@@ -14,4 +14,7 @@
 
   /* Color BG */
   --color-bg-st: #f4fbf8;
+
+  /* Gradients */
+  --gradient-st: linear-gradient(45deg, var(--color-st), var(--color-nd));
 }

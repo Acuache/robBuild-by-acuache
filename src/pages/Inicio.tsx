@@ -1,5 +1,8 @@
+import { FrontPage } from '../components/Inicio'
 export default function Inicio() {
   return (
-    <div>Inicio</div>
+    <>
+      <FrontPage />
+    </>
   )
 }             
