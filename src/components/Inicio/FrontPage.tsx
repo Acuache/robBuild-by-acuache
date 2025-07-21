@@ -1,9 +1,9 @@
 import { muniLima, democracia, upc } from "../../assets/images/support";
-import { luffy1, luffy2, luffy3 } from '../../assets/images/frontPage'
+// import { luffy1, luffy2, luffy3 } from '../../assets/images/frontPage'
 
 
 export default function FrontPage() {
-  const images = [luffy1, luffy2, luffy3]
+  // const images = [luffy1, luffy2, luffy3]
   return (
     <main className="w-full h-dvh max-h-dvh" style={{ background: 'var(--gradient-st)' }}>
       <div className="h-9/10 px-4 max-w-7xl m-auto text-white text-center flex flex-col gap-5 items-center sm:flex-row sm:text-left">
@@ -16,7 +16,7 @@ export default function FrontPage() {
           </div>
         </div>
         <div className="bg-red-800 min-w-80 overflow-hidden max-w-120 h-112 sm:w-5/10 ">
-          <img className="w-full h-full object-cover" src={luffy1} />
+          {/* <img className="w-full h-full object-cover" src={luffy1} /> */}
         </div>
       </div>
       <footer className="h-1/10 bg-white text-center text-black flex flex-col gap-5 py-15">
