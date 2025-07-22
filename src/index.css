@@ -18,3 +18,11 @@
   /* Gradients */
   --gradient-st: linear-gradient(45deg, var(--color-st), var(--color-nd));
 }
+@layer components {
+  .title {
+    @apply text-4xl font-bold text-center sm:text-6xl;
+  }
+  .description{
+    @apply text-lg text-center sm:text-2xl;
+  }
+}

@@ -30,10 +30,10 @@ export default function FrontPage() {
     return () => clearInterval(interval)
   }, [images.length])
   return (
-    <main className="w-full  min-h-dvh " style={{ background: 'var(--gradient-st)' }}>
-      <div className="h-9/10 px-4 max-w-7xl m-auto text-white text-center flex flex-col gap-10 items-center py-5 sm:py-30 sm:flex-row sm:text-left sm:gap-20">
+    <main className="w-full  min-h-dvh" style={{ background: 'var(--gradient-st)' }}>
+      <div className="h-9/10 px-4 max-w-7xl m-auto text-white text-center flex flex-col gap-10 items-center py-10 pb-15 sm:py-30 sm:flex-row sm:text-left sm:gap-20">
         <div className="flex flex-col gap-8 sm:w-4/10 md:1/2 lg:w-6/10">
-          <h1 className="text-4xl font-bold sm:text-5xl lg:text-6xl">Tranformamos vidas con el poder de la educación</h1>
+          <h1 className="text-4xl font-bold sm:text-5xl lg:text-6xl text-balance">Tranformamos vidas con el poder de la educación</h1>
           <p className="sm:text-xl lg:text-2xl">Brindamos talleres gratuitos, cursos en nuestra aula virtual y proyectos educativos con impacto solial para estudiantes y docentes.</p>
           <div className="flex gap-5 w-fit m-auto sm:m-0">
             <button className="border-2 border-white px-5 py-2 rounded-4xl bg-nd">Donar Ahora</button>
