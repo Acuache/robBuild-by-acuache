@@ -1,0 +1,27 @@
+[
+  {
+    "id": 1,
+    "title": "¿Puedo participar desde cualquier lugar del mundo?",
+    "description": "¡Sí! Nuestras actividades virtuales, tanto talleres como cursos, así como el acceso al Aula Robbuild, están disponibles para cualquier persona sin importar donde viva. Solo necesitas conexión a internet."
+  },
+  {
+    "id": 2,
+    "title": "¿Qué materiales necesito para participar?",
+    "description": "Solo una computadora o laptop con acceso a internet. Todos los proyectos se desarrollan paso a paso utilizando plataformas y simuladores virtuales."
+  },
+  {
+    "id": 3,
+    "title": "¿Cuál es la diferencia entre un taller y un curso?",
+    "description": "Los talleres son sesiones únicas donde aprendes y aplicas un tema específico en un solo día. En cambio, los cursos siguen una ruta de aprendizaje, con varias sesiones y contenidos secuenciales orientados a un objetivo educativo más completo."
+  },
+  {
+    "id": 4,
+    "title": "¿Las actividades de Robbuild tienen algún costo?",
+    "description": "Nuestros 2 programas educativos principales son completamente gratuitos. En Aula Robbuild, encontrarás cursos gratuitos y de pago que ayudan a sostener esta iniciativa educativa."
+  },
+  {
+    "id": 5,
+    "title": "¿Cómo puedo ayudar a que más niños accedan a estas oportunidades?",
+    "description": "Con una donación desde S/25, puedes contribuir al impacto en la educación de un niño. Tu aporte nos permite llegar a más comunidades y brindar acceso a talleres, cursos y recursos de calidad. ¡Cada apoyo suma y te hace parte del cambio!, creo que sería bueno darle más texto a las respuestas"
+  }
+] 

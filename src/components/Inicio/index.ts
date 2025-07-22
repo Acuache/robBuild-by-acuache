@@ -6,6 +6,7 @@
 // Como usa "export default", necesitamos "default as"
 export { default as FrontPage } from './FrontPage'
 export { default as CardImpact } from './CardImpact'
+export { default as ImpactSection } from './ImpactSection'
 
 // ========================================
 // USO:
