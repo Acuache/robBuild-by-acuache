@@ -1,5 +1,3 @@
-import { Icon } from '@iconify/react';
-
 interface CardImpactProps {
   title: string;
   number: number;
