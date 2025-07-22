@@ -30,8 +30,8 @@ export default function FrontPage() {
     return () => clearInterval(interval)
   }, [images.length])
   return (
-    <main className="w-full  min-h-dvh" style={{ background: 'var(--gradient-st)' }}>
-      <div className="h-9/10 px-4 max-w-7xl m-auto text-white text-center flex flex-col gap-10 items-center py-10 pb-15 sm:py-30 sm:flex-row sm:text-left sm:gap-20">
+    <main className="w-full  min-h-dvh flex flex-col" style={{ background: 'var(--gradient-st)' }}>
+      <div className="flex-1 basis-[90%] px-4 max-w-7xl m-auto text-white text-center flex flex-col gap-10 items-center py-10 pb-15 sm:py-30 sm:flex-row sm:text-left sm:gap-20">
         <div className="flex flex-col gap-8 sm:w-4/10 md:1/2 lg:w-6/10">
           <h1 className="text-4xl font-bold sm:text-5xl lg:text-6xl text-balance">Tranformamos vidas con el poder de la educación</h1>
           <p className="sm:text-xl lg:text-2xl">Brindamos talleres gratuitos, cursos en nuestra aula virtual y proyectos educativos con impacto solial para estudiantes y docentes.</p>
@@ -59,7 +59,7 @@ export default function FrontPage() {
           />
         </div>
       </div>
-      <footer className="h-1/10 bg-white text-center text-black flex flex-col gap-5 py-5 sm:py-15">
+      <footer className="basis-[10%] bg-white text-center text-black flex flex-col gap-5 py-5 sm:py-15">
         <p className="text-lg sm:text-xl">Reconocidos y apoyados por</p>
         <section className="flex flex-wrap justify-center items-center gap-10">
           <article>
