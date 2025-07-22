@@ -13,7 +13,7 @@ export default function Header() {
         <div className='w-25 h-10 '>
           <img src={logoColor} alt="Logo de RobBuild" />
         </div>
-        <nav className={`w-70 h-dvh p-5 fixed top-0 right-0 bg-white flex flex-col transition-all duration-300 ${isActive ? "translate-x-0" : "translate-x-full"} sm:translate-x-0 sm:static sm:flex sm:flex-row sm:w-auto sm:h-auto sm:p-0`}>
+        <nav className={`w-70 h-dvh p-5 fixed top-0 right-0 bg-white flex flex-col transition-all duration-300 ${isActive ? "translate-x-0" : "translate-x-full"} sm:translate-x-0 sm:static sm:flex sm:flex-row sm:w-auto sm:h-auto sm:p-0 z-8`}>
           <div className="cursor-pointer sm:hidden" onClick={handleClick}>
             <Icon icon="heroicons:x-mark" width="24" height="24" />
           </div>
