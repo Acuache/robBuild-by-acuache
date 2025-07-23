@@ -7,6 +7,7 @@
 export { default as FrontPage } from './FrontPage'
 export { default as CardImpact } from './CardImpact'
 export { default as ImpactSection } from './ImpactSection'
+export { default as FAQSection } from './FAQSection'
 
 // ========================================
 // USO:
