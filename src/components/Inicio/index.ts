@@ -11,6 +11,9 @@ export { default as FAQSection } from './FAQSection'
 export { default as CardDay } from "./CardDay"
 export { default as DaySection } from "./DaySection"
 export { default as VolunteerDonateSection } from "./VolunteerDonateSection"
+export { default as AboutUsSection } from "./AboutUsSection"
+export { default as SocialNetwork} from "./SocialNetwork"
+export { default as SocialMedia } from "./SocialMedia"
 // ========================================
 // USO:
 // import { FrontPage } from '../components/Inicio'
