@@ -1,4 +1,4 @@
-import { FAQSection, FrontPage, ImpactSection, DaySection } from '../components/Inicio'
+import { FAQSection, FrontPage, ImpactSection, DaySection, VolunteerDonateSection } from '../components/Inicio'
 
 export default function Inicio() {
   return (
@@ -7,6 +7,7 @@ export default function Inicio() {
       <ImpactSection />
       <FAQSection />
       <DaySection />
+      <VolunteerDonateSection />
     </>
   )
 }             
