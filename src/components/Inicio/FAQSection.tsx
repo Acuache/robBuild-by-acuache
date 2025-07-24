@@ -16,7 +16,7 @@ export default function FAQSection() {
         </header>
 
         {/* Cards de FAQ */}
-        <section className='flex flex-col justify-center items-center gap-8 lg:gap-10 '>
+        <section className='flex flex-col justify-center items-center gap-8'>
           {
             faqInformation.map((faqItem, index) => (
               <FAQItem {...faqItem} key={index} isOpen={openItemId === faqItem.id} onToggle={() => handleToggle(faqItem.id)} />
