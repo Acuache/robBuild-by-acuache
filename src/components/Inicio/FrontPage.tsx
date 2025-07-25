@@ -40,7 +40,7 @@ export default function FrontPage() {
           : 'transform translate-y-0 rotate-0 scale-100'
           }`}>
           {/* Marco de fondo */}
-          <div className={`tranform scale-95 w-[calc(100%-8px)] h-[calc(100%-8px)] top-2 left-2 absolute sm:w-[calc(100%-10px)] sm:h-[calc(100%-10px)] bg-gray-200 sm:-top-1 sm:-left-1 rounded-3xl -z-1 transition-all duration-700 ease-out ${isAnimating
+          <div className={`tranform scale-92 w-[calc(100%-4px)] h-[calc(100%-4px)] top-3 left-1 absolute sm:w-[calc(100%-10px)] sm:h-[calc(100%-10px)] bg-gray-200 sm:-top-1 sm:-left-1 rounded-3xl -z-1 transition-all duration-700 ease-out ${isAnimating
             ? 'rotate-[8deg] translate-y-2'
             : 'rotate-[4deg] sm:rotate-[5deg] translate-y-0'
             }`}></div>
