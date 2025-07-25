@@ -40,7 +40,7 @@ export default function FrontPage() {
           : 'transform translate-y-0 rotate-0 scale-100'
           }`}>
           {/* Marco de fondo */}
-          <div className={`tranform scale-91 sm:scale-100 w-[calc(100%)] h-[calc(100%)] -top-3 -left-1 absolute sm:w-[calc(100%-10px)] sm:h-[calc(100%-10px)] bg-gray-200 sm:-top-1 sm:-left-1 rounded-3xl -z-1 transition-all duration-700 ease-out ${isAnimating
+          <div className={`tranform scale-88 sm:scale-100 w-[calc(100%+2px)] h-[calc(100%+2px)] -top-3 -left-1 absolute sm:w-[calc(100%-10px)] sm:h-[calc(100%-10px)] bg-gray-200 sm:-top-1 sm:-left-1 rounded-3xl -z-1 transition-all duration-700 ease-out ${isAnimating
             ? 'rotate-[8deg] translate-y-2'
             : 'rotate-[4deg] sm:rotate-[5deg] translate-y-0'
             }`}></div>
@@ -56,7 +56,7 @@ export default function FrontPage() {
       </div>
       <footer className="basis-[10%] bg-white text-center text-black flex flex-col gap-5 py-5 sm:py-15">
         <p className="text-lg sm:text-xl">Reconocidos y apoyados por</p>
-        <section className="flex flex-wrap justify-center items-center gap-10">
+        <section className="flex flex-wrap justify-center items-center gap-10 md:gap-20 lg:gap-30">
           <article>
             <img src={muniLima} alt="Logo de Municipalidad de Lima" className="h-12 w-auto" />
           </article>
