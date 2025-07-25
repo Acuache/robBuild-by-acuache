@@ -35,12 +35,12 @@ export default function FrontPage() {
             <button className="text-sm md:text-base lg:text-lg border-2 border-white px-5 py-2 rounded-4xl bg-st">Ir al Aula Virtual</button>
           </div>
         </div>
-        <div className={` p-3 rounded-3xl w-full h-100 sm:w-2/3 lg:w-2/3 relative z-2 transition-all duration-700 ease-out ${isAnimating
+        <div className={`p-3 rounded-3xl w-full h-100 sm:w-2/3 lg:w-2/3 relative z-2 transition-all duration-700 ease-out ${isAnimating
           ? 'transform translate-y-3 rotate-1 scale-[0.98]'
           : 'transform translate-y-0 rotate-0 scale-100'
           }`}>
           {/* Marco de fondo */}
-          <div className={`w-[calc(100%-8px)] h-[calc(100%-8px)] top-2 left-2 absolute sm:w-[calc(100%-10px)] sm:h-[calc(100%-10px)] bg-gray-200 sm:-top-1 sm:-left-1 rounded-3xl -z-1 transition-all duration-700 ease-out ${isAnimating
+          <div className={`tranform scale-95 w-[calc(100%-8px)] h-[calc(100%-8px)] top-2 left-2 absolute sm:w-[calc(100%-10px)] sm:h-[calc(100%-10px)] bg-gray-200 sm:-top-1 sm:-left-1 rounded-3xl -z-1 transition-all duration-700 ease-out ${isAnimating
             ? 'rotate-[8deg] translate-y-2'
             : 'rotate-[4deg] sm:rotate-[5deg] translate-y-0'
             }`}></div>
