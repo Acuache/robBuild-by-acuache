@@ -11,7 +11,7 @@ export default function FAQItem({ title, description, isOpen, onToggle }: FAQIte
     <article className="max-w-4xl">
       <header onClick={onToggle} className="flex justify-between items-center bg-white p-3 rounded-lg cursor-pointer gap-4">
         <h3>{title}</h3>
-        <div>
+        <div className={`transition-all duration-300 ${isOpen ? "rotate-180" : "rotate-0"}`}>
           <Icon className="" icon="iconamoon:arrow-up-2-light" width="25" height="25" />
         </div>
       </header>
