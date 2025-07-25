@@ -14,6 +14,7 @@ export { default as VolunteerDonateSection } from "./VolunteerDonateSection"
 export { default as AboutUsSection } from "./AboutUsSection"
 export { default as SocialNetwork} from "./SocialNetwork"
 export { default as SocialMedia } from "./SocialMedia"
+export {default as ResultsSection} from "./ResultsSection"
 // ========================================
 // USO:
 // import { FrontPage } from '../components/Inicio'

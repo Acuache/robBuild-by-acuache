@@ -1,0 +1,47 @@
+[
+  {
+    "id": 1,
+    "title": "Ganador del concurso nacional Impacto que Hablan",
+    "description": "Desarrollé un brazo robótico innovador capaz de clasificar objetos por colores utilizando sensores avanzados y algoritmos de reconocimiento. Este proyecto fue seleccionado para representar a mi organización.",
+    "impact": "He enseñado a +400 personas a unirse y enseñar.",
+    "victories": "Primer lugar en la categoría de robótica educativa en la competencia nacional 2023 desarrollado por la UPC",
+    "skills": ["Trabajo en equipo", "Ayuda social", "Diseño 3D", "Programación"],
+    "image": "luffy1.png"
+  },
+  {
+    "id": 2,
+    "title": "Robot educativo inclusivo para niños con discapacidad",
+    "description": "Creé un robot interactivo que transforma el aprendizaje de matemáticas para niños con discapacidades cognitivas mediante juegos adaptativos. Implementado exitosamente en múltiples instituciones educativas.",
+    "impact": "Benefició a más de 200 niños mejorando su comprensión matemática en un 60%.",
+    "victories": "Reconocimiento del Ministerio de Educación como proyecto innovador en inclusión educativa",
+    "skills": ["Programación educativa", "Psicología infantil", "Arduino", "Diseño UX"],
+    "image": "luffy2.png"
+  },
+  {
+    "id": 3,
+    "title": "Sistema IoT inteligente para huertos urbanos sostenibles",
+    "description": "Diseñé una solución de riego automatizada que utiliza sensores IoT para optimizar el crecimiento de cultivos urbanos, monitoreando en tiempo real la humedad, temperatura y luminosidad del ambiente.",
+    "impact": "Implementado en 15 comunidades, aumentando la producción agrícola en 45%.",
+    "victories": "Segundo lugar en el Hackathon de Sostenibilidad Ambiental 2023",
+    "skills": ["IoT", "Sensores", "Agricultura urbana", "Programación Python"],
+    "image": "luffy3.png"
+  },
+  {
+    "id": 4,
+    "title": "Prótesis robótica accesible y funcional de bajo costo",
+    "description": "Construí una prótesis de mano completamente funcional usando tecnología de impresión 3D y componentes electrónicos económicos para democratizar el acceso a dispositivos protésicos avanzados.",
+    "impact": "Entregué 12 prótesis gratuitas, cambiando la vida de familias vulnerables.",
+    "victories": "Ganador del premio Innovación Social en la Feria de Ciencias Regional",
+    "skills": ["Impresión 3D", "Bioingeniería", "Electrónica", "Impacto social"],
+    "image": "luffy4.png"
+  },
+  {
+    "id": 5,
+    "title": "Plataforma colaborativa global de aprendizaje robótico",
+    "description": "Desarrollé una plataforma web integral donde estudiantes internacionales colaboran en proyectos robóticos, comparten conocimientos y reciben mentorías expertas con simuladores virtuales integrados.",
+    "impact": "Más de 1,500 estudiantes activos de 20 países utilizan la plataforma.",
+    "victories": "Seleccionado como mejor startup educativa en el Demo Day 2023",
+    "skills": ["Desarrollo web", "React", "Node.js", "Educación digital"],
+    "image": "luffy5.png"
+  }
+]

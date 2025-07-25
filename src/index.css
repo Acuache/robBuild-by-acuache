@@ -17,6 +17,26 @@
 
   /* Gradients */
   --gradient-st: linear-gradient(45deg, var(--color-st), var(--color-nd));
+  
+  /* Animación de latido */
+  --animate-heartbeat: heartbeat 1.5s ease-in-out infinite;
+  @keyframes heartbeat {
+    0% {
+      transform: scale(1);
+    }
+    14% {
+      transform: scale(1.2);
+    }
+    28% {
+      transform: scale(1);
+    }
+    42% {
+      transform: scale(1.2);
+    }
+    70% {
+      transform: scale(1);
+    }
+  }
 }
 @layer components {
   .title {
@@ -25,4 +45,5 @@
   .description{
     @apply text-lg text-center sm:text-2xl;
   }
+  
 }
