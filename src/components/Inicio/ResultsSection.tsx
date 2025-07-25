@@ -26,7 +26,7 @@ export default function ResultsSection() {
         ))
         setIsAnimating(false)
       }, 300)
-    }, 3000)
+    }, 8000)
     return () => clearTimeout(timer)
   }, [currentIndex])
   return (
