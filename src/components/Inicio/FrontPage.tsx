@@ -8,46 +8,41 @@ export default function FrontPage() {
   const [currentImageIndex, setCurrentImageIndex] = useState(0)
   const [isAnimating, setIsAnimating] = useState(false)
 
-  // Auto-rotate images every 4 seconds with drop animation
   useEffect(() => {
     const interval = setInterval(() => {
       setIsAnimating(true)
-
-      // After animation starts, change image
       setTimeout(() => {
         setCurrentImageIndex((prevIndex) =>
           prevIndex === images.length - 1 ? 0 : prevIndex + 1
         )
-      }, 200) // Small delay to start drop animation
-
-      // Reset animation state
+      }, 200)
       setTimeout(() => {
         setIsAnimating(false)
-      }, 800) // Reset after animation completes
+      }, 800)
 
-    }, 4000) // Every 4 seconds
+    }, 4000)
 
     return () => clearInterval(interval)
   }, [images.length])
   return (
     <main className="w-full  min-h-dvh flex flex-col" style={{ background: 'var(--gradient-st)' }}>
-      <div className="flex-1 basis-[90%] px-4 max-w-7xl m-auto text-white text-center flex flex-col gap-10 items-center py-10 pb-15 sm:py-30 sm:flex-row sm:text-left sm:gap-20">
-        <div className="flex flex-col gap-8 sm:w-4/10 md:1/2 lg:w-6/10">
-          <h1 className="text-4xl font-bold sm:text-5xl lg:text-6xl text-balance">Tranformamos vidas con el poder de la educación</h1>
-          <p className="sm:text-xl lg:text-2xl">Brindamos talleres gratuitos, cursos en nuestra aula virtual y proyectos educativos con impacto solial para estudiantes y docentes.</p>
+      <div className=" flex-1 basis-[90%] px-4 max-w-7xl m-auto text-white text-center flex flex-col gap-10 items-center py-10 pb-15 sm:py-30 sm:flex-row sm:text-left sm:gap-12 md:gap-18 lg:gap-25">
+        <div className="flex flex-col gap-8 sm:w-1/3 lg:w-1/3">
+          <h1 className="text-4xl font-bold sm:text-4xl md:text-5xl lg:text-6xl text-balance">Tranformamos vidas con el poder de la educación</h1>
+          <p className="sm:text-base md:text-xl lg:text-2xl">Brindamos talleres gratuitos, cursos en nuestra aula virtual y proyectos educativos con impacto solial para estudiantes y docentes.</p>
           <div className="flex gap-5 w-fit m-auto sm:m-0">
-            <button className="border-2 border-white px-5 py-2 rounded-4xl bg-nd">Donar Ahora</button>
-            <button className="border-2 border-white px-5 py-2 rounded-4xl bg-st">Ir al Aula Virtual</button>
+            <button className="text-sm md:text-base lg:text-lg border-2 border-white px-5 py-2 rounded-4xl bg-nd">Donar Ahora</button>
+            <button className="text-sm md:text-base lg:text-lg border-2 border-white px-5 py-2 rounded-4xl bg-st">Ir al Aula Virtual</button>
           </div>
         </div>
-        <div className={` rounded-3xl min-w-75 max-w-120 h-100 sm:w-6/10 md:1/2 lg:4/10 relative z-2 transition-all duration-700 ease-out ${isAnimating
+        <div className={` p-3 rounded-3xl w-full h-100 sm:w-2/3 lg:w-2/3 relative z-2 transition-all duration-700 ease-out ${isAnimating
           ? 'transform translate-y-3 rotate-1 scale-[0.98]'
           : 'transform translate-y-0 rotate-0 scale-100'
           }`}>
-          {/* Marco de fondo - también se anima */}
-          <div className={`w-full h-full -top-1 -left-3 absolute sm:w-[calc(100%+10px)] sm:h-[calc(100%+10px)] bg-gray-200 sm:-top-3 sm:-left-6 rounded-3xl -z-1 transition-all duration-700 ease-out ${isAnimating
+          {/* Marco de fondo */}
+          <div className={`w-[calc(100%-8px)] h-[calc(100%-8px)] top-2 left-2 absolute sm:w-[calc(100%-10px)] sm:h-[calc(100%-10px)] bg-gray-200 sm:-top-1 sm:-left-1 rounded-3xl -z-1 transition-all duration-700 ease-out ${isAnimating
             ? 'rotate-[8deg] translate-y-2'
-            : 'rotate-[5deg] translate-y-0'
+            : 'rotate-[4deg] sm:rotate-[5deg] translate-y-0'
             }`}></div>
 
           {/* Imagen principal con animación */}
