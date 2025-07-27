@@ -26,10 +26,10 @@ export default function FrontPage() {
   }, [images.length])
   return (
     <main className="w-full  min-h-dvh flex flex-col" style={{ background: 'var(--gradient-st)' }}>
-      <div className=" flex-1 basis-[90%] px-4 max-w-7xl m-auto text-white text-center flex flex-col gap-10 items-center py-10 pb-15 sm:py-30 sm:flex-row sm:text-left sm:gap-12 md:gap-18 lg:gap-25">
+      <div className=" flex-1 basis-[90%] px-4 max-w-6xl m-auto text-white text-center flex flex-col gap-10 items-center py-10 pb-15 md:px-8 sm:py-30 sm:flex-row sm:text-left sm:gap-12 md:gap-18 lg:gap-25 xl:px-0">
         <div className="flex flex-col gap-8 sm:w-1/3 lg:w-1/3">
           <h1 className="text-4xl font-bold sm:text-4xl md:text-5xl lg:text-6xl text-balance">Tranformamos vidas con el poder de la educación</h1>
-          <p className="sm:text-base md:text-xl lg:text-2xl">Brindamos talleres gratuitos, cursos en nuestra aula virtual y proyectos educativos con impacto solial para estudiantes y docentes.</p>
+          <p className="sm:text-base md:text-xl lg:text-xl">Brindamos talleres gratuitos, cursos en nuestra aula virtual y proyectos educativos con impacto solial para estudiantes y docentes.</p>
           <div className="flex gap-5 w-fit m-auto sm:m-0">
             <button className="text-sm md:text-base lg:text-lg border-2 border-white px-5 py-2 rounded-4xl bg-nd">Donar Ahora</button>
             <button className="text-sm md:text-base lg:text-lg border-2 border-white px-5 py-2 rounded-4xl bg-st">Ir al Aula Virtual</button>
