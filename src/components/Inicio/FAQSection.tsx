@@ -9,7 +9,7 @@ export default function FAQSection() {
   }
   return (
     <section className="w-full text-black py-15 sm:py-30 bg-[#f4fbf8]">
-      <div className='max-w-7x px-5 flex flex-col items-center gap-8 lg:gap-11'>
+      <div className='max-w-6x px-5 flex flex-col items-center gap-8 lg:gap-11'>
         {/* Header de la sección */}
         <header className='flex flex-col gap-5'>
           <h2 className='title'>Preguntas Frecuentes</h2>
