@@ -1,3 +1,4 @@
+import { Footer } from '../components'
 import { FAQSection, FrontPage, ImpactSection, DaySection, VolunteerDonateSection, AboutUsSection, ResultsSection, ProgramsSections } from '../components/Inicio'
 
 export default function Inicio() {
@@ -11,6 +12,7 @@ export default function Inicio() {
       <VolunteerDonateSection />
       <AboutUsSection />
       <FAQSection />
+      <Footer />
     </>
   )
 }             
