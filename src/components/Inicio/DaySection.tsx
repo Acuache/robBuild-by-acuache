@@ -9,7 +9,7 @@ export default function DaySection() {
         {/* Header de la sección */}
         <header className='flex flex-col gap-5'>
           <h2 className='title text-black'>Lo que nos mueve cada día</h2>
-          <p className='description'>Estos principios guían cada paso que damos para transformar vidas a través de la educación.
+          <p className='description max-w-4xl m-auto'>Estos principios guían cada paso que damos para transformar vidas a través de la educación.
           </p>
         </header>
 
