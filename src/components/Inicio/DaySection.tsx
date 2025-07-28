@@ -14,7 +14,7 @@ export default function DaySection() {
         </header>
 
         {/* Cards de impacto */}
-        <section className='flex flex-col gap-8 sm:flex-row sm:flex-wrap sm:justify-center sm:items-center lg:gap-8 transition-all duration-300'>
+        <section className='flex flex-col gap-8 sm:flex-row sm:flex-wrap sm:justify-center sm:items-center lg:gap-3 transition-all duration-300 xl:gap-9'>
           <CardDay
             title="Pasión por Enseñar"
             description="Creemos que cada clase puede abrir puertas, cambiar futuros y sembrar oportunidades."
