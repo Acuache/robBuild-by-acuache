@@ -5,11 +5,11 @@ export default function Inicio() {
     <>
       <FrontPage />
       <ResultsSection />
-      <ImpactSection />
-      <FAQSection />
       <DaySection />
+      <ImpactSection />
       <VolunteerDonateSection />
       <AboutUsSection />
+      <FAQSection />
     </>
   )
 }             
