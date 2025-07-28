@@ -3,12 +3,12 @@ import { SocialNetwork, SocialMedia } from './'
 import { logoWhite } from '../../assets/images/logos'
 export default function AboutUsSection() {
   return (
-    <section className="w-full py-15 sm:py-30 bg-[#f4fbf8]">
-      <div className='max-w-7xl m-auto px-5 flex flex-col rounded-4xl overflow-hidden sm:flex-row'>
-        <div className="h-auto bg-white p-5 sm:basis-1/2 sm:p-10">
+    <section className="w-full py-15  bg-[#f4fbf8]">
+      <div className='max-w-6xl m-auto px-5 flex flex-col md:px-8 sm:flex-row xl:px-0 '>
+        <div className="h-auto bg-white p-5 sm:basis-1/2 sm:p-10 sm:rounded-l-xl">
           <header className='flex flex-col gap-5'>
             <h2 className='text-xl font-semibold sm:text-4xl'>Conéctate con nosotros</h2>
-            <p className='sm:text-base'>
+            <p className='text-base'>
               Síguenos en nuestras redes sociales para estar al dia con nuestras actividades, talleres y el impacto que estamos generando juntos.
             </p>
           </header>
@@ -39,7 +39,7 @@ export default function AboutUsSection() {
             </SocialNetwork>
           </section>
         </div>
-        <div className="min-h-125 px-5 flex flex-col justify-center items-center sm:basis-1/2 sm:px-10" style={{ background: 'var(--gradient-st)' }}>
+        <div className="min-h-125 px-5 flex flex-col justify-center items-center sm:basis-1/2 sm:px-10 sm:rounded-r-xl" style={{ background: 'var(--gradient-st)' }}>
           <div className="w-50 sm:w-50 md:w-65 lg:w-75">
             <img className="w-full h-full object-cover" src={logoWhite} alt="Logo de RobBuild" />
           </div>
