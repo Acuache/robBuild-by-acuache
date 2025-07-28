@@ -9,7 +9,7 @@ interface FAQItemProps {
 export default function FAQItem({ title, description, isOpen, onToggle }: FAQItemProps) {
   return (
     <article className="max-w-6xl w-full">
-      <header onClick={onToggle} className={`h-13 flex justify-between items-center bg-white p-3 cursor-pointer gap-4 px-6 ${isOpen ? " rounded-t-lg" : "rounded-lg"}`}>
+      <header onClick={onToggle} className={`h-auto flex justify-between items-center bg-white p-3 cursor-pointer gap-4 px-6 ${isOpen ? " rounded-t-lg" : "rounded-lg"}`}>
         <h3 className="font-semibold">{title}</h3>
         <div className="transition-all duration-300">
           {
