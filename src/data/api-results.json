@@ -23,7 +23,7 @@
     "description": "Diseñé una solución de riego automatizada que utiliza sensores IoT para optimizar el crecimiento de cultivos urbanos, monitoreando en tiempo real la humedad, temperatura y luminosidad del ambiente.",
     "impact": "Implementado en 15 comunidades, aumentando la producción agrícola en 45%.",
     "victories": "Segundo lugar en el Hackathon de Sostenibilidad Ambiental 2023",
-    "skills": ["IoT", "Sensores", "Agricultura urbana", "Programación Python"],
+    "skills": ["Programación Python", "IoT", "Sensores", "Agricultura urbana"],
     "image": "luffy3.png"
   },
   {
