@@ -30,7 +30,7 @@ export default function ResultsSection() {
     return () => clearTimeout(timer)
   }, [currentIndex])
   return (
-    <section className="w-full text-black py-15 sm:py-30 bg-[#f4fbf8]">
+    <section className="w-full text-black py-15 sm:py-15 bg-[#f4fbf8]">
       <div className='px-4 flex flex-col gap-8 lg:gap-11 max-w-6xl m-auto md:px-8 xl:px-0'>
 
         <header className='flex flex-col gap-5'>
