@@ -3,8 +3,8 @@ import { Icon } from "@iconify/react";
 
 export default function ImpactSection() {
   return (
-    <section className="w-full text-white py-15 sm:py-30" style={{ background: 'var(--gradient-st)' }}>
-      <div className='px-5 flex flex-col gap-8 lg:gap-11 max-w-7xl m-auto'>
+    <section className="w-full text-white py-15 sm:py-15" style={{ background: 'var(--gradient-st)' }}>
+      <div className='px-5 flex flex-col gap-8 lg:gap-11 max-w-6xl m-auto'>
 
         {/* Header de la sección */}
         <header className='flex flex-col gap-5'>
@@ -15,7 +15,7 @@ export default function ImpactSection() {
         </header>
 
         {/* Cards de impacto */}
-        <section className='flex flex-col gap-8 sm:flex-row sm:flex-wrap sm:justify-center sm:items-center lg:gap-10 transition-all duration-300'>
+        <section className='flex flex-col gap-8 sm:flex-row sm:flex-wrap sm:justify-between sm:items-center lg:gap-10 transition-all duration-300'>
           <CardImpact title="Niños y jóvenes beneficiados" number={4500}>
             <Icon icon="formkit:people" width="38" height="38" />
           </CardImpact>
