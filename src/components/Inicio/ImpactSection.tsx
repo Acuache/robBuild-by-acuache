@@ -4,7 +4,7 @@ import { Icon } from "@iconify/react";
 export default function ImpactSection() {
   return (
     <section className="w-full text-white py-15 sm:py-15" style={{ background: 'var(--gradient-st)' }}>
-      <div className='px-5 flex flex-col gap-8 md:px-8 lg:gap-11 max-w-6xl m-auto'>
+      <div className='px-5 flex flex-col gap-8 md:px-8 lg:gap-11 max-w-6xl m-auto xl:px-0'>
 
         {/* Header de la sección */}
         <header className='flex flex-col gap-5'>
