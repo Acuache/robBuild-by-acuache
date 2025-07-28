@@ -84,6 +84,8 @@
 @layer components {
   .title {
     @apply text-4xl font-bold text-center sm:text-5xl;
+    text-shadow: 0.5px 0 0 currentColor;
+    -webkit-text-stroke: 0.3px;
   }
   .description{
     @apply text-lg text-center sm:text-xl;
