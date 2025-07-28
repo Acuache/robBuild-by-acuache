@@ -35,7 +35,7 @@ export default function ResultsSection() {
 
         <header className='flex flex-col gap-5'>
           <h2 className='title'>Resultados que Hablan</h2>
-          <p className='description'>
+          <p className='description max-w-4xl m-auto'>
             Reconocimientos que respaldan el compromiso de Robbuild con la innovación educativa, el desarrollo STEAM y el futuro de miles de niños y jóvenes.
           </p>
         </header>
