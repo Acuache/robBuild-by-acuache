@@ -7,8 +7,8 @@ export default function Inicio() {
       <FrontPage />
       <ResultsSection />
       <ImpactSection />
-      <DaySection />
       <ProgramsSections />
+      <DaySection />
       <VolunteerDonateSection />
       <AboutUsSection />
       <FAQSection />
