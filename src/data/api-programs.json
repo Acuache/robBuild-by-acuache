@@ -1,0 +1,24 @@
+[
+  {
+    "id": 0,
+    "title": "Robótica para todos con enfoque STEAM",
+    "description": "Talleres virtuales dirigido a niñas, niños y jóvenes de 8 a 17 años, donde se enseña los pilares de la robótica.",
+    "informations": [
+      "Dirigido a estudiantes de primaria y secundaria.",
+      "Clases de robótica, electrónica, programación y diseño 3D.",
+      "Desarrollo de la competencia 22 “Diseña y construye soluciones” del Currículo Nacional"
+    ],
+    "img": "program1.png"
+  },
+  {
+    "id": 1,
+    "title": "Robótica para un futuro sin brechas",
+    "description": "Cursos virtuales que llevan educación tecnológica a estudiantes de secundaria en colegios públicos.",
+    "informations": [
+      "Dirigido a estudiantes de 3°,4°, o 5° de secundaria.",
+      "Modalidad de docente remoto.",
+      "Enfocado en reducir las brechas educativas en colegios de zonas rurales"
+    ],
+    "img": "program1.png"
+  }
+]

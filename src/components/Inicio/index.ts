@@ -15,7 +15,10 @@ export { default as AboutUsSection } from "./AboutUsSection"
 export { default as SocialNetwork} from "./SocialNetwork"
 export { default as SocialMedia } from "./SocialMedia"
 export {default as ResultsSection} from "./ResultsSection"
+export { default as ProgramCard } from "./ProgramCard"
+export { default as ProgramsSections } from "./ProgramsSections"
 // ========================================
+// USO:
 // USO:
 // import { FrontPage } from '../components/Inicio'
 // ========================================
