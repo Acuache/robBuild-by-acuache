@@ -8,7 +8,7 @@ export default function Header() {
     setIsActive(!isActive)
   }
   return (
-    <header className='w-full h-16 bg-white z-10 fixed top-0'>
+    <header className='w-full h-16 bg-white z-10 fixed top-0 shadow-md'>
       <div className='max-w-7xl h-15 m-auto px-4 flex justify-between items-center'>
         <div className='w-25 h-10 '>
           <img src={logoColor} alt="Logo de RobBuild" />
