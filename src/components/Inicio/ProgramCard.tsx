@@ -15,8 +15,8 @@ export default function ProgramCard({ id, title, description, informations }: Pr
       <div className='h-65'>
         <img className='w-full h-full object-cover' src={resultImages[id]} alt={title} />
       </div>
-      <div className='bg-white p-4 flex flex-col items-center gap-3 flex-grow justify-between lg:p-8'>
-        <div className='flex flex-col items-center gap-3 sm:gap-5'>
+      <div className='bg-white p-4 flex flex-col items-center gap-2 flex-grow justify-between lg:p-4'>
+        <div className='flex flex-col items-center gap-3 '>
           <h3 className='font-bold text-st text-2xl '>{title}</h3>
           <p className='text-base'>{description}</p>
           <div className='flex flex-col gap-3'>
@@ -32,7 +32,7 @@ export default function ProgramCard({ id, title, description, informations }: Pr
             }
           </div>
         </div>
-        <button className='text-white font-bold w-fit px-6 py-2 rounded-full transition-all duration-300 ease-out hover:scale-105 hover:shadow-xl hover:shadow-st/30 hover:-translate-y-1 hover:brightness-110 active:scale-95' style={{ background: 'var(--gradient-st)' }}>Más información</button>
+        <button className='mt-3 text-white font-bold w-fit px-6 py-2 rounded-full transition-all duration-300 ease-out hover:scale-105 hover:shadow-xl hover:shadow-st/30 hover:-translate-y-1 hover:brightness-110 active:scale-95' style={{ background: 'var(--gradient-st)' }}>Más información</button>
       </div>
     </article>
   )

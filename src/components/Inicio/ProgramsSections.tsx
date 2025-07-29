@@ -8,7 +8,7 @@ export default function ProgramsSections() {
         {/* Header de la sección */}
         <header className='flex flex-col gap-5 items-center'>
           <h2 className='title'> Nuestros Programas</h2>
-          <p className='description text-pretty max-w-4xl'>Ofrecemos programas para diferentes edades y necesidades, todos con un enfoque práctico y divertido.
+          <p className='description text-pretty max-w-5xl'>Ofrecemos programas para diferentes edades y necesidades, todos con un enfoque práctico y divertido.
           </p>
         </header>
 
