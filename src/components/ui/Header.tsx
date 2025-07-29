@@ -8,7 +8,7 @@ export default function Header() {
     setIsActive(!isActive)
   }
   return (
-    <header className='w-full h-15 bg-white'>
+    <header className='w-full h-16 bg-white z-10 fixed top-0'>
       <div className='max-w-7xl h-15 m-auto px-4 flex justify-between items-center'>
         <div className='w-25 h-10 '>
           <img src={logoColor} alt="Logo de RobBuild" />
@@ -33,7 +33,7 @@ export default function Header() {
           </ul>
         </nav>
         <div className="flex justify-center items-center gap-3">
-          <button className='bg-st text-white px-3 py-1'>Ir al Aula Virtual</button>
+          <button className='bg-st text-white px-3 py-1 text-sm rounded-md sm:text-base sm:rounded-md'>Ir al Aula Virtual</button>
           <div className="cursor-pointer sm:hidden" onClick={handleClick}>
             <Icon icon="fe:bar" width="24" height="24" />
           </div>
