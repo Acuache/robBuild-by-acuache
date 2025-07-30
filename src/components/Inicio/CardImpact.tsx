@@ -16,7 +16,7 @@ export default function CardImpact({ children, title, number, isView }: CardImpa
     hover:scale-105 hover:-translate-y-2 hover:border-white/30
     active:bg-white/40 active:shadow-2xl active:shadow-st/20 
     active:scale-105 active:-translate-y-2 active:border-white/30
-    touch-action-none
+    touch-action-none select-none
     ${isView ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-10"}
   `}
     >
