@@ -41,6 +41,17 @@
 
 @import "tailwindcss";
 
+/* Animación de flecha de ida y vuelta */
+@keyframes slideLeftRight {
+  0% { transform: translateX(0px); }
+  50% { transform: translateX(12px); }
+  100% { transform: translateX(0px); }
+}
+
+.group:hover .arrow-slide {
+  animation: slideLeftRight 0.8s ease-in-out infinite;
+}
+
 @theme {
   --font-sans: 'Quicksand', system-ui, sans-serif;
 

@@ -5,7 +5,7 @@ interface SocialNetworkProps {
 }
 export default function SocialNetwork({ title, description, children }: SocialNetworkProps) {
   return (
-    <article className="flex gap-3 border-1 border-gray600 p-2 py-3 rounded-xl min-w-48 flex-1 sm:max-w-[calc(50%-0.75rem)]">
+    <article className="cursor-pointer flex gap-3 border-1 border-gray600 p-2 py-3 rounded-xl min-w-48 flex-1 sm:max-w-[calc(50%-0.75rem)] hover:shadow-lg hover:-translate-y-1 transition-all duration-300 ease-out">
       <div className="flex justify-center items-center w-15">
         {children}
       </div>
