@@ -5,7 +5,7 @@ import { useState, useEffect } from 'react'
 
 export default function ImpactSection() {
   const { ref, inView } = useInView({
-    threshold: 1,
+    threshold: 0.3,
     triggerOnce: true
   })
 
