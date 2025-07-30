@@ -52,6 +52,56 @@
   animation: slideLeftRight 0.8s ease-in-out infinite;
 }
 
+/* Animación de subrayado de izquierda a derecha */
+.underline-animation {
+  position: relative;
+  display: inline-block;
+}
+
+.underline-animation::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: var(--color-st);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease-out;
+}
+
+.group:hover .underline-animation::after {
+  transform: scaleX(1);
+}
+
+/* Animación de latido sutil */
+@keyframes heartbeat {
+  0% { transform: scale(1); }
+  15% { transform: scale(1.1); }
+  30% { transform: scale(1); }
+  45% { transform: scale(1.05); }
+  60% { transform: scale(1); }
+  100% { transform: scale(1); }
+}
+
+.heartbeat-animation {
+  animation: heartbeat 2s ease-in-out;
+}
+
+/* Animación de latido infinito para el corazón */
+@keyframes heartBeatInfinite {
+  0% { transform: scale(1); }
+  25% { transform: scale(1.15); }
+  50% { transform: scale(1); }
+  75% { transform: scale(1.1); }
+  100% { transform: scale(1); }
+}
+
+.heart-beat-infinite {
+  animation: heartBeatInfinite 1.5s ease-in-out infinite;
+}
+
 @theme {
   --font-sans: 'Quicksand', system-ui, sans-serif;
 
