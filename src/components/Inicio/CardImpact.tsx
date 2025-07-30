@@ -14,24 +14,27 @@ export default function CardImpact({ children, title, number, isView }: CardImpa
     border border-white/10 px-4 h-full transition-all duration-500 ease-out
     hover:bg-white/40 hover:shadow-2xl hover:shadow-st/20 
     hover:scale-105 hover:-translate-y-2 hover:border-white/30
+    active:bg-white/40 active:shadow-2xl active:shadow-st/20 
+    active:scale-105 active:-translate-y-2 active:border-white/30
+    touch-action-none
     ${isView ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-10"}
   `}
     >
 
-      <div className='w-18 h-18 rounded-full bg-[#7bc7aa] flex items-center justify-center transition-all duration-300 ease-out group-hover:bg-st group-hover:scale-110 group-hover:shadow-lg group-hover:shadow-st/30'>
-        <div className='transition-transform duration-300 group-hover:scale-110'>
+      <div className='w-18 h-18 rounded-full bg-[#7bc7aa] flex items-center justify-center transition-all duration-300 ease-out group-hover:bg-st group-hover:scale-110 group-hover:shadow-lg group-hover:shadow-st/30 group-active:bg-st group-active:scale-110 group-active:shadow-lg group-active:shadow-st/30'>
+        <div className='transition-transform duration-300 group-hover:scale-110 group-active:scale-110'>
           {children}
         </div>
       </div>
 
-      <h3 className='text-4xl font-bold transition-all duration-300 group-hover:text-st group-hover:scale-105'>
+      <h3 className='text-4xl font-bold transition-all duration-300 group-hover:text-st group-hover:scale-105 group-active:text-st group-active:scale-105'>
         {number}
-        <span className='text-5xl font-extrabold transition-all duration-500 group-hover:rotate-12 inline-block'>
+        <span className='text-5xl font-extrabold transition-all duration-500 group-hover:rotate-12 group-active:rotate-12 inline-block'>
           +
         </span>
       </h3>
 
-      <p className='text-lg transition-all duration-300 group-hover:text-gray-700 group-hover:font-medium text-center'>
+      <p className='text-lg transition-all duration-300 group-hover:text-gray-700 group-hover:font-medium group-active:text-gray-700 group-active:font-medium text-center'>
         {title}
       </p>
     </article>
