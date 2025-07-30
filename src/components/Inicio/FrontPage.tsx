@@ -8,6 +8,8 @@ export default function FrontPage() {
   const images = frontPageImages
   const [currentImageIndex, setCurrentImageIndex] = useState(0)
   const [isAnimating, setIsAnimating] = useState(false)
+  const [resetTimer, setResetTimer] = useState(0) // Para reiniciar el intervalo
+
   const { ref, inView } = useInView({
     threshold: 0.1,
     triggerOnce: true
@@ -30,10 +32,24 @@ export default function FrontPage() {
         setIsAnimating(false)
       }, 800)
 
-    }, 4000)
+    }, 5000)
 
     return () => clearInterval(interval)
-  }, [images.length])
+  }, [images.length, resetTimer]) // ← Agregué resetTimer como dependencia
+
+  function handleClick() {
+    setIsAnimating(true)
+    setTimeout(() => {
+      setCurrentImageIndex((prevIndex) =>
+        prevIndex === images.length - 1 ? 0 : prevIndex + 1
+      )
+    }, 200)
+    setTimeout(() => {
+      setIsAnimating(false)
+    }, 800)
+
+    setResetTimer(prev => prev + 1)
+  }
   return (
     <main ref={ref} className="w-full mt-16 min-h-dvh flex flex-col" style={{ background: 'var(--gradient-st)' }}>
       <div className=" flex-1 basis-[90%] px-4 max-w-6xl m-auto text-white text-center flex flex-col gap-10 items-center py-10 pb-15 md:px-8 sm:py-30 sm:flex-row sm:text-left sm:gap-12 md:gap-18 lg:gap-25 xl:px-0">
@@ -45,7 +61,7 @@ export default function FrontPage() {
             <button className={`whitespace-nowrap text-sm md:text-sm lg:text-lg border-2 border-white px-5 py-2 rounded-4xl bg-st duration-1000 delay-600 ${inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}>Ir al Aula Virtual</button>
           </div>
         </div>
-        <div className={`p-3 rounded-3xl w-full h-100 sm:w-2/3 lg:w-2/3 relative z-2 transition-all duration-700 ease-out ${inView ? "opacity-100 -translate-x-0" : "opacity-0 translate-x-10"} ${isAnimating
+        <div onClick={handleClick} className={`cursor-pointer p-3 rounded-3xl w-full h-100 sm:w-2/3 lg:w-2/3 relative z-2 transition-all duration-700 ease-out ${inView ? "opacity-100 -translate-x-0" : "opacity-0 translate-x-10"} ${isAnimating
           ? 'transform translate-y-3 rotate-1 scale-[0.98]'
           : 'transform translate-y-0 rotate-0 scale-100'
           }`}>
