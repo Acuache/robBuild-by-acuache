@@ -1,5 +1,6 @@
+import { FoundersSection } from '../components/Voluntariados'
 export default function Voluntariados() {
   return (
-    <div>Voluntareados</div>
+    <FoundersSection />
   )
 }
