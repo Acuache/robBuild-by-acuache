@@ -101,6 +101,8 @@ export default function VolunteersSection() {
               <CardVolunteer
                 {...volunteer}
                 key={`${category}-${index}`}
+                isAll={category === "Todos"}
+
               />
             ))
           }

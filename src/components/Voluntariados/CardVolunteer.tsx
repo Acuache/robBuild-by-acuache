@@ -1,17 +1,27 @@
 import { Icon } from "@iconify/react";
 
 interface CardVolunteerProps {
-  specialty?: string,
+  specialty: string,
   name: string,
   profession: string
   img: string,
   location: string,
   linkedin: string,
+  isAll: boolean
 }
 
-export default function CardVolunteer({ specialty, name, profession, img, location, linkedin }: CardVolunteerProps) {
+export default function CardVolunteer({ specialty, name, profession, img, location, linkedin, isAll }: CardVolunteerProps) {
   return (
     <article className={`group relative w-full max-w-[320px] h-100 rounded-md overflow-hidden duration-300`}>
+      {
+        isAll && (
+          <div
+            style={{ background: 'var(--gradient-st)' }}
+            className="absolute text-white text-md px-3 rounded-full top-[3%] left-[5%] opacity-0 duration-300 group-hover:opacity-100"
+          >{specialty}</div>
+        )
+      }
+
       {/* Effecto Circulo */}
       <a href={linkedin} target="black">
         <div className="absolute flex justify-center items-center text-white w-18 h-18 bg-[#33AA6F]/80 rounded-full  duration-500 opacity-0 -right-[30%] -top-[30%] group-hover:-right-[5%] group-hover:-top-[3%] group-hover:opacity-100">
