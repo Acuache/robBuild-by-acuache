@@ -1,7 +1,7 @@
 import { Icon } from "@iconify/react";
 
 interface CardVolunteerProps {
-  specialty: string,
+  specialty?: string,
   name: string,
   profession: string
   img: string,
