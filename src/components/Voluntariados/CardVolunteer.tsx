@@ -18,7 +18,7 @@ export default function CardVolunteer({ specialty, name, profession, img, locati
         isAll && (
           <div
             style={{ background: 'var(--gradient-st)' }}
-            className="absolute text-white text-md px-3 rounded-full top-[3%] left-[5%] opacity-0 duration-300 group-hover:opacity-100"
+            className="absolute text-white text-md px-3 rounded-full top-[3%] left-[5%]"
           >{specialty}</div>
         )
       }
