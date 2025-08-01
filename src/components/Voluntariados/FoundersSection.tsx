@@ -3,7 +3,7 @@ import { founder1, founder2 } from '../../assets/images/founders'
 
 export default function FoundersSection() {
   return (
-    <section className="mt-16 w-full  py-15 ">
+    <section className="mt-16 w-full  py-15  bg-[#f4fbf8]">
       <div className='px-5 max-w-6xl m-auto flex flex-col gap-8 lg:gap-11 lg:px-0'>
 
         {/* Header de la sección */}

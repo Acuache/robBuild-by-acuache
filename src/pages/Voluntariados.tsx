@@ -1,6 +1,11 @@
-import { FoundersSection } from '../components/Voluntariados'
+import { Footer } from '../components/ui/'
+import { FoundersSection, VolunteersSection } from '../components/Voluntariados'
 export default function Voluntariados() {
   return (
-    <FoundersSection />
+    <>
+      <FoundersSection />
+      <VolunteersSection />
+      <Footer />
+    </>
   )
 }
