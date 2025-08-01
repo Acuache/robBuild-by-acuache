@@ -1,34 +1,37 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import volunteers from '../../data/api-volunteers.json'
 import { CardVolunteer, CategoryVolunteer } from './'
 import { Icon } from "@iconify/react";
 
 export default function VolunteersSection() {
+  // LOGICA DE LOS FILTROS
   const [category, setCategory] = useState<string>("Todos")
 
-  // Función para randomizar array 
-  const shuffleArray = (array: any[]) => {
-    const newArray = [...array]
-    for (let i = newArray.length - 1; i > 0; i--) {
-      const j = Math.floor(Math.random() * (i + 1));
-      [newArray[i], newArray[j]] = [newArray[j], newArray[i]]
-    }
-    return newArray
-  }
+  const [displayedVolunteers, setDisplayedVolunteers] = useState<any[]>([]) // Array acumulativo
 
-  const filterCategory = () => {
-    let filtered
+  // Resetear cuando cambia la categoría
+  useEffect(() => {
+    const filtered = getFilteredVolunteers()
+    setDisplayedVolunteers(filtered.slice(0, 8)) // Solo los primeros 8
+  }, [category])
+
+  // Función simple para filtrar voluntarios
+  const getFilteredVolunteers = () => {
     if (category === "Todos") {
-      filtered = volunteers
+      return volunteers
     } else {
-      filtered = volunteers.filter((volunteer) => volunteer.specialty === category)
+      return volunteers.filter((volunteer) => volunteer.specialty === category)
     }
-
-    return shuffleArray(filtered)
   }
 
-  // Volunters de manera Aleatorio
-  const filterVolunteer = filterCategory()
+  const allVolunteers = getFilteredVolunteers()
+
+  // Función para agregar 8 más
+  const handleShowMore = () => {
+    const currentCount = displayedVolunteers.length
+    const nextBatch = allVolunteers.slice(currentCount, currentCount + 8) // Solo los siguientes 8
+    setDisplayedVolunteers(prev => [...prev, ...nextBatch]) // Agregar solo los nuevos
+  }
 
   return (
     <section className="w-full  py-15  bg-[#f4fbf8]">
@@ -54,6 +57,7 @@ export default function VolunteersSection() {
             number={12}
             onClick={() => setCategory("Programación")}
             isActive={category === "Programación"}
+
           >
             <Icon icon="fa:code" width="26" height="20" />
           </CategoryVolunteer>
@@ -93,14 +97,25 @@ export default function VolunteersSection() {
 
         <section className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5 md:gap-8 justify-items-center'>
           {
-            filterVolunteer.map((volunteer, index) => (
+            displayedVolunteers.map((volunteer, index) => (
               <CardVolunteer
                 {...volunteer}
-                key={index}
+                key={`${category}-${index}`}
               />
             ))
           }
         </section>
+
+        {/* Botón Ver más - solo mostrar si hay más elementos */}
+        {displayedVolunteers.length < allVolunteers.length && (
+          <button
+            onClick={handleShowMore}
+            style={{ background: 'var(--gradient-st)' }}
+            className='cursor-pointer m-auto w-fit font-bold text-lg text-white px-8 py-1 rounded-full hover:opacity-90 transition-opacity'
+          >
+            Ver más ({allVolunteers.length - displayedVolunteers.length} restantes)
+          </button>
+        )}
 
       </div>
     </section>
