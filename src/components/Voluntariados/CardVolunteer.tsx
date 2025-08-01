@@ -1,4 +1,5 @@
 import { Icon } from "@iconify/react";
+import { getVolunteerImage } from "../../utils/importImage";
 
 interface CardVolunteerProps {
   specialty: string,
@@ -44,7 +45,7 @@ export default function CardVolunteer({ specialty, name, profession, img, locati
       </div>
 
       <img
-        src={`/src/assets/images/volunteers/${img}`}
+        src={getVolunteerImage(img)}
         alt={name}
         className="w-full h-[100%] object-cover rounded-b-2xl"
       />
