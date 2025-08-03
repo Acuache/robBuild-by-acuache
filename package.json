@@ -6,10 +6,13 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
+    "build:production": "node scripts/check-paypal-config.js && npm run build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "check-paypal": "node scripts/check-paypal-config.js"
   },
   "dependencies": {
+    "@paypal/react-paypal-js": "^8.8.3",
     "@tailwindcss/vite": "^4.1.11",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",

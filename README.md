@@ -1,69 +1,101 @@
-# React + TypeScript + Vite
+# RobBuild - Plataforma de Donaciones
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Website de RobBuild con sistema de donaciones integrado con PayPal.
 
-Currently, two official plugins are available:
+## 🚀 Desarrollo
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+npm install
+npm run dev
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## 🔧 Configuración de PayPal
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+### Para desarrollo:
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+1. Crea archivo `.env`:
+   ```bash
+   VITE_PAYPAL_CLIENT_ID=tu_sandbox_client_id
+   VITE_PAYPAL_ENVIRONMENT=sandbox
+   ```
+
+### Para producción:
+
+1. Sigue las instrucciones en [`PAYPAL_SETUP.md`](./PAYPAL_SETUP.md)
+2. Configura variables de entorno en tu hosting
+
+## 📦 Build para producción
+
+```bash
+# Verificar configuración antes del build
+npm run check-paypal
+
+# Build con verificación automática
+npm run build:production
 ```
+
+## 🌐 Características
+
+- ✅ Sistema de donaciones con PayPal
+- ✅ Conversión automática PEN → USD
+- ✅ Interfaz responsive
+- ✅ Validaciones de monto
+- ✅ Modal de confirmación
+- ✅ Configuración ambiente sandbox/live
+
+## 💰 Sistema de Donaciones
+
+### Conversión de moneda
+
+- Los usuarios ven montos en **soles peruanos (PEN)**
+- PayPal procesa pagos en **dólares americanos (USD)**
+- Conversión automática con tasa actualizable
+
+### Montos predefinidos
+
+- S/ 30 soles (≈ $8.10 USD)
+- S/ 50 soles (≈ $13.50 USD)
+- S/ 100 soles (≈ $27.00 USD)
+- S/ 200 soles (≈ $54.00 USD)
+- Monto personalizado (S/ 1 - S/ 50,000)
+
+## 📋 Antes de publicar
+
+- [ ] Configurar PayPal Live App
+- [ ] Añadir dominios autorizados
+- [ ] Configurar variables de entorno
+- [ ] Actualizar tasa de cambio PEN/USD
+- [ ] Probar transacciones en sandbox
+
+## 🔧 Stack Tecnológico
+
+- **Frontend**: React 19 + TypeScript + Vite
+- **Styling**: Tailwind CSS
+- **Pagos**: PayPal React SDK
+- **Routing**: React Router DOM
+- **Build**: Vite + TypeScript
+
+## 📁 Estructura del proyecto
+
+```
+src/
+├── components/          # Componentes reutilizables
+├── pages/              # Páginas principales
+│   └── Donar.tsx       # Sistema de donaciones
+├── data/               # Datos estáticos (JSON)
+├── assets/             # Imágenes y recursos
+└── routers/            # Configuración de rutas
+```
+
+## 🚀 Scripts disponibles
+
+- `npm run dev` - Servidor de desarrollo
+- `npm run build` - Build básico
+- `npm run build:production` - Build con verificación PayPal
+- `npm run check-paypal` - Verificar configuración PayPal
+- `npm run preview` - Preview del build
+- `npm run lint` - Linting del código
+
+## 📞 Soporte
+
+Para problemas con PayPal, consulta [`PAYPAL_SETUP.md`](./PAYPAL_SETUP.md) o contacta al soporte técnico.
