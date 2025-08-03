@@ -9,10 +9,12 @@ export default function Header() {
   }
   return (
     <header className='w-full h-16 bg-white z-10 fixed top-0 shadow-md'>
-      <div className='max-w-7xl h-15 m-auto px-4 flex justify-between items-center'>
-        <div className='w-25 h-10 '>
-          <img src={logoColor} alt="Logo de RobBuild" />
-        </div>
+      <div className='max-w-6xl h-15 m-auto  flex justify-between items-center xl:px-0 px-6'>
+        <Link to="/">
+          <div className='w-25 h-10 '>
+            <img src={logoColor} alt="Logo de RobBuild" />
+          </div>
+        </Link>
         <nav className={`w-70 h-dvh p-5 fixed top-0 right-0 bg-white flex flex-col transition-all duration-300 ${isActive ? "translate-x-0" : "translate-x-full"} sm:translate-x-0 sm:static sm:flex sm:flex-row sm:w-auto sm:h-auto sm:p-0 z-8`}>
           <div className="cursor-pointer sm:hidden" onClick={handleClick}>
             <Icon icon="heroicons:x-mark" width="24" height="24" />
