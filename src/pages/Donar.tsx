@@ -138,9 +138,9 @@ export default function Donar() {
   }
 
   // Función para manejar cancelación
-  const onCancel = (data: any) => {
+  const onCancel = (_data: any) => {
     setIsProcessing(false)
-    console.log("Pago cancelado:", data)
+    console.log("Pago cancelado")
   }
 
   // Función para cerrar modal y resetear
