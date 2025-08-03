@@ -1,3 +1,4 @@
+import { Icon } from "@iconify/react";
 interface CardImpactProps {
   title: string;
   number: number;
@@ -27,10 +28,10 @@ export default function CardImpact({ children, title, number, isView }: CardImpa
         </div>
       </div>
 
-      <h3 className='text-4xl font-bold transition-all duration-300 group-hover:text-st group-hover:scale-105 group-active:text-st group-active:scale-105'>
+      <h3 className='text-4xl font-bold transition-all duration-300 group-hover:text-st group-hover:scale-105 group-active:text-st group-active:scale-105 flex items-center justify-center '>
         {number}
-        <span className='text-5xl font-extrabold transition-all duration-500 group-hover:rotate-12 group-active:rotate-12 inline-block'>
-          +
+        <span className='text-4xl font-extrabold transition-all duration-500 group-hover:rotate-12 group-active:rotate-12 inline-block'>
+          <Icon icon="tabler:plus" width="40" height="40" />
         </span>
       </h3>
 
