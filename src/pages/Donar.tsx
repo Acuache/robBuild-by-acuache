@@ -63,7 +63,7 @@ export default function Donar() {
   }
 
   // Función para crear la orden de PayPal
-  const createOrder = (data: any, actions: any) => {
+  const createOrder = (_data: any, actions: any) => {
     const amount = getCurrentAmount()
 
     if (!isValidAmount()) {
@@ -88,8 +88,8 @@ export default function Donar() {
   }
 
   // Función cuando se aprueba el pago
-  const onApprove = (data: any, actions: any) => {
-    console.log("onApprove ejecutado!", data)
+  const onApprove = (_data: any, actions: any) => {
+    console.log("onApprove ejecutado!", _data)
     setIsProcessing(false)
 
     return actions.order.capture().then((details: any) => {
