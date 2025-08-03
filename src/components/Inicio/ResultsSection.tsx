@@ -25,8 +25,8 @@ export default function ResultsSection() {
           prev === results.length - 1 ? 0 : prev + 1
         ))
         setIsAnimating(false)
-      }, 300)
-    }, 8000)
+      }, 150)
+    }, 8300)
     return () => clearTimeout(timer)
   }, [currentIndex])
   return (
@@ -41,24 +41,24 @@ export default function ResultsSection() {
         </header>
 
         <section className=''>
-          <article className="flex flex-col rounded-xl md:flex-row md:h-185 lg:h-145 overflow-hidden md:rounded-2xl">
-            <div className={`h-120 md:basis-1/2  overflow-hidden bg-green-200 md:h-full bg-center bg-no-repeat bg-[length:60%]`} style={{
+          <article className="flex flex-col rounded-xl md:flex-row md:h-165 lg:h-135 overflow-hidden md:rounded-2xl">
+            <div className={`h-120 md:basis-1/2  overflow-hidden bg-white md:h-full bg-center bg-no-repeat bg-[length:60%]`} style={{
               backgroundImage: `url(${logoColor})`
             }}>
               <img
                 src={resultImages[currentIndex]}
                 alt={result.title}
-                className={`w-full h-full object-cover duration-300 ${isAnimating ? "opacity-0" : "opacity-100"} `}
+                className={`w-full h-full object-cover duration-150 ${isAnimating ? "opacity-0" : "opacity-100"} `}
               />
             </div>
-            <div className="flex flex-col justify-between gap-5 bg-white p-5 py-10 md:gap-0  md:basis-1/2 md:p-7 ">
-              <header className={`duration-150 ${isAnimating ? "opacity-0" : "opacity-100"} `}>
+            <div className="flex flex-col justify-between gap-5 bg-white p-5 py-10 md:gap-10  md:basis-1/2 md:p-7 ">
+              <header className={`duration-150 ${isAnimating ? "opacity-0 translate-x-10" : "opacity-100 translate-x-0"} `}>
                 <h3 className="text-nd text-center text-2xl font-bold sm:text-3xl">{result.title}</h3>
               </header>
-              <div className={`flex flex-col gap-4 duration-300 ${isAnimating ? "opacity-0" : "opacity-100"}`}>
-                {/* Una descripcion */}
-                <div className="flex flex-col gap-1">
-                  <div className="text-st text-lg flex items-center font-semibold gap-3">
+              <div className={`flex flex-col gap-4 `}>
+                {/* Sección de descripcion */}
+                <div className={`flex flex-col gap-1 duration-200 delay-0 ${isAnimating ? "opacity-0 translate-x-10" : "opacity-100 translate-x-0"}`}>
+                  <div className={`text-st text-lg flex items-center font-semibold gap-3`}>
                     <div>
                       <Icon icon="carbon:idea" width="28" height="28" />
                     </div>
@@ -67,8 +67,8 @@ export default function ResultsSection() {
                   <p className="text-base/5">{result.description}</p>
                 </div>
 
-                {/* Otra descipsion */}
-                <div className="flex flex-col gap-2">
+                {/* Sección de Impacto */}
+                <div className={`flex flex-col gap-2 duration-200 delay-75 ${isAnimating ? "opacity-0 translate-x-10" : "opacity-100 translate-x-0"}`}>
                   <div className="text-st text-lg flex items-center font-semibold gap-3">
                     <div>
                       <Icon icon="mdi-light:heart" width="28" height="28" />
@@ -78,8 +78,8 @@ export default function ResultsSection() {
                   <p className="text-base/5">{result.impact}</p>
                 </div>
 
-                {/* Otra descipsion */}
-                <div className="flex flex-col gap-2">
+                {/* Sección de logros */}
+                <div className={`flex flex-col gap-2 duration-200 delay-150 ${isAnimating ? "opacity-0 translate-x-10" : "opacity-100 translate-x-0"}`}>
                   <div className="text-st text-lg flex items-center font-semibold gap-3">
                     <div>
                       <Icon icon="iconoir:medal" width="28" height="28" />
@@ -87,25 +87,6 @@ export default function ResultsSection() {
                     <p className="text-lg">Logros</p>
                   </div>
                   <p className="text-base/5">{result.victories}</p>
-                </div>
-
-                {/* Otra descipsion */}
-                <div className="flex flex-col gap-2">
-                  <div className="text-lg flex items-center font-semibold gap-3">
-                    <p className="font-bold text-black text-lg">Habilidades Desarrolladas</p>
-                  </div>
-                  <div className="flex flex-wrap gap-3">
-                    {
-                      result.skills.map((skill, index) => (
-                        <span
-                          className="text-xs bg-[#d1fae5] text-nd font-semibold px-5 py-1 rounded-full"
-                          key={index}
-                        >
-                          {skill}
-                        </span>
-                      ))
-                    }
-                  </div>
                 </div>
               </div>
               <div className="flex gap-2">
