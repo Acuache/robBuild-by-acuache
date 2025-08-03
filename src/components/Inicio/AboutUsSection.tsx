@@ -16,24 +16,29 @@ export default function AboutUsSection() {
             <SocialNetwork
               title="Facebook"
               description="Noticias y eventos"
+              link="https://www.facebook.com/RobbuildPeru"
             >
               <Icon icon="logos:facebook" width="42" height="42" />
             </SocialNetwork>
             <SocialNetwork
               title="Youtube"
               description="Clases grabadas"
+              link="https://www.youtube.com/@AulaRobbuild/videos"
             >
               <Icon icon="logos:youtube-icon" width="50" height="42" />
+
             </SocialNetwork>
             <SocialNetwork
               title="Instagram"
               description="Fotos y stories"
+              link="https://www.instagram.com/robbuild.peru"
             >
               <Icon icon="skill-icons:instagram" width="42" height="42" />
             </SocialNetwork>
             <SocialNetwork
               title="LinkedIn"
               description="Red profesional"
+              link="https://www.linkedin.com/company/69872519"
             >
               <Icon icon="skill-icons:linkedin" width="42" height="42" />
             </SocialNetwork>
@@ -47,12 +52,14 @@ export default function AboutUsSection() {
             <SocialMedia
               title="Grupo de WhatsApp"
               description="Únete a nuestra comunidad activa para enterarte de todas nuestras actividades."
+              link="https://chat.whatsapp.com/DByGEjnsTEs8OXD4sBmq1F"
             >
               <Icon icon="logos:whatsapp-icon" width="35" height="35" />
             </SocialMedia>
             <SocialMedia
               title="Grupo de Telegram"
               description="Recibe notificaciones instantáneas de talleres, eventos y oportunidades."
+              link="https://t.me/+jrEF5JaskLtmMDYx"
             >
               <Icon icon="logos:telegram" width="35" height="35" />
             </SocialMedia>

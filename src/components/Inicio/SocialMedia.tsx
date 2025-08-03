@@ -2,12 +2,13 @@ import { Icon } from "@iconify/react";
 interface SocialMediaProps {
   title: string;
   description: string;
+  link: string;
   children: React.ReactNode;
 }
-export default function SocialMedia({ title, description, children }: SocialMediaProps) {
+export default function SocialMedia({ title, description, link, children }: SocialMediaProps) {
   return (
-    <article className="group cursor-pointer flex gap-2 bg-white items-center px-3 py-2 rounded-lg sm:px-5 sm:py-4 hover:shadow-md transition-shadow duration-300">
-      <div className="mr-1">
+    <a className="group cursor-pointer flex gap-2 bg-white items-center px-3 py-2 rounded-lg sm:px-5 sm:py-4 hover:shadow-md transition-shadow duration-300" href={link} target="black">
+      <div className="mr-1" >
         {children}
       </div>
       <div className="w-full flex flex-col ">
@@ -26,6 +27,6 @@ export default function SocialMedia({ title, description, children }: SocialMedi
           {description}
         </p>
       </div>
-    </article>
+    </a>
   )
 }
