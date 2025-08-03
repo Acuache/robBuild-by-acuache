@@ -30,6 +30,11 @@ export default function Donar() {
     fetchExchangeRate()
   }, [])
 
+  // Scroll al top cuando se monta el componente
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
+
   // Montos preestablecidos en soles
   const presetAmounts = [
     { value: 30, label: "S/ 30 soles" },
