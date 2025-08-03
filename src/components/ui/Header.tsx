@@ -20,17 +20,29 @@ export default function Header() {
             <Icon icon="heroicons:x-mark" width="24" height="24" />
           </div>
           <ul className='flex flex-col sm:flex-row gap-3 transition-all duration-300 md:flex-row sm:gap-5 md:gap-8 lg:gap-12'>
-            <li>
-              <Link to="/">Inicio</Link>
+            <li className="relative group">
+              <Link to="/" className="relative">
+                Inicio
+                <span className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-0 h-0.5 bg-st transition-all duration-500 group-hover:w-full"></span>
+              </Link>
             </li>
-            <li>
-              <Link to="/talleres">Talleres</Link>
+            <li className="relative group">
+              <Link to="/talleres" className="relative">
+                Talleres
+                <span className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-0 h-0.5 bg-st transition-all duration-500 group-hover:w-full"></span>
+              </Link>
             </li>
-            <li>
-              <Link to="/voluntariados">Voluntariados</Link>
+            <li className="relative group">
+              <Link to="/voluntariados" className="relative">
+                Voluntariados
+                <span className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-0 h-0.5 bg-st transition-all duration-500 group-hover:w-full"></span>
+              </Link>
             </li>
-            <li>
-              <Link to="/donar">Donar</Link>
+            <li className="relative group">
+              <Link to="/donar" className="relative">
+                Donar
+                <span className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-0 h-0.5 bg-st transition-all duration-500 group-hover:w-full"></span>
+              </Link>
             </li>
           </ul>
         </nav>
