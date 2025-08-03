@@ -15,7 +15,7 @@ export default function CardFounder({ name, job, img }: CardFounderProps) {
           <h3 className="font-semibold">{name}</h3>
           <p className="text-gray800 text-sm">{job}</p>
         </div>
-        <div className="bg-amber-200">
+        <div className="">
           <Icon icon="devicon:linkedin" width="32" height="32" />
         </div>
       </div>
