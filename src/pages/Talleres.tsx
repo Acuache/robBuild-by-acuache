@@ -1,4 +1,5 @@
 import { useEffect } from 'react'
+import { FrontPageTalleres } from '../components/Talleres'
 
 export default function Talleres() {
   // Scroll al top cuando se monta el componente
@@ -6,6 +7,8 @@ export default function Talleres() {
     window.scrollTo(0, 0)
   }, [])
   return (
-    <div>Talleres</div>
+    <>
+      <FrontPageTalleres />
+    </>
   )
 }
