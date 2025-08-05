@@ -27,6 +27,12 @@ export default function Header() {
               </Link>
             </li>
             <li className="relative group">
+              <Link to="/noticias" className="relative">
+                Noticias
+                <span className="absolute -bottom-[2px] left-1/2 transform -translate-x-1/2 w-0 h-0.5 bg-st transition-all duration-500 group-hover:w-full"></span>
+              </Link>
+            </li>
+            <li className="relative group">
               <Link to="/talleres" className="relative">
                 Talleres
                 <span className="absolute -bottom-[2px] left-1/2 transform -translate-x-1/2 w-0 h-0.5 bg-st transition-all duration-500 group-hover:w-full"></span>
