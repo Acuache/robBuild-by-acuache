@@ -48,7 +48,7 @@ export default function SectionVideos() {
             onClick={() => setFilter("Todos")}
             isActive={filter === "Todos"}
           >
-            <Icon icon="tabler:code" width="24" height="24" />
+            <Icon icon="mdi:apps" width="24" height="24" />
           </CategoryVideo>
           <CategoryVideo
             title="Programación"
@@ -62,14 +62,14 @@ export default function SectionVideos() {
             onClick={() => setFilter("Mecanica")}
             isActive={filter === "Mecanica"}
           >
-            <Icon icon="tabler:code" width="24" height="24" />
+            <Icon icon="bxs:wrench" width="24" height="24" />
           </CategoryVideo>
           <CategoryVideo
             title="Electrónica"
             onClick={() => setFilter("Electronica")}
             isActive={filter === "Electronica"}
           >
-            <Icon icon="tabler:code" width="24" height="24" />
+            <Icon icon="mage:electricity-fill" width="24" height="24" />
           </CategoryVideo>
         </div>
 
