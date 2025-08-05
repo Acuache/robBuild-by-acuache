@@ -23,25 +23,25 @@ export default function Header() {
             <li className="relative group">
               <Link to="/" className="relative">
                 Inicio
-                <span className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-0 h-0.5 bg-st transition-all duration-500 group-hover:w-full"></span>
+                <span className="absolute -bottom-[2px] left-1/2 transform -translate-x-1/2 w-0 h-0.5 bg-st transition-all duration-500 group-hover:w-full"></span>
               </Link>
             </li>
             <li className="relative group">
               <Link to="/talleres" className="relative">
                 Talleres
-                <span className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-0 h-0.5 bg-st transition-all duration-500 group-hover:w-full"></span>
+                <span className="absolute -bottom-[2px] left-1/2 transform -translate-x-1/2 w-0 h-0.5 bg-st transition-all duration-500 group-hover:w-full"></span>
               </Link>
             </li>
             <li className="relative group">
               <Link to="/voluntariados" className="relative">
                 Voluntariados
-                <span className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-0 h-0.5 bg-st transition-all duration-500 group-hover:w-full"></span>
+                <span className="absolute -bottom-[2px] left-1/2 transform -translate-x-1/2 w-0 h-0.5 bg-st transition-all duration-500 group-hover:w-full"></span>
               </Link>
             </li>
             <li className="relative group">
               <Link to="/donar" className="relative">
                 Donar
-                <span className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-0 h-0.5 bg-st transition-all duration-500 group-hover:w-full"></span>
+                <span className="absolute -bottom-[2px] left-1/2 transform -translate-x-1/2 w-0 h-0.5 bg-st transition-all duration-500 group-hover:w-full"></span>
               </Link>
             </li>
           </ul>
