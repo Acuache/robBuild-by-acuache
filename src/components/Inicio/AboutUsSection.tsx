@@ -45,7 +45,7 @@ export default function AboutUsSection() {
           </section>
         </div>
         <div className="min-h-125 px-5 flex flex-col justify-center items-center rounded-b-xl sm:basis-1/2 sm:px-10 sm:rounded-r-xl" style={{ background: 'var(--gradient-st)' }}>
-          <div className="w-50 sm:w-50 md:w-65 lg:w-75 mb-6">
+          <div className="w-50 sm:w-50 md:w-60 lg:w-70 mb-6">
             <img className="w-full h-full object-cover" src={logoWhite} alt="Logo de RobBuild" />
           </div>
           <section className="w-full flex flex-col gap-5">
