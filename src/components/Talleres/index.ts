@@ -1,2 +1,5 @@
 export { default as FrontPageTalleres } from './FrontPageTalleres'
 export { default as CardIcon } from './CardIcon'
+export { default as CardVideo } from './CardVideo'
+export { default as SectionVideos } from './SectionVideos'
+export { default as CategoryVideo } from './CategoryVideo'

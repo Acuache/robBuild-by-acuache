@@ -1,5 +1,5 @@
 import { useEffect } from 'react'
-import { FrontPageTalleres } from '../components/Talleres'
+import { FrontPageTalleres, SectionVideos } from '../components/Talleres'
 
 export default function Talleres() {
   // Scroll al top cuando se monta el componente
@@ -9,6 +9,7 @@ export default function Talleres() {
   return (
     <>
       <FrontPageTalleres />
+      <SectionVideos />
     </>
   )
 }
