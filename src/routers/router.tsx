@@ -17,7 +17,7 @@ export default function MyRoutes() {
       <Routes>
         <Route path="/" element={<Inicio />} />
         <Route path="/talleres" element={<Talleres />} />
-        <Route path="/voluntariados" element={<Voluntariados />} />
+        <Route path="/voluntarios" element={<Voluntariados />} />
         <Route path="/donar" element={<Donar />} />
         <Route path="*" element={<Error404 />} />
       </Routes>
