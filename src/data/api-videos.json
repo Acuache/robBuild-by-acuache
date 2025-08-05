@@ -1,0 +1,117 @@
+[
+  {
+    "category": "Mecanica",
+    "url": "https://www.youtube.com/watch?v=kzirMhsjsvs&t=1532s",
+    "title": "Cómo diseñar un soporte para laptop en Tinkercad"
+  },
+  {
+    "category": "Mecanica",
+    "url": "https://www.youtube.com/watch?v=HtR4Vzd5a-A&t=708s",
+    "title": "Cómo crear una avioneta en 3D con Tinkercad"
+  },
+  {
+    "category": "Mecanica",
+    "url": "https://www.youtube.com/watch?v=o9l143QMxMg",
+    "title": "Cómo diseñar piezas de ajedrez en 3D con Tinkercad"
+  },
+  {
+    "category": "Mecanica",
+    "url": "https://www.youtube.com/watch?v=cLKcUyxlC8Q",
+    "title": "Cómo diseñar un soporte para libros en Tinkercad"
+  },
+  {
+    "category": "Mecanica",
+    "url": "https://www.youtube.com/watch?v=MBO8HkfP2RA",
+    "title": "Cómo diseñar un auto con motor DC en TinkerCAD"
+  },
+  {
+    "category": "Mecanica",
+    "url": "https://www.youtube.com/watch?v=qQCBamMwScc",
+    "title": "Cómo diseñar un helicóptero en Tinkercad"
+  },
+
+
+
+
+
+  {
+    "category": "Electronica",
+    "url": "https://www.youtube.com/watch?v=6O1kdX6ajPw&t=1791s",
+    "title": "Cómo construir un circuito de péndulo invertido y controlar motores DC"
+  },
+  {
+    "category": "Electronica",
+    "url": "https://www.youtube.com/watch?v=UAMviFyJJ9c",
+    "title": "Cómo crear un bebedero automático para tu gato con Tinkercad"
+  },
+  {
+    "category": "Electronica",
+    "url": "https://www.youtube.com/watch?v=SgcehpEAlN0&t=912s",
+    "title": "Cómo crear un termómetro digital con pantalla LED en TinkerCAD"
+  },
+  {
+    "category": "Electronica",
+    "url": "https://www.youtube.com/watch?v=xGqSuhUB9Os",
+    "title": "Cómo crear un semáforo con LEDs en Tinkercad"
+  },
+  {
+    "category": "Electronica",
+    "url": "https://www.youtube.com/watch?v=pC_IQBzOk3s",
+    "title": "Cómo crear un circuito electrónico con resistencias"
+  },
+  {
+    "category": "Electronica",
+    "url": "https://www.youtube.com/watch?v=ID_munwsUtY",
+    "title": "Como hacer una señal de reloj con osciloscopio en TinkerCAD"
+  },
+  {
+    "category": "Electronica",
+    "url": "https://www.youtube.com/watch?v=9hsNWoXpe6M",
+    "title": "Como hacer una alarma de gas en TinkerCAD"
+  },
+  {
+    "category": "Electronica",
+    "url": "https://www.youtube.com/watch?v=dZrYIZzipdo",
+    "title": "Cómo usar una luz LED RGB en TinkerCAD"
+  },
+
+
+
+
+
+  {
+    "category": "Programacion",
+    "url": "https://www.youtube.com/watch?v=o-zho7N-4yw&t=973s",
+    "title": "Cómo crear un juego para esquivar meteoritos en Scratch"
+  },
+  {
+    "category": "Programacion",
+    "url": "https://www.youtube.com/watch?v=63F4wKELpho",
+    "title": "Cómo crear un juego para cazar ardillas en Scratch"
+  },
+  {
+    "category": "Programacion",
+    "url": "https://www.youtube.com/watch?v=vzkYFaVkfMI",
+    "title": "Cómo crear un juego de limpieza en Fondo de Bikini con Scratch"
+  },
+  {
+    "category": "Programacion",
+    "url": "https://www.youtube.com/watch?v=sADzYfCuAVw",
+    "title": "Cómo crear tu propio Fruit Ninja en Scratch"
+  },
+  {
+    "category": "Programacion",
+    "url": "https://www.youtube.com/watch?v=iErn8nX9CLQ",
+    "title": "Como recrear el juego de Duck Hunt en Scratch"
+  },
+  {
+    "category": "Programacion",
+    "url": "https://www.youtube.com/watch?v=D0aWjYSbmG0",
+    "title": "Como hacer el dinosaurio de Google en Scratch"
+  },
+  {
+    "category": "Programacion",
+    "url": "https://www.youtube.com/watch?v=7Im8FBM2HkA",
+    "title": "Cómo crear un juego en Scratch \"Misión Mar Profundo\""
+  }
+]
