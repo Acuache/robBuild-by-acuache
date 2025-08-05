@@ -19,7 +19,7 @@ export default function Header() {
           <div className="cursor-pointer sm:hidden" onClick={handleClick}>
             <Icon icon="heroicons:x-mark" width="24" height="24" />
           </div>
-          <ul className='flex flex-col sm:flex-row gap-3 transition-all duration-300 md:flex-row sm:gap-5 md:gap-8 lg:gap-12'>
+          <ul className='flex flex-col sm:flex-row gap-3 transition-all duration-300 md:flex-row sm:gap-3 sm:text-md md:gap-8 lg:gap-12'>
             <li className="relative group">
               <Link to="/" className="relative">
                 Inicio
