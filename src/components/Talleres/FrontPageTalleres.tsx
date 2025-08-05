@@ -2,7 +2,7 @@ import { Icon } from "@iconify/react";
 import { CardIcon } from './'
 export default function FrontPageTalleres() {
   return (
-    <section className="mt-16 w-full py-15">
+    <section className="mt-16 w-full py-15 pb-0">
       <div className='px-5 max-w-6xl m-auto flex flex-col gap-8 lg:gap-11 lg:px-0'>
 
         {/* Header de la sección */}
