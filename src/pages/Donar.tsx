@@ -329,8 +329,8 @@ export default function Donar() {
           <div className="mt-8 text-center">
             <p className="text-gray-600 text-sm">
               ¿Tienes preguntas? Contáctanos en{" "}
-              <a href="mailto:info@robbuild.org" className="text-blue-600 hover:underline">
-                info@robbuild.org
+              <a href="mailto:contacto@robbuild.com" className="text-blue-600 hover:underline">
+                contacto@robbuild.com
               </a>
             </p>
           </div>
