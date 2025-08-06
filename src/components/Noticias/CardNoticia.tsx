@@ -6,10 +6,12 @@ interface CardNoticiaProps {
   "description": string,
   "tag": string,
   "img": string,
+  isVisible: boolean
 }
-export default function CardNoticia({ url, title, description, tag, img }: CardNoticiaProps) {
+
+export default function CardNoticia({ url, title, description, tag, img, isVisible }: CardNoticiaProps) {
   return (
-    <article className="bg-white flex flex-col h-full overflow-hidden rounded-xl relative">
+    <article className={`bg-white flex flex-col h-full overflow-hidden rounded-xl relative transition-all duration-700 ease-out transform ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-8"}`}>
       <div className="absolute bg-st text-white top-3 left-5  px-3 rounded-full">
         {tag}
       </div>
