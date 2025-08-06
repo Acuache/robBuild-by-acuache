@@ -1,6 +1,7 @@
 import { logoWhite } from '../../assets/images/logos'
 import { Icon } from "@iconify/react";
 import { useInView } from 'react-intersection-observer'
+import { Link } from 'react-router-dom'
 export default function Footer() {
   const { ref, inView } = useInView({
     threshold: 0.1,
@@ -17,31 +18,47 @@ export default function Footer() {
             </div>
             <p>Incentivando a niños y jóvenes a optar por carreras STEAM a través de la robótica y tecnología.</p>
             <div className='flex gap-4'>
-              <button className='bg-white px-6 py-1 rounded-full text-st font-semibold transition-all duration-300 hover:bg-st hover:text-white hover:scale-105 hover:shadow-lg'>Donar</button>
-              <button className='bg-white px-6 py-1 rounded-full text-st font-semibold transition-all duration-300 hover:bg-gradient-to-r hover:from-st hover:to-nd hover:text-white hover:scale-105 hover:shadow-lg'>Aula Virtual</button>
+              <Link to="/donar">
+                <button className='bg-white px-6 py-1 rounded-full text-st font-semibold transition-all duration-300 hover:bg-st hover:text-white hover:scale-105 hover:shadow-lg'>Donar</button>
+              </Link>
+              <a href='https://aula.robbuild.com' target='black' className='bg-white px-6 py-1 rounded-full text-st font-semibold transition-all duration-300 hover:bg-gradient-to-r hover:from-st hover:to-nd hover:text-white hover:scale-105 hover:shadow-lg'>Aula Virtual</a>
             </div>
           </div>
           <div className='flex flex-col gap-2'>
             <h5 className='font-bold text-st'>Enlaces rápidos</h5>
             <ul className='flex flex-col gap-3'>
-              <li className='group cursor-pointer flex items-center gap-2 transition-all duration-300'>
-                <div className="transition-colors duration-300 group-hover:text-st">
-                  <Icon icon="ic:round-home" width="24" height="24" />
-                </div>
-                <p className="underline-animation">Home</p>
-              </li>
-              <li className='group cursor-pointer flex items-center gap-2 transition-all duration-300'>
-                <div className="transition-colors duration-300 group-hover:text-st">
-                  <Icon icon="grommet-icons:workshop" width="24" height="24" />
-                </div>
-                <p className="underline-animation">Talleres</p>
-              </li>
-              <li className='group cursor-pointer flex items-center gap-2 transition-all duration-300'>
-                <div className="transition-colors duration-300 group-hover:text-st">
-                  <Icon icon="ic:round-laptop" width="24" height="24" />
-                </div>
-                <p className="underline-animation">Aula Virtual</p>
-              </li>
+              <Link to="/">
+                <li className='group cursor-pointer flex items-center gap-2 transition-all duration-300'>
+                  <div className="transition-colors duration-300 group-hover:text-st">
+                    <Icon icon="ic:round-home" width="24" height="24" />
+                  </div>
+                  <p className="underline-animation">Inicio</p>
+                </li>
+              </Link>
+              <Link to="/noticias">
+                <li className='group cursor-pointer flex items-center gap-2 transition-all duration-300'>
+                  <div className="transition-colors duration-300 group-hover:text-st">
+                    <Icon icon="material-symbols:news-outline" width="24" height="24" />
+                  </div>
+                  <p className="underline-animation">Noticias</p>
+                </li>
+              </Link>
+              <Link to="talleres">
+                <li className='group cursor-pointer flex items-center gap-2 transition-all duration-300'>
+                  <div className="transition-colors duration-300 group-hover:text-st">
+                    <Icon icon="grommet-icons:workshop" width="24" height="24" />
+                  </div>
+                  <p className="underline-animation">Talleres</p>
+                </li>
+              </Link>
+              <Link to="voluntarios">
+                <li className='group cursor-pointer flex items-center gap-2 transition-all duration-300'>
+                  <div className="transition-colors duration-300 group-hover:text-st">
+                    <Icon icon="formkit:people" width="24" height="24" />
+                  </div>
+                  <p className="underline-animation">Voluntarios</p>
+                </li>
+              </Link>
             </ul>
           </div>
           <div className='flex flex-col gap-2'>
@@ -51,7 +68,7 @@ export default function Footer() {
                 <div className="transition-colors duration-300 group-hover:text-st">
                   <Icon icon="pepicons-pencil:letter" width="24" height="24" />
                 </div>
-                <p className="underline-animation">ingo@robbuild.com</p>
+                <p className="underline-animation">contacto@robbuild.com</p>
               </li>
               <li className='group cursor-pointer flex items-center gap-2 transition-all duration-300'>
                 <div className="transition-colors duration-300 group-hover:text-st">
