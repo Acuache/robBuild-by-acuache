@@ -35,7 +35,7 @@ export default function Footer() {
                   <p className="underline-animation">Inicio</p>
                 </li>
               </Link>
-              <Link to="noticias">
+              <Link to="/noticias">
                 <li className='group cursor-pointer flex items-center gap-2 transition-all duration-300'>
                   <div className="transition-colors duration-300 group-hover:text-st">
                     <Icon icon="material-symbols:news-outline" width="24" height="24" />
@@ -43,7 +43,7 @@ export default function Footer() {
                   <p className="underline-animation">Noticias</p>
                 </li>
               </Link>
-              <Link to="talleres">
+              <Link to="/talleres">
                 <li className='group cursor-pointer flex items-center gap-2 transition-all duration-300'>
                   <div className="transition-colors duration-300 group-hover:text-st">
                     <Icon icon="grommet-icons:workshop" width="24" height="24" />
@@ -51,7 +51,7 @@ export default function Footer() {
                   <p className="underline-animation">Talleres</p>
                 </li>
               </Link>
-              <Link to="voluntarios">
+              <Link to="/voluntarios">
                 <li className='group cursor-pointer flex items-center gap-2 transition-all duration-300'>
                   <div className="transition-colors duration-300 group-hover:text-st">
                     <Icon icon="formkit:people" width="24" height="24" />
