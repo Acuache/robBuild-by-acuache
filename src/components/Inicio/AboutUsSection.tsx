@@ -18,7 +18,7 @@ export default function AboutUsSection() {
               description="Noticias y eventos"
               link="https://www.facebook.com/RobbuildPeru"
             >
-              <Icon icon="logos:facebook" width="42" height="42" />
+              <Icon icon="devicon:facebook" width="42" height="42" />
             </SocialNetwork>
             <SocialNetwork
               title="Youtube"
