@@ -64,7 +64,7 @@ export default function Donar() {
   // Validar monto
   const isValidAmount = () => {
     const amount = getCurrentAmount()
-    return amount && amount > 0 && amount <= 800 // Max S/ 800 soles
+    return amount && amount >= 10 // Min S/ 10 soles, sin máximo
   }
 
   // Función para crear la orden de PayPal
@@ -72,7 +72,7 @@ export default function Donar() {
     const amount = getCurrentAmount()
 
     if (!isValidAmount()) {
-      alert("Por favor ingresa un monto válido entre S/ 1 y S/ 800 soles")
+      alert("Por favor ingresa un monto válido de al menos S/ 10 soles")
       return Promise.reject(new Error("Invalid amount"))
     }
 
@@ -161,7 +161,7 @@ export default function Donar() {
   return (
     <>
       <section className="mt-16 w-full py-15 bg-[#f4fbf8] px-4">
-        <div className="px-5 max-w-6xl m-auto flex flex-col gap-8 lg:px-0">
+        <div className="max-w-3xl m-auto flex flex-col gap-8 px-4 sm:px-6 lg:px-8">
           {/* Header */}
           <header className='flex flex-col gap-5 items-center'>
             <h2 className='title'>Apoya Nuestra Misión</h2>
@@ -172,7 +172,7 @@ export default function Donar() {
           </header>
 
           {/* Contenedor principal */}
-          <div className="bg-white rounded-2xl shadow-xl p-8 max-w-3xl m-auto">
+          <div className="bg-white rounded-2xl shadow-xl p-4 sm:p-6 lg:p-8 max-w-3xl m-auto w-full">
             {success && (
               <div className="mb-6 p-4 bg-green-50 border border-green-200 rounded-lg">
                 <div className="flex items-center">
@@ -191,7 +191,7 @@ export default function Donar() {
               <h3 className="text-lg font-semibold text-gray-900 mb-4">
                 Elige un monto para donar:
               </h3>
-              <div className="grid grid-cols-2 gap-3">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                 {presetAmounts.map((amount) => (
                   <button
                     key={amount.value}
@@ -206,7 +206,7 @@ export default function Donar() {
                       }`}
                   >
                     <div className="text-center">
-                      <div className="font-semibold">{amount.label}</div>
+                      <div className="font-semibold text-sm sm:text-base">{amount.label}</div>
                     </div>
                   </button>
                 ))}
@@ -220,12 +220,11 @@ export default function Donar() {
               </h3>
               <div className="relative">
                 <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                  <span className="text-gray-500 text-lg">S/</span>
+                  <span className="text-gray-500 text-base sm:text-lg">S/</span>
                 </div>
                 <input
                   type="number"
-                  min="1"
-                  max="800"
+                  min="10"
                   step="1"
                   placeholder="0"
                   value={customAmount > 0 ? customAmount : ''}
@@ -246,20 +245,22 @@ export default function Donar() {
                     setIsCustom(true)
                     setSelectedAmount(0) // Deseleccionar botones al hacer focus
                   }}
-                  className={`w-full pl-10 pr-20 py-3 border-2 rounded-lg text-lg ${isCustom
+                  className={`w-full pl-10 pr-20 py-2 sm:py-3 border-2 rounded-lg text-base sm:text-lg ${isCustom
                     ? 'border-blue-500 bg-blue-50'
                     : 'border-gray-200'
                     } focus:outline-none focus:border-blue-500 focus:bg-blue-50`}
                 />
                 <div className="absolute inset-y-0 right-0 pr-3 flex items-center pointer-events-none">
-                  <span className="text-gray-500 text-lg">soles</span>
+                  <span className="text-gray-500 text-base sm:text-lg">soles</span>
                 </div>
               </div>
-              {isCustom && customAmount && !isValidAmount() && (
-                <p className="mt-2 text-red-600 text-sm">
-                  Por favor ingresa un monto entre S/ 1 y S/ 800 soles
-                </p>
-              )}
+              <div className="h-6 mt-2">
+                {isCustom && customAmount && !isValidAmount() && (
+                  <p className="text-red-600 text-sm">
+                    Por favor ingresa un monto de al menos S/ 10 soles
+                  </p>
+                )}
+              </div>
             </div>
 
             {/* Resumen */}
@@ -297,7 +298,7 @@ export default function Donar() {
                 <div className="text-center p-4 border-2 border-dashed border-gray-300 rounded-lg">
                   <p className="text-gray-500">
                     {getCurrentAmount() ?
-                      "Ingresa un monto válido para continuar (S/ 1 - S/ 800 soles)" :
+                      "Ingresa un monto válido para continuar (mínimo S/ 10 soles)" :
                       "Selecciona o ingresa un monto para donar"
                     }
                   </p>
@@ -311,7 +312,7 @@ export default function Donar() {
                 🔒 Pagos seguros procesados por PayPal
               </p>
               <p>
-                Tu donación nos ayuda a seguir construyendo el futuro con robótica
+                Tu donación nos ayuda a seguir construyendo el futuro
               </p>
               {rateLoading ? (
                 <p className="mt-2 text-xs text-gray-400">
