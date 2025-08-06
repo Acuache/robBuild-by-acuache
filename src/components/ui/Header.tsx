@@ -53,7 +53,7 @@ export default function Header() {
           </ul>
         </nav>
         <div className="flex justify-center items-center gap-3">
-          <button className='bg-st text-white px-3 py-1 text-sm rounded-md sm:text-base sm:rounded-md'>Ir al Aula Virtual</button>
+          <a href="https://aula.robbuild.com" className='bg-st text-white px-3 py-1 text-sm rounded-md sm:text-base sm:rounded-md'>Ir al Aula Virtual</a>
           <div className="cursor-pointer sm:hidden" onClick={handleClick}>
             <Icon icon="fe:bar" width="24" height="24" />
           </div>
