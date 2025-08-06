@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { muniLima, democracia, upc } from "../../assets/images/support";
 import { frontPageImages } from '../../assets/images/frontPage'
 import { useInView } from 'react-intersection-observer'
+import { Link } from 'react-router-dom'
 
 
 export default function FrontPage() {
@@ -57,8 +58,16 @@ export default function FrontPage() {
           <h1 className={`text-4xl font-bold sm:text-4xl md:text-5xl lg:text-6xl text-balance duration-1000 ${inView ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-10"}`} style={{ textShadow: '0 0 1px currentColor, 1px 0 1px currentColor, 0 1px 1px currentColor, -1px 0 1px currentColor' }}>Tranformamos vidas con el poder de la educación</h1>
           <p className={`sm:text-base md:text-xl lg:text-xl duration-1000 ${inView ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-10"}`}>Brindamos talleres gratuitos, cursos en nuestra aula virtual y proyectos educativos con impacto solial para estudiantes y docentes.</p>
           <div className="flex gap-5 w-fit m-auto sm:m-0 sm:relative sm:top-9 md:top-0">
-            <button className={`whitespace-nowrap text-sm md:text-sm lg:text-lg border-2 border-white px-5 py-2 rounded-4xl bg-nd duration-1000 delay-300 ${inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}>Donar Ahora</button>
-            <button className={`whitespace-nowrap text-sm md:text-sm lg:text-lg border-2 border-white px-5 py-2 rounded-4xl bg-st duration-1000 delay-600 ${inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}>Ir al Aula Virtual</button>
+            <Link to="donar">
+              <button className={`group cursor-pointer whitespace-nowrap text-sm md:text-sm lg:text-lg border-2 border-white px-5 py-2 rounded-4xl bg-nd duration-1000 delay-300 hover:scale-105 hover:shadow-lg hover:shadow-nd/50 transition-all ease-out ${inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}>
+                <span className="relative z-10">Donar Ahora</span>
+                <div className="absolute inset-0 rounded-4xl bg-gradient-to-r from-white/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              </button>
+            </Link>
+            <a href="https://aula.robbuild.com" className={`group cursor-pointer whitespace-nowrap text-sm md:text-sm lg:text-lg border-2 border-white px-5 py-2 rounded-4xl bg-st duration-1000 delay-600 hover:scale-105 hover:shadow-lg hover:shadow-st/50 transition-all ease-out ${inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}>
+              <span className="relative z-10">Ir al Aula Virtual</span>
+              <div className="absolute inset-0 rounded-4xl bg-gradient-to-r from-white/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+            </a>
           </div>
         </div>
         <div onClick={handleClick} className={`cursor-pointer p-3 rounded-3xl w-full h-100 sm:w-2/3 lg:w-2/3 relative z-2 transition-all duration-700 ease-out ${inView ? "opacity-100 -translate-x-0" : "opacity-0 translate-x-10"} ${isAnimating
