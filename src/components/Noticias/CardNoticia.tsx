@@ -3,26 +3,22 @@ import { getVolunteerImage } from "../../utils/importImagesNews";
 interface CardNoticiaProps {
   "url": string,
   "title": string,
-  "description": string,
-  "tag": string,
   "img": string,
+  "date": string,
   isVisible: boolean
 }
 
-export default function CardNoticia({ url, title, description, tag, img, isVisible }: CardNoticiaProps) {
+export default function CardNoticia({ url, title, img, date, isVisible }: CardNoticiaProps) {
+  const img__ciplima = (img === "ciplima.png") ? "w-[75%]" : "w-[55%]"
   return (
     <article className={`bg-white flex flex-col h-full overflow-hidden rounded-xl relative transition-all duration-700 ease-out transform ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-8"}`}>
-      <div className="absolute bg-st text-white top-3 left-5  px-3 rounded-full">
-        {tag}
-      </div>
-      <div className="h-65">
-        <img className="w-full h-full object-cover" src={getVolunteerImage(img)} alt={title} />
+      <div className="h-40 bg-gray-100 flex items-center justify-center">
+        <img className={`${img__ciplima} h-full object-contain`} src={getVolunteerImage(img)} alt={title} />
       </div>
       <div className="flex flex-col flex-1 gap-2 p-5">
-        <h3 className="font-bold text-lg line-clamp-2">{title}</h3>
-        <p className="text-md text-gray800 line-clamp-4 mb-3">{description}</p>
+        <h3 className="font-bold text-lg line-clamp-3">{title}</h3>
         <div className="flex justify-between items-center mt-auto">
-          <p className="text-gray800">15 Oct. 2021</p>
+          <p className="text-gray800">{date}</p>
           <a
             href={url}
             target="black"
