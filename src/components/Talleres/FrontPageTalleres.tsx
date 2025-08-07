@@ -7,12 +7,8 @@ export default function FrontPageTalleres() {
 
         {/* Header de la sección */}
         <header className='flex flex-col gap-5 items-center'>
-          <h2 className='title'>Aprende a tu ritmo con
-            nuestros talleres grabados</h2>
-          <p className='description text-pretty'>
-            Con tu ayuda, podemos transformar vidas a través de la educación tecnológica. <br />
-            Ya sea como voluntario o donando, tú puedes hacer la diferencia.
-          </p>
+          <h2 className='title'>Aprende a tu ritmo con nuestros talleres grabados</h2>
+          <p className='description text-pretty'>Accede a contenidos prácticos y dinámicos que te guiarán paso a paso para crear, experimentar y fortalecer tus habilidades tecnológicas, desde cualquier lugar y a tu propio ritmo.</p>
         </header>
 
         <section className='flex flex-row flex-wrap justify-center items-center gap-6 sm:gap-15'>
@@ -32,7 +28,7 @@ export default function FrontPageTalleres() {
           </CardIcon>
           <CardIcon
             number={3}
-            description="Talleres Grabados"
+            description="Áreas especializadas"
             isMayor500={false}
           >
             <Icon icon="mdi:book-open-page-variant" width={35} height={35} />
