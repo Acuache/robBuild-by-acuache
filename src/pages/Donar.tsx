@@ -37,15 +37,15 @@ export default function Donar() {
 
   // Montos preestablecidos en soles
   const presetAmounts = [
-    { value: 30, label: "S/ 30 soles" },
+    { value: 20, label: "S/ 20 soles" },
     { value: 50, label: "S/ 50 soles" },
     { value: 100, label: "S/ 100 soles" },
     { value: 200, label: "S/ 200 soles" },
   ]
 
   // Estados
-  const [selectedAmount, setSelectedAmount] = useState(30) // Monto mínimo por defecto
-  const [customAmount, setCustomAmount] = useState(30) // Monto mínimo por defecto
+  const [selectedAmount, setSelectedAmount] = useState(20) // Monto mínimo por defecto
+  const [customAmount, setCustomAmount] = useState(20) // Monto mínimo por defecto
   const [isCustom, setIsCustom] = useState(false)
   const [isProcessing, setIsProcessing] = useState(false)
   const [success, setSuccess] = useState(false)
@@ -64,7 +64,7 @@ export default function Donar() {
   // Validar monto
   const isValidAmount = () => {
     const amount = getCurrentAmount()
-    return amount && amount >= 10 // Min S/ 10 soles, sin máximo
+    return amount && amount >= 3 // Min S/ 3 soles, sin máximo
   }
 
   // Función para crear la orden de PayPal
@@ -72,7 +72,7 @@ export default function Donar() {
     const amount = getCurrentAmount()
 
     if (!isValidAmount()) {
-      alert("Por favor ingresa un monto válido de al menos S/ 10 soles")
+      alert("Por favor ingresa un monto válido de al menos S/ 3 soles")
       return Promise.reject(new Error("Invalid amount"))
     }
 
@@ -153,8 +153,8 @@ export default function Donar() {
     setShowModal(false)
     setSuccess(false)
     setDonationDetails(null)
-    setSelectedAmount(30) // Volver al monto mínimo
-    setCustomAmount(30) // Volver al monto mínimo
+    setSelectedAmount(20) // Volver al monto mínimo
+    setCustomAmount(20) // Volver al monto mínimo
     setIsCustom(false)
   }
 
@@ -224,7 +224,7 @@ export default function Donar() {
                 </div>
                 <input
                   type="number"
-                  min="10"
+                  min="3"
                   step="1"
                   placeholder="0"
                   value={customAmount > 0 ? customAmount : ''}
@@ -257,7 +257,7 @@ export default function Donar() {
               <div className="h-6 mt-2">
                 {isCustom && customAmount && !isValidAmount() && (
                   <p className="text-red-600 text-sm">
-                    Por favor ingresa un monto de al menos S/ 10 soles
+                    Por favor ingresa un monto de al menos S/ 3 soles
                   </p>
                 )}
               </div>
@@ -298,7 +298,7 @@ export default function Donar() {
                 <div className="text-center p-4 border-2 border-dashed border-gray-300 rounded-lg">
                   <p className="text-gray-500">
                     {getCurrentAmount() ?
-                      "Ingresa un monto válido para continuar (mínimo S/ 10 soles)" :
+                      "Ingresa un monto válido para continuar (mínimo S/ 3 soles)" :
                       "Selecciona o ingresa un monto para donar"
                     }
                   </p>
@@ -324,6 +324,27 @@ export default function Donar() {
                 </p>
               )}
             </div>
+
+            {/* Explicación del mínimo - solo aparece cuando el monto es menor a 3 soles */}
+            {isCustom && customAmount > 0 && customAmount < 3 && (
+              <div className="mt-4 p-3 bg-blue-50 border border-blue-200 rounded-lg">
+                <div className="flex items-start">
+                  <div className="text-blue-500 mr-2 mt-0.5">
+                    <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clipRule="evenodd" />
+                    </svg>
+                  </div>
+                  <div className="text-left">
+                    <p className="text-blue-800 text-xs font-medium mb-1">
+                      ¿Por qué un mínimo de S/ 3 soles?
+                    </p>
+                    <p className="text-blue-700 text-xs">
+                      Las plataformas de pago cobran comisiones fijas por transacción. Con montos muy pequeños, casi todo se va en comisiones y no llega a nuestros proyectos. S/ 3 soles es el mínimo para que tu donación tenga un impacto real 💙
+                    </p>
+                  </div>
+                </div>
+              </div>
+            )}
           </div>
 
           {/* Footer informativo */}
