@@ -41,7 +41,7 @@ export default function ResultsSection() {
         </header>
 
         <section className=''>
-          <article className="flex flex-col rounded-xl md:flex-row md:h-163 lg:h-128style() overflow-hidden md:rounded-2xl">
+          <article className="flex flex-col rounded-xl md:flex-row md:h-163 lg:h-128 overflow-hidden md:rounded-2xl">
             <div className={`h-120 md:basis-1/2  overflow-hidden bg-white md:h-full bg-center bg-no-repeat bg-[length:60%]`} style={{
               backgroundImage: `url(${logoColor})`
             }}>
@@ -51,7 +51,7 @@ export default function ResultsSection() {
                 className={`w-full h-full object-cover duration-150 ${isAnimating ? "opacity-0" : "opacity-100"} `}
               />
             </div>
-            <div className="flex flex-col justify-between gap-5 bg-white p-5 py-10 md:gap-10  md:basis-1/2 md:p-7 ">
+            <div className="flex flex-col justify-between gap-5 bg-white p-5 py-10 md:gap-6  md:basis-1/2 md:p-7 ">
               <header className={`duration-150 ${isAnimating ? "opacity-0 translate-x-10" : "opacity-100 translate-x-0"} `}>
                 <h3 className="text-nd text-center text-2xl font-bold sm:text-3xl">{result.title}</h3>
               </header>
