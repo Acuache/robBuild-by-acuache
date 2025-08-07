@@ -64,6 +64,14 @@
     "linkedin": "https://www.linkedin.com/in/angela-milagros-vera-bonilla-a77834237"
   },
   {
+    "specialty": "Desarrollo Web",
+    "name": "Michael Acuache",
+    "profession": "Ing. Sistemas",
+    "img": "michael-acuache.png",
+    "location": "Ica",
+    "linkedin": "https://www.linkedin.com/in/yeltsin-michael-acuache-yalle-25968936b/"
+  },
+  {
     "specialty": "Electrónica",
     "name": "Nattaly Mantari",
     "profession": "Ing. Mecatrónica ",
@@ -128,7 +136,7 @@
     "linkedin": "https://www.linkedin.com/in/nicol-anccana-llanto-b92a22253/"
   },
   {
-    "specialty": "Developer",
+    "specialty": "Desarrollo Web",
     "name": "Martin Romani",
     "profession": "Tec. Desarrollo de software",
     "img": "martin-romani.png",

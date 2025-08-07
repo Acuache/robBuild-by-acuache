@@ -18,6 +18,8 @@ export default function VolunteersSection() {
       "Electrónica": volunteers.filter(v => v.specialty === "Electrónica").length,
       "Embajadores": volunteers.filter(v => v.specialty === "Embajadores").length,
       "Mecánica": volunteers.filter(v => v.specialty === "Mecánica").length,
+      "Maker": volunteers.filter(v => v.specialty === "Maker").length,
+      "Desarrollo Web": volunteers.filter(v => v.specialty === "Desarrollo Web").length,
     }
     return counts
   }
@@ -106,6 +108,22 @@ export default function VolunteersSection() {
             isActive={category === "Mecánica"}
           >
             <Icon icon="bxs:wrench" width="24" height="24" />
+          </CategoryVolunteer>
+          <CategoryVolunteer
+            title="Desarrollo Web"
+            number={categoryCounts["Desarrollo Web"]}
+            onClick={() => setCategory("Desarrollo Web")}
+            isActive={category === "Desarrollo Web"}
+          >
+            <Icon icon="mdi:web" width="24" height="24" />
+          </CategoryVolunteer>
+          <CategoryVolunteer
+            title="Maker"
+            number={categoryCounts["Maker"]}
+            onClick={() => setCategory("Maker")}
+            isActive={category === "Maker"}
+          >
+            <Icon icon="mdi:lightbulb-on-outline" width="24" height="24" />
           </CategoryVolunteer>
         </section>
 
