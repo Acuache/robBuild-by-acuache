@@ -19,9 +19,9 @@ export default function Footer() {
             <p>Incentivando a niños y jóvenes a optar por carreras STEAM a través de la robótica y tecnología.</p>
             <div className='flex gap-4'>
               <Link to="/donar">
-                <button className='bg-white px-6 py-1 rounded-full text-st font-semibold transition-all duration-300 hover:bg-st hover:text-white hover:scale-105 hover:shadow-lg'>Donar</button>
+                <button className='bg-white px-6 py-1 rounded-full text-[#111827] font-semibold transition-all duration-300 hover:bg-st hover:text-white hover:scale-105 hover:shadow-lg'>Donar</button>
               </Link>
-              <a href='https://aula.robbuild.com' target='black' className='bg-white px-6 py-1 rounded-full text-st font-semibold transition-all duration-300 hover:bg-gradient-to-r hover:from-st hover:to-nd hover:text-white hover:scale-105 hover:shadow-lg'>Aula Virtual</a>
+              <a href='https://aula.robbuild.com' target='black' className='bg-white px-6 py-1 rounded-full text-[#111827] font-semibold transition-all duration-300 hover:bg-gradient-to-r hover:from-st hover:to-nd hover:text-white hover:scale-105 hover:shadow-lg'>Aula Virtual</a>
             </div>
           </div>
           <div className='flex flex-col gap-2'>
@@ -33,14 +33,6 @@ export default function Footer() {
                     <Icon icon="ic:round-home" width="24" height="24" />
                   </div>
                   <p className="underline-animation">Inicio</p>
-                </li>
-              </Link>
-              <Link to="/noticias">
-                <li className='group cursor-pointer flex items-center gap-2 transition-all duration-300'>
-                  <div className="transition-colors duration-300 group-hover:text-st">
-                    <Icon icon="material-symbols:news-outline" width="24" height="24" />
-                  </div>
-                  <p className="underline-animation">Noticias</p>
                 </li>
               </Link>
               <Link to="/talleres">
@@ -59,6 +51,14 @@ export default function Footer() {
                   <p className="underline-animation">Voluntarios</p>
                 </li>
               </Link>
+              <Link to="/noticias">
+                <li className='group cursor-pointer flex items-center gap-2 transition-all duration-300'>
+                  <div className="transition-colors duration-300 group-hover:text-st">
+                    <Icon icon="material-symbols:news-outline" width="24" height="24" />
+                  </div>
+                  <p className="underline-animation">Noticias</p>
+                </li>
+              </Link>
             </ul>
           </div>
           <div className='flex flex-col gap-2'>
@@ -70,11 +70,13 @@ export default function Footer() {
                 </div>
                 <p className="underline-animation">contacto@robbuild.com</p>
               </li>
-              <li className='group cursor-pointer flex items-center gap-2 transition-all duration-300'>
-                <div className="transition-colors duration-300 group-hover:text-st">
-                  <Icon icon="mdi-light:phone" width="24" height="24" />
-                </div>
-                <p className="underline-animation">+51 987654321</p>
+              <li className=''>
+                <a href="https://wa.me/51940686994" target='black' className='group cursor-pointer flex items-center gap-2 transition-all duration-300'>
+                  <div className="transition-colors duration-300 group-hover:text-st">
+                    <Icon icon="mdi-light:phone" width="24" height="24" />
+                  </div>
+                  <p className="underline-animation">+51 940686994</p>
+                </a>
               </li>
               <li className='group cursor-pointer flex items-center gap-2 transition-all duration-300'>
                 <div className="transition-colors duration-300 group-hover:text-st">
