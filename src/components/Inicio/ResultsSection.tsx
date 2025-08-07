@@ -41,7 +41,7 @@ export default function ResultsSection() {
         </header>
 
         <section className=''>
-          <article className="flex flex-col rounded-xl md:flex-row md:h-163 lg:h-135 overflow-hidden md:rounded-2xl">
+          <article className="flex flex-col rounded-xl md:flex-row md:h-163 lg:h-128style() overflow-hidden md:rounded-2xl">
             <div className={`h-120 md:basis-1/2  overflow-hidden bg-white md:h-full bg-center bg-no-repeat bg-[length:60%]`} style={{
               backgroundImage: `url(${logoColor})`
             }}>
