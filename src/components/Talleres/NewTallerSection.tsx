@@ -6,11 +6,9 @@ export default function NewTallerSection() {
         {/* Header de la sección */}
         <header className='flex flex-col gap-5 items-center'>
 
-          <h2 className='title'>Haz que algo grande suceda</h2>
-          <p className='description text-pretty'>
-            Con tu ayuda, podemos transformar vidas a través de la educación tecnológica. <br />
-            Ya sea como voluntario o donando, tú puedes hacer la diferencia.
-          </p>
+          <h2 className='title'>¡Empieza tu primer proyecto hoy!</h2>
+          <p className='description text-pretty'>Únete a miles de estudiantes que ya están transformando sus habilidades y
+            creando proyectos increíbles.</p>
         </header>
 
         <a
