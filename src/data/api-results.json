@@ -5,7 +5,7 @@
     "description": "Reconocimiento otorgado por Democracia Digital a iniciativas que impulsan el aprendizaje y participación ciudadana a través de tecnologías inclusivas.",
     "impact": "Más de 1000 escolares accedieron a talleres digitales en robótica, programación y diseño 3D con enfoque STEAM.",
     "victories": "Distinción honorífica en la categoría “Formación y Aprendizaje” por nuestro plataforma educativa “Aula Robbuild”.",
-    "image": "luffy1.png"
+    "image": "premio2024.png"
   },
   {
     "id": 2,
@@ -13,7 +13,7 @@
     "description": "Reconocimiento otorgado por Democracia Digital a iniciativas que impulsan el aprendizaje y participación ciudadana a través de tecnologías inclusivas.",
     "impact": "Más de 3500 escolares accedieron a talleres digitales en robótica, programación y diseño 3D con enfoque STEAM.",
     "victories": "Distinción honorífica en la categoría “Formación y Aprendizaje” por nuestro programa “Robótica para todos con enfoque STEAM”.",
-    "image": "luffy2.png"
+    "image": "premio2023.png"
   },
   {
     "id": 3,
@@ -21,7 +21,7 @@
     "description": "Premio nacional a jóvenes líderes con impacto social, otorgado por la Universidad Peruana de Ciencias Aplicadas (UPC) tras un proceso de selección entre cientos de postulaciones.",
     "impact": "Más de 2300 escolares accedieron a talleres digitales en robótica, programación y diseño 3D con enfoque STEAM.",
     "victories": "Primer lugar en la categoría de Robótica Educativa a nivel nacional.",
-    "image": "luffy3.png"
+    "image": "premio2022.png"
   },
   {
     "id": 4,
@@ -29,6 +29,6 @@
     "description": "Reconocimiento otorgado por la Municipalidad de Lima a iniciativas juveniles destacadas durante la pandemia por su impacto educativo gratuito y virtual.",
     "impact": "Más de 1000 escolares accedieron a talleres digitales en robótica, programación y diseño 3D con enfoque STEAM.",
     "victories": "Ganador en la categoría “Iniciativas frente al COVID-19” del concurso metropolitano Jóvenes por Lima.",
-    "image": "luffy4.png"
+    "image": "premio2021.png"
   }
 ]

@@ -3,29 +3,37 @@ import results from '../../data/api-results.json'
 import { resultImages } from '../../assets/images/results'
 import { useEffect, useState } from 'react'
 
-import { logoColor } from '../../assets/images/logos'
 
 export default function ResultsSection() {
   const [currentIndex, setCurrentIndex] = useState<number>(0)
   const [isAnimating, setIsAnimating] = useState<boolean>(false)
+  const [isTextAnimating, setIsTextAnimating] = useState<boolean>(false)
   const result = results[currentIndex]
   function handleClick(index: number) {
     if (index == currentIndex) return
     setIsAnimating(true)
+    setIsTextAnimating(true)
     setTimeout(() => {
       setCurrentIndex(index)
       setIsAnimating(false)
-    }, 300)
+    }, 50)
+    setTimeout(() => {
+      setIsTextAnimating(false)
+    }, 400)
   }
   useEffect(() => {
     const timer = setTimeout(() => {
       setIsAnimating(true)
+      setIsTextAnimating(true)
       setTimeout(() => {
         setCurrentIndex((prev) => (
           prev === results.length - 1 ? 0 : prev + 1
         ))
         setIsAnimating(false)
-      }, 150)
+      }, 50)
+      setTimeout(() => {
+        setIsTextAnimating(false)
+      }, 400)
     }, 8300)
     return () => clearTimeout(timer)
   }, [currentIndex])
@@ -42,22 +50,20 @@ export default function ResultsSection() {
 
         <section className=''>
           <article className="flex flex-col rounded-xl md:flex-row md:h-163 lg:h-128 overflow-hidden md:rounded-2xl">
-            <div className={`h-120 md:basis-1/2  overflow-hidden bg-white md:h-full bg-center bg-no-repeat bg-[length:60%]`} style={{
-              backgroundImage: `url(${logoColor})`
-            }}>
+            <div className={`h-120 md:basis-1/2  overflow-hidden bg-white md:h-full bg-center bg-no-repeat bg-[length:60%]`}>
               <img
                 src={resultImages[currentIndex]}
                 alt={result.title}
-                className={`w-full h-full object-cover duration-150 ${isAnimating ? "opacity-0" : "opacity-100"} `}
+                className={`w-full h-full object-cover duration-50 ${isAnimating ? "opacity-0" : "opacity-100"} `}
               />
             </div>
             <div className="flex flex-col justify-between gap-5 bg-white p-5 py-10 md:gap-6  md:basis-1/2 md:p-7 ">
-              <header className={`duration-150 ${isAnimating ? "opacity-0 translate-x-10" : "opacity-100 translate-x-0"} `}>
+              <header className={`duration-200 delay-50 ${isTextAnimating ? "opacity-0 translate-x-10" : "opacity-100 translate-x-0"} `}>
                 <h3 className="text-nd text-center text-2xl font-bold sm:text-3xl">{result.title}</h3>
               </header>
               <div className={`flex flex-col gap-4 `}>
                 {/* Sección de descripcion */}
-                <div className={`flex flex-col gap-1 duration-200 delay-0 ${isAnimating ? "opacity-0 translate-x-10" : "opacity-100 translate-x-0"}`}>
+                <div className={`flex flex-col gap-1 duration-200 delay-0 ${isTextAnimating ? "opacity-0 translate-x-10" : "opacity-100 translate-x-0"}`}>
                   <div className={`text-st text-lg flex items-center font-semibold gap-3`}>
                     <div>
                       <Icon icon="carbon:idea" width="28" height="28" />
@@ -68,7 +74,7 @@ export default function ResultsSection() {
                 </div>
 
                 {/* Sección de Impacto */}
-                <div className={`flex flex-col gap-2 duration-200 delay-75 ${isAnimating ? "opacity-0 translate-x-10" : "opacity-100 translate-x-0"}`}>
+                <div className={`flex flex-col gap-2 duration-200 delay-100 ${isTextAnimating ? "opacity-0 translate-x-10" : "opacity-100 translate-x-0"}`}>
                   <div className="text-st text-lg flex items-center font-semibold gap-3">
                     <div>
                       <Icon icon="mdi-light:heart" width="28" height="28" />
@@ -79,7 +85,7 @@ export default function ResultsSection() {
                 </div>
 
                 {/* Sección de logros */}
-                <div className={`flex flex-col gap-2 duration-200 delay-150 ${isAnimating ? "opacity-0 translate-x-10" : "opacity-100 translate-x-0"}`}>
+                <div className={`flex flex-col gap-2 duration-200 delay-200 ${isTextAnimating ? "opacity-0 translate-x-10" : "opacity-100 translate-x-0"}`}>
                   <div className="text-st text-lg flex items-center font-semibold gap-3">
                     <div>
                       <Icon icon="iconoir:medal" width="28" height="28" />

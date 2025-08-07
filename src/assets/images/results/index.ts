@@ -1,11 +1,11 @@
-import luffy1 from "./luffy1.png"
-import luffy2 from "./luffy2.png"
-import luffy3 from "./luffy3.png"
-import luffy4 from "./luffy4.png"
-import luffy5 from "./luffy5.png"
+
+import premio2024 from "./premio2024.png"
+import premio2023 from "./premio2023.png"
+import premio2022 from "./premio2022.png"
+import premio2021 from "./premio2021.png"
 
 // Exportación en array para acceso dinámico
-export const resultImages = [luffy1, luffy2, luffy3, luffy4, luffy5]
+export const resultImages = [premio2024, premio2023, premio2022,premio2021]
 
 // Exportación individual
-export { luffy1, luffy2, luffy3, luffy4, luffy5 }
+export { premio2024, premio2023, premio2022,premio2021 }
