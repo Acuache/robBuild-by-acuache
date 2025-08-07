@@ -48,7 +48,7 @@ export default function LifeSection() {
             <Icon icon="mdi:heart-outline" width="26" height="26" />
           </span>
           <span className="font-bold w-auto">
-            !Quiero ser Voluntario¡
+            ¡Quiero ser Voluntario!
           </span>
           <span>
             <Icon icon="proicons:arrow-right" width="26" height="26" />

@@ -47,7 +47,7 @@ export default function CardVolunteer({ specialty, name, profession, img, locati
       <img
         src={getVolunteerImage(img)}
         alt={name}
-        className="w-full h-[100%] object-cover rounded-b-2xl"
+        className="w-full h-[100%] object-cover rounded-b-2xl bg-[#cbd0cc]"
       />
 
       <div className="absolute w-full bottom-0 bg-white h-12 flex justify-center items-center">

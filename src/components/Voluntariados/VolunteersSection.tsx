@@ -9,6 +9,19 @@ export default function VolunteersSection() {
 
   const [displayedVolunteers, setDisplayedVolunteers] = useState<any[]>([]) // Array acumulativo
 
+  // Función para calcular cantidades por categoría
+  const getCategoryCounts = () => {
+    const counts: { [key: string]: number } = {
+      "Todos": volunteers.length,
+      "Programación": volunteers.filter(v => v.specialty === "Programación").length,
+      "Marketing": volunteers.filter(v => v.specialty === "Marketing").length,
+      "Electrónica": volunteers.filter(v => v.specialty === "Electrónica").length,
+      "Embajadores": volunteers.filter(v => v.specialty === "Embajadores").length,
+      "Mecánica": volunteers.filter(v => v.specialty === "Mecánica").length,
+    }
+    return counts
+  }
+
   // Resetear cuando cambia la categoría
   useEffect(() => {
     const filtered = getFilteredVolunteers()
@@ -25,6 +38,7 @@ export default function VolunteersSection() {
   }
 
   const allVolunteers = getFilteredVolunteers()
+  const categoryCounts = getCategoryCounts()
 
   // Función para agregar 8 más
   const handleShowMore = () => {
@@ -46,7 +60,7 @@ export default function VolunteersSection() {
         <section className='flex flex-row flex-wrap justify-center items-center gap-5'>
           <CategoryVolunteer
             title="Todos los voluntarios"
-            number={50}
+            number={categoryCounts["Todos"]}
             onClick={() => setCategory("Todos")}
             isActive={category === "Todos"}
           >
@@ -54,7 +68,7 @@ export default function VolunteersSection() {
           </CategoryVolunteer>
           <CategoryVolunteer
             title="Programación"
-            number={12}
+            number={categoryCounts["Programación"]}
             onClick={() => setCategory("Programación")}
             isActive={category === "Programación"}
 
@@ -63,7 +77,7 @@ export default function VolunteersSection() {
           </CategoryVolunteer>
           <CategoryVolunteer
             title="Marketing"
-            number={8}
+            number={categoryCounts["Marketing"]}
             onClick={() => setCategory("Marketing")}
             isActive={category === "Marketing"}
           >
@@ -71,7 +85,7 @@ export default function VolunteersSection() {
           </CategoryVolunteer>
           <CategoryVolunteer
             title="Electrónica"
-            number={17}
+            number={categoryCounts["Electrónica"]}
             onClick={() => setCategory("Electrónica")}
             isActive={category === "Electrónica"}
           >
@@ -79,7 +93,7 @@ export default function VolunteersSection() {
           </CategoryVolunteer>
           <CategoryVolunteer
             title="Embajadores"
-            number={3}
+            number={categoryCounts["Embajadores"]}
             onClick={() => setCategory("Embajadores")}
             isActive={category === "Embajadores"}
           >
@@ -87,7 +101,7 @@ export default function VolunteersSection() {
           </CategoryVolunteer>
           <CategoryVolunteer
             title="Mecánica"
-            number={10}
+            number={categoryCounts["Mecánica"]}
             onClick={() => setCategory("Mecánica")}
             isActive={category === "Mecánica"}
           >
