@@ -54,7 +54,10 @@ export default function ResultsSection() {
               <img
                 src={resultImages[currentIndex]}
                 alt={result.title}
-                className={`w-full h-full object-cover duration-50 ${isAnimating ? "opacity-0" : "opacity-100"} `}
+                className={`w-full h-full duration-50 object-center object-cover  ${isAnimating ? "opacity-0" : "opacity-100"}`}
+                style={{
+                  objectPosition: currentIndex === 0 ? "75% center" : "center"
+                }}
               />
             </div>
             <div className="flex flex-col justify-between gap-5 bg-white p-5 py-10 md:gap-6  md:basis-1/2 md:p-7 ">
