@@ -2,16 +2,17 @@ import { useState, useEffect } from 'react'
 import { PayPalButtons } from '@paypal/react-paypal-js'
 import { Footer } from '../components'
 export default function Donar() {
-  // Estado para la tasa de cambio
-  const [exchangeRate, setExchangeRate] = useState(3.7) // Valor por defecto
+  // Estado para la tasa de cambio (desde API)
+  const [exchangeRate, setExchangeRate] = useState(0) // PEN por USD
   const [rateLoading, setRateLoading] = useState(true)
 
   // Estado para la moneda seleccionada
   const [selectedCurrency, setSelectedCurrency] = useState<'PEN' | 'USD' | 'EUR'>('PEN')
 
-  // Tasas de cambio (valores aproximados, se pueden actualizar)
-  const eurRate = 0.25 // 1 PEN = 0.25 EUR
-  const usdRate = 0.27 // 1 PEN = 0.27 USD
+  // Tasas de cambio dinámicas desde API
+  // exchangeRate: PEN por USD (1 USD = X PEN)
+  // eurPerUsd: EUR por USD (1 USD = X EUR)
+  const [eurPerUsd, setEurPerUsd] = useState(0)
 
   // Función para obtener tasa de cambio
   const fetchExchangeRate = async () => {
@@ -21,8 +22,13 @@ export default function Donar() {
       const response = await fetch('https://api.exchangerate-api.com/v4/latest/USD')
       const data = await response.json()
 
-      if (data.rates && data.rates.PEN) {
-        setExchangeRate(data.rates.PEN) // PEN por USD
+      if (data.rates) {
+        if (data.rates.PEN) {
+          setExchangeRate(data.rates.PEN) // PEN por USD
+        }
+        if (data.rates.EUR) {
+          setEurPerUsd(data.rates.EUR) // EUR por USD
+        }
       }
     } catch (error) {
       console.error('Error obteniendo tasa de cambio:', error)
@@ -43,8 +49,8 @@ export default function Donar() {
   }, [])
 
   // Función para obtener montos preestablecidos según la moneda
-  const getPresetAmounts = () => {
-    switch (selectedCurrency) {
+  const getPresetAmounts = (currency: 'PEN' | 'USD' | 'EUR' = selectedCurrency) => {
+    switch (currency) {
       case 'PEN':
         return [
           { value: 20, label: "S/ 20 soles" },
@@ -96,18 +102,21 @@ export default function Donar() {
     }
   }
 
-  // Función para convertir monto a USD para PayPal
+  // Función para convertir monto a USD para PayPal usando tasas del API
+  // exchangeRate: PEN por USD (1 USD = X PEN)
+  // eurPerUsd: EUR por USD (1 USD = X EUR)
   const convertToUSD = (amount: number) => {
-    switch (selectedCurrency) {
-      case 'PEN':
-        return (amount / exchangeRate).toFixed(2)
-      case 'USD':
-        return amount.toFixed(2)
-      case 'EUR':
-        return (amount / eurRate * usdRate).toFixed(2)
-      default:
-        return (amount / exchangeRate).toFixed(2)
+    if (selectedCurrency === 'USD') return amount.toFixed(2)
+    if (selectedCurrency === 'PEN') {
+      if (!exchangeRate || exchangeRate <= 0) throw new Error('Tasa PEN/USD no disponible')
+      return (amount / exchangeRate).toFixed(2)
     }
+    if (selectedCurrency === 'EUR') {
+      if (!eurPerUsd || eurPerUsd <= 0) throw new Error('Tasa EUR/USD no disponible')
+      // 1 USD = eurPerUsd EUR => 1 EUR = 1/eurPerUsd USD
+      return (amount * (1 / eurPerUsd)).toFixed(2)
+    }
+    throw new Error('Moneda no soportada')
   }
 
   // Función para obtener el monto mínimo según la moneda
@@ -237,6 +246,16 @@ export default function Donar() {
     setIsCustom(false)
   }
 
+  useEffect(() => {
+    // Al cambiar de moneda, seleccionar el primer monto preestablecido de esa moneda
+    const amounts = getPresetAmounts(selectedCurrency)
+    if (amounts && amounts.length > 0) {
+      setSelectedAmount(amounts[0].value)
+      setCustomAmount(amounts[0].value)
+      setIsCustom(false)
+    }
+  }, [selectedCurrency])
+
   return (
     <>
       <section className="mt-16 w-full py-15 bg-[#f4fbf8] px-4">
@@ -267,7 +286,7 @@ export default function Donar() {
 
             {/* Selector de moneda y montos preestablecidos */}
             <div className="mb-6">
-              <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-4">
+              <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-8">
                 <h3 className="text-lg font-semibold text-gray-900 mb-3 sm:mb-0">
                   Elige un monto para donar:
                 </h3>
@@ -281,11 +300,6 @@ export default function Donar() {
                         key={currency}
                         onClick={() => {
                           setSelectedCurrency(currency)
-                          // Resetear montos cuando cambie la moneda
-                          const newAmounts = getPresetAmounts()
-                          setSelectedAmount(newAmounts[0].value)
-                          setCustomAmount(newAmounts[0].value)
-                          setIsCustom(false)
                         }}
                         className={`px-3 py-1 text-sm font-medium transition-all ${selectedCurrency === currency
                           ? 'bg-blue-500 text-white'
@@ -388,6 +402,13 @@ export default function Donar() {
               {isValidAmount() ? (
                 <div>
                   {/* Texto explicativo antes del botón */}
+                  {!rateLoading && ((selectedCurrency !== 'PEN' && eurPerUsd > 0) || (selectedCurrency === 'PEN' && exchangeRate > 0)) ? null : (
+                    <div className="mb-4 p-3 bg-yellow-50 border border-yellow-200 rounded-lg">
+                      <p className="text-yellow-800 text-xs">
+                        Obteniendo tasas de cambio... Por favor espera un momento.
+                      </p>
+                    </div>
+                  )}
                   <div className="mb-4 p-3 bg-blue-50 border border-blue-200 rounded-lg">
                     <div className="flex items-start">
                       <div className="text-blue-500 mr-2 mt-0.5">
@@ -397,11 +418,9 @@ export default function Donar() {
                       </div>
                       <div className="text-left">
                         <p className="text-blue-800 text-sm font-medium mb-1">
-                          Puedes donar con PayPal o tarjeta
+                          Puedes donar con tarjeta de crédito/debito o con Paypal
                         </p>
-                        <p className="text-blue-700 text-xs">
-                          Al hacer clic en el botón, podrás completar tu donación de forma segura con PayPal
-                        </p>
+
                       </div>
                     </div>
                   </div>
@@ -420,7 +439,7 @@ export default function Donar() {
                       onApprove={onApprove}
                       onError={onError}
                       onCancel={onCancel}
-                      disabled={isProcessing}
+                      disabled={isProcessing || rateLoading || (selectedCurrency === 'PEN' ? exchangeRate <= 0 : eurPerUsd <= 0)}
                     />
                   </div>
                 </div>
@@ -444,13 +463,9 @@ export default function Donar() {
               <p>
                 Tu donación nos ayuda a seguir construyendo el futuro
               </p>
-              {rateLoading ? (
+              {!rateLoading && exchangeRate > 0 && (
                 <p className="mt-2 text-xs text-gray-400">
-                  ⏳ Actualizando tasa de cambio...
-                </p>
-              ) : (
-                <p className="mt-2 text-xs text-gray-400">
-                  💱 Tasa actual: 1 USD = S/ {exchangeRate.toFixed(2)}
+                  💱 Tasas actuales: 1 USD = S/ {exchangeRate.toFixed(2)} | 1 USD = € {eurPerUsd.toFixed(4)}
                 </p>
               )}
             </div>
