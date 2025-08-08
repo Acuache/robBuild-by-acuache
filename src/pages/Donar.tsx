@@ -6,6 +6,13 @@ export default function Donar() {
   const [exchangeRate, setExchangeRate] = useState(3.7) // Valor por defecto
   const [rateLoading, setRateLoading] = useState(true)
 
+  // Estado para la moneda seleccionada
+  const [selectedCurrency, setSelectedCurrency] = useState<'PEN' | 'USD' | 'EUR'>('PEN')
+
+  // Tasas de cambio (valores aproximados, se pueden actualizar)
+  const eurRate = 0.25 // 1 PEN = 0.25 EUR
+  const usdRate = 0.27 // 1 PEN = 0.27 USD
+
   // Función para obtener tasa de cambio
   const fetchExchangeRate = async () => {
     setRateLoading(true)
@@ -35,13 +42,83 @@ export default function Donar() {
     window.scrollTo(0, 0)
   }, [])
 
-  // Montos preestablecidos en soles
-  const presetAmounts = [
-    { value: 20, label: "S/ 20 soles" },
-    { value: 50, label: "S/ 50 soles" },
-    { value: 100, label: "S/ 100 soles" },
-    { value: 200, label: "S/ 200 soles" },
-  ]
+  // Función para obtener montos preestablecidos según la moneda
+  const getPresetAmounts = () => {
+    switch (selectedCurrency) {
+      case 'PEN':
+        return [
+          { value: 20, label: "S/ 20 soles" },
+          { value: 50, label: "S/ 50 soles" },
+          { value: 100, label: "S/ 100 soles" },
+          { value: 200, label: "S/ 200 soles" },
+        ]
+      case 'USD':
+        return [
+          { value: 5, label: "$5 USD" },
+          { value: 10, label: "$10 USD" },
+          { value: 20, label: "$20 USD" },
+          { value: 50, label: "$50 USD" },
+        ]
+      case 'EUR':
+        return [
+          { value: 5, label: "€5 EUR" },
+          { value: 10, label: "€10 EUR" },
+          { value: 20, label: "€20 EUR" },
+          { value: 50, label: "€50 EUR" },
+        ]
+      default:
+        return [
+          { value: 20, label: "S/ 20 soles" },
+          { value: 50, label: "S/ 50 soles" },
+          { value: 100, label: "S/ 100 soles" },
+          { value: 200, label: "S/ 200 soles" },
+        ]
+    }
+  }
+
+  // Función para obtener el símbolo de la moneda
+  const getCurrencySymbol = () => {
+    switch (selectedCurrency) {
+      case 'PEN': return 'S/'
+      case 'USD': return '$'
+      case 'EUR': return '€'
+      default: return 'S/'
+    }
+  }
+
+  // Función para obtener el nombre de la moneda
+  const getCurrencyName = () => {
+    switch (selectedCurrency) {
+      case 'PEN': return 'soles'
+      case 'USD': return 'USD'
+      case 'EUR': return 'EUR'
+      default: return 'soles'
+    }
+  }
+
+  // Función para convertir monto a USD para PayPal
+  const convertToUSD = (amount: number) => {
+    switch (selectedCurrency) {
+      case 'PEN':
+        return (amount / exchangeRate).toFixed(2)
+      case 'USD':
+        return amount.toFixed(2)
+      case 'EUR':
+        return (amount / eurRate * usdRate).toFixed(2)
+      default:
+        return (amount / exchangeRate).toFixed(2)
+    }
+  }
+
+  // Función para obtener el monto mínimo según la moneda
+  const getMinAmount = () => {
+    switch (selectedCurrency) {
+      case 'PEN': return 3
+      case 'USD': return 1
+      case 'EUR': return 1
+      default: return 3
+    }
+  }
 
   // Estados
   const [selectedAmount, setSelectedAmount] = useState(20) // Monto mínimo por defecto
@@ -64,7 +141,7 @@ export default function Donar() {
   // Validar monto
   const isValidAmount = () => {
     const amount = getCurrentAmount()
-    return amount && amount >= 3 // Min S/ 3 soles, sin máximo
+    return amount && amount >= getMinAmount() // Min según la moneda seleccionada
   }
 
   // Función para crear la orden de PayPal
@@ -72,14 +149,16 @@ export default function Donar() {
     const amount = getCurrentAmount()
 
     if (!isValidAmount()) {
-      alert("Por favor ingresa un monto válido de al menos S/ 3 soles")
+      const minAmount = getMinAmount()
+      const currencySymbol = getCurrencySymbol()
+      alert(`Por favor ingresa un monto válido de al menos ${currencySymbol} ${minAmount} ${getCurrencyName()}`)
       return Promise.reject(new Error("Invalid amount"))
     }
 
     setIsProcessing(true)
 
-    // Convertir soles a USD usando tasa actualizada
-    const usdAmount = (amount / exchangeRate).toFixed(2)
+    // Convertir a USD usando la función de conversión
+    const usdAmount = convertToUSD(amount)
 
     return actions.order.create({
       purchase_units: [{
@@ -186,13 +265,42 @@ export default function Donar() {
               </div>
             )}
 
-            {/* Montos preestablecidos */}
+            {/* Selector de moneda y montos preestablecidos */}
             <div className="mb-6">
-              <h3 className="text-lg font-semibold text-gray-900 mb-4">
-                Elige un monto para donar:
-              </h3>
+              <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-4">
+                <h3 className="text-lg font-semibold text-gray-900 mb-3 sm:mb-0">
+                  Elige un monto para donar:
+                </h3>
+
+                {/* Selector de moneda */}
+                <div className="flex items-center gap-2">
+                  <span className="text-sm text-gray-600">Moneda:</span>
+                  <div className="flex border border-gray-300 rounded-lg overflow-hidden">
+                    {(['PEN', 'USD', 'EUR'] as const).map((currency) => (
+                      <button
+                        key={currency}
+                        onClick={() => {
+                          setSelectedCurrency(currency)
+                          // Resetear montos cuando cambie la moneda
+                          const newAmounts = getPresetAmounts()
+                          setSelectedAmount(newAmounts[0].value)
+                          setCustomAmount(newAmounts[0].value)
+                          setIsCustom(false)
+                        }}
+                        className={`px-3 py-1 text-sm font-medium transition-all ${selectedCurrency === currency
+                          ? 'bg-blue-500 text-white'
+                          : 'bg-white text-gray-700 hover:bg-gray-50'
+                          }`}
+                      >
+                        {currency === 'PEN' ? 'Soles' : currency}
+                      </button>
+                    ))}
+                  </div>
+                </div>
+              </div>
+
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                {presetAmounts.map((amount) => (
+                {getPresetAmounts().map((amount) => (
                   <button
                     key={amount.value}
                     onClick={() => {
@@ -220,11 +328,11 @@ export default function Donar() {
               </h3>
               <div className="relative">
                 <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                  <span className="text-gray-500 text-base sm:text-lg">S/</span>
+                  <span className="text-gray-500 text-base sm:text-lg">{getCurrencySymbol()}</span>
                 </div>
                 <input
                   type="number"
-                  min="3"
+                  min={getMinAmount()}
                   step="1"
                   placeholder="0"
                   value={customAmount > 0 ? customAmount : ''}
@@ -235,8 +343,8 @@ export default function Donar() {
                       setIsCustom(false)
                       setSelectedAmount(0) // Deseleccionar botones
                     } else {
-                      const soles = parseFloat(value) || 0
-                      setCustomAmount(soles)
+                      const amount = parseFloat(value) || 0
+                      setCustomAmount(amount)
                       setIsCustom(true)
                       setSelectedAmount(0) // Deseleccionar botones
                     }
@@ -251,13 +359,13 @@ export default function Donar() {
                     } focus:outline-none focus:border-blue-500 focus:bg-blue-50`}
                 />
                 <div className="absolute inset-y-0 right-0 pr-3 flex items-center pointer-events-none">
-                  <span className="text-gray-500 text-base sm:text-lg">soles</span>
+                  <span className="text-gray-500 text-base sm:text-lg">{getCurrencyName()}</span>
                 </div>
               </div>
               <div className="h-6 mt-2">
                 {isCustom && customAmount && !isValidAmount() && (
                   <p className="text-red-600 text-sm">
-                    Por favor ingresa un monto de al menos S/ 3 soles
+                    Por favor ingresa un monto de al menos {getCurrencySymbol()} {getMinAmount()} {getCurrencyName()}
                   </p>
                 )}
               </div>
@@ -269,8 +377,8 @@ export default function Donar() {
                 <span className="text-gray-600">Monto a donar:</span>
                 <span className="text-2xl font-bold text-green-600">
                   {getCurrentAmount() ?
-                    `S/ ${getCurrentAmount()} soles`
-                    : "S/ 0 soles"}
+                    `${getCurrencySymbol()} ${getCurrentAmount()} ${getCurrencyName()}`
+                    : `${getCurrencySymbol()} 0 ${getCurrencyName()}`}
                 </span>
               </div>
             </div>
@@ -278,27 +386,49 @@ export default function Donar() {
             {/* Botones de PayPal */}
             <div className="mb-6">
               {isValidAmount() ? (
-                <div className="paypal-buttons-container">
-                  <PayPalButtons
-                    style={{
-                      layout: "vertical",
-                      color: "blue",
-                      shape: "rect",
-                      label: "donate",
-                      height: 50,
-                    }}
-                    createOrder={createOrder}
-                    onApprove={onApprove}
-                    onError={onError}
-                    onCancel={onCancel}
-                    disabled={isProcessing}
-                  />
+                <div>
+                  {/* Texto explicativo antes del botón */}
+                  <div className="mb-4 p-3 bg-blue-50 border border-blue-200 rounded-lg">
+                    <div className="flex items-start">
+                      <div className="text-blue-500 mr-2 mt-0.5">
+                        <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                          <path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clipRule="evenodd" />
+                        </svg>
+                      </div>
+                      <div className="text-left">
+                        <p className="text-blue-800 text-sm font-medium mb-1">
+                          Puedes donar con PayPal o tarjeta
+                        </p>
+                        <p className="text-blue-700 text-xs">
+                          Al hacer clic en el botón, podrás completar tu donación de forma segura con PayPal
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="paypal-buttons-container">
+                    <PayPalButtons
+                      fundingSource="paypal"
+                      style={{
+                        layout: "vertical",
+                        color: "blue",
+                        shape: "rect",
+                        label: "donate",
+                        height: 50,
+                      }}
+                      createOrder={createOrder}
+                      onApprove={onApprove}
+                      onError={onError}
+                      onCancel={onCancel}
+                      disabled={isProcessing}
+                    />
+                  </div>
                 </div>
               ) : (
                 <div className="text-center p-4 border-2 border-dashed border-gray-300 rounded-lg">
                   <p className="text-gray-500">
                     {getCurrentAmount() ?
-                      "Ingresa un monto válido para continuar (mínimo S/ 3 soles)" :
+                      `Ingresa un monto válido para continuar (mínimo ${getCurrencySymbol()} ${getMinAmount()} ${getCurrencyName()})` :
                       "Selecciona o ingresa un monto para donar"
                     }
                   </p>
@@ -325,8 +455,8 @@ export default function Donar() {
               )}
             </div>
 
-            {/* Explicación del mínimo - solo aparece cuando el monto es menor a 3 soles */}
-            {isCustom && customAmount > 0 && customAmount < 3 && (
+            {/* Explicación del mínimo - solo aparece cuando el monto es menor al mínimo */}
+            {isCustom && customAmount > 0 && customAmount < getMinAmount() && (
               <div className="mt-4 p-3 bg-blue-50 border border-blue-200 rounded-lg">
                 <div className="flex items-start">
                   <div className="text-blue-500 mr-2 mt-0.5">
@@ -336,10 +466,10 @@ export default function Donar() {
                   </div>
                   <div className="text-left">
                     <p className="text-blue-800 text-xs font-medium mb-1">
-                      ¿Por qué un mínimo de S/ 3 soles?
+                      ¿Por qué un mínimo de {getCurrencySymbol()} {getMinAmount()} {getCurrencyName()}?
                     </p>
                     <p className="text-blue-700 text-xs">
-                      Las plataformas de pago cobran comisiones fijas por transacción. Con montos muy pequeños, casi todo se va en comisiones y no llega a nuestros proyectos. S/ 3 soles es el mínimo para que tu donación tenga un impacto real 💙
+                      Las plataformas de pago cobran comisiones fijas por transacción. Con montos muy pequeños, casi todo se va en comisiones y no llega a nuestros proyectos. {getCurrencySymbol()} {getMinAmount()} {getCurrencyName()} es el mínimo para que tu donación tenga un impacto real 💙
                     </p>
                   </div>
                 </div>
@@ -390,7 +520,7 @@ export default function Donar() {
                     <div className="bg-gray-50 rounded-lg p-4 mb-4">
                       <div className="text-center mb-3">
                         <div className="text-2xl font-bold text-green-600">
-                          {`S/ ${donationDetails.amount} soles`}
+                          {`${getCurrencySymbol()} ${donationDetails.amount} ${getCurrencyName()}`}
                         </div>
                         <p className="text-xs text-gray-500 mt-1">
                           Procesado exitosamente
