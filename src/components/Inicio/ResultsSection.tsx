@@ -56,7 +56,7 @@ export default function ResultsSection() {
                 alt={result.title}
                 className={`w-full h-full duration-50 object-center object-cover  ${isAnimating ? "opacity-0" : "opacity-100"}`}
                 style={{
-                  objectPosition: currentIndex === 0 ? "75% center" : "center"
+                  objectPosition: currentIndex === 0 ? "70% center" : "center"
                 }}
               />
             </div>
