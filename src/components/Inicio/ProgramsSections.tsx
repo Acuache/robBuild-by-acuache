@@ -4,7 +4,7 @@ import { ProgramCard } from './'
 export default function ProgramsSections() {
   return (
     <section className="w-full text-black py-15 sm:py-15 bg-[#f4fbf8]" >
-      <div className='px-5 max-w-6xl m-auto flex flex-col gap-8 md:px-8 lg:gap-11 lg:px-0'>
+      <div className='px-5 max-w-6xl m-auto flex flex-col gap-8 md:px-8 lg:gap-11 xl:px-0'>
         {/* Header de la sección */}
         <header className='flex flex-col gap-5 items-center'>
           <h2 className='title'> Nuestros Programas</h2>
