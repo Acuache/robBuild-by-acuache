@@ -50,7 +50,7 @@ export default function ResultsSection() {
 
         <section className=''>
           <article className="flex flex-col rounded-xl md:flex-row md:h-163 lg:h-128 overflow-hidden md:rounded-2xl">
-            <div className={`h-120 md:basis-1/2  overflow-hidden bg-white md:h-full bg-center bg-no-repeat bg-[length:60%]`}>
+            <div className={`h-100 md:basis-1/2  overflow-hidden bg-white md:h-full bg-center bg-no-repeat bg-[length:60%]`}>
               <img
                 src={resultImages[currentIndex]}
                 alt={result.title}
