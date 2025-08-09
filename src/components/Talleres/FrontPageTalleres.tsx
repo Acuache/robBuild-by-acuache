@@ -7,7 +7,7 @@ export default function FrontPageTalleres() {
 
         {/* Header de la sección */}
         <header className='flex flex-col gap-5 items-center'>
-          <h2 className='title'>Aprende a tu ritmo con nuestros talleres grabados</h2>
+          <h2 className='title'>Aprende a tu ritmo <br /> con nuestros talleres grabados</h2>
           <p className='description text-pretty'>Accede a contenidos prácticos y dinámicos que te guiarán paso a paso para crear, experimentar y fortalecer tus habilidades tecnológicas, desde cualquier lugar y a tu propio ritmo.</p>
         </header>
 
