@@ -1,7 +1,6 @@
 import { useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { Footer } from '../components'
-import { Icon } from '@iconify/react'
 
 export default function Error404() {
   useEffect(() => {
