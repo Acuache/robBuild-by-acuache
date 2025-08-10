@@ -12,14 +12,10 @@ export default function Error404() {
     <>
       <main className="min-h-[calc(100dvh-4rem)] pt-24 pb-12 flex flex-col items-center justify-center bg-[var(--color-bg-st)] px-6 text-center">
         <div className="max-w-2xl w-full flex flex-col items-center gap-6">
-          <div className="flex items-center justify-center gap-3 text-st">
-            <Icon icon="ph:compass-duotone" width="42" height="42" />
-            <span className="uppercase tracking-wide font-semibold">Error</span>
-          </div>
 
           <h1 className="title">Página no encontrada</h1>
           <p className="description text-gray-600">
-            El enlace que buscas no existe, fue movido o es temporalmente inaccesible.
+            El enlace que buscas no existe, fue movido <br /> o es temporalmente inaccesible.
           </p>
 
           <div className="text-[5.5rem] sm:text-[7rem] font-extrabold leading-none text-st select-none">404</div>
