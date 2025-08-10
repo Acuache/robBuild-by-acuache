@@ -1,10 +1,25 @@
-RewriteEngine On
-RewriteBase /
-RewriteRule ^index\.html$ - [L]
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteCond %{REQUEST_FILENAME} !-l
-RewriteRule . /index.html [L]
+<IfModule mod_negotiation.c>
+  Options -MultiViews
+</IfModule>
+
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteBase /
+
+  # No reescribir el propio index.html
+  RewriteRule ^index\.html$ - [L]
+
+  # Si el recurso físico existe (archivo o carpeta), servirlo tal cual
+  RewriteCond %{REQUEST_FILENAME} -f [OR]
+  RewriteCond %{REQUEST_FILENAME} -d
+  RewriteRule . - [L]
+
+  # En caso contrario, enviar todo a index.html (SPA)
+  RewriteRule . /index.html [L]
+</IfModule>
+
+# Fallback adicional si no se aplica mod_rewrite
+ErrorDocument 404 /index.html
 
 # Headers para SPA
 <IfModule mod_headers.c>
