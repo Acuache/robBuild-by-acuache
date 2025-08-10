@@ -10,7 +10,7 @@ import Error404 from "../pages/Error404";
 // UI
 import Header from '../components/ui/Header'
 
-import { BrowserRouter, Route, Routes } from "react-router";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 export default function MyRoutes() {
   return (
