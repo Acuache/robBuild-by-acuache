@@ -17,14 +17,16 @@ export default function FoundersSection() {
 
         <section className='flex flex-row flex-wrap gap-5 justify-center items-center md:gap-8'>
           <CardFounder
-            name="Miguel Ruiz Pacheco"
-            job="Fundador de RobBuild"
+            name="Maycoll Gamarra Chura"
+            job="Director General"
             img={founder1}
+            url="https://www.linkedin.com/in/maycoll-gamarra-chura-a721b7156/"
           />
           <CardFounder
-            name="Dayan Torres Aybar"
-            job="Fundador de RobBuild"
+            name="Diego Vargas Triveño"
+            job="Director de Proyectos"
             img={founder2}
+            url="https://www.youtube.com/"
           />
         </section>
 
