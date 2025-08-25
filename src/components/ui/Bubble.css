@@ -1,6 +1,8 @@
 .paused .shape1,
 .paused .shape2,
-.paused .shape3 {
+.paused .shape3,
+.paused .shape4,
+.paused .shape5 {
   animation-play-state: paused;
 }
 
@@ -39,9 +41,9 @@
   } 77% {
     top: 30%;
     left: 100%;
-} 91% {
-  top: -30%;
-left:70%;
+  } 91% {
+    top: -30%;
+    left:70%;
   } 100%{
     top: 55%;
   left: 60%;
@@ -56,21 +58,69 @@ left:70%;
   0% {
     top: 30%;
     left: 40%;
-} 10% {
-  top: 63%;
-left: -24%;
+  } 10% {
+    top: 63%;
+    left: -24%;
   } 44% {
     top: -20%;
   left: 0%;
   } 57% {
-     top: 5%;
-  left: 70%
-
+    top: 5%;
+    left: 70%
   } 88% {
     top: 60%;
   left: 120%;
   } 100%{
     top: 30%;
     left: 40%;
+  }
+}
+.shape4 {
+  animation: moveShape4 66s infinite both;
+}
+@keyframes moveShape4 {
+  0% {
+    top: 60%;
+    left: 60%;
+  } 20% {
+    top: 20%;
+    left: 10%;
+  } 40% {
+    top: -5%;
+    left: 80%;
+  left: 0%;
+  } 60% {
+    top: 70%;
+    left: 10%
+  } 80% {
+    top: 60%;
+    left: 120%;
+  } 100%{
+    top: 60%;
+    left: 60%;
+  }
+}
+.shape5 {
+  animation: moveShape5 60s infinite both;
+}
+@keyframes moveShape5 {
+  0% {
+    top: 60%;
+    left: 90%;
+  } 20% {
+    top: 20%;
+    left: 40%;
+  } 40% {
+    top: -5%;
+    left: 90%;
+  } 60% {
+    top: 80%;
+    left: 20%
+  } 80% {
+    top: 10%;
+  left: 2%;
+  } 100%{
+    top: 60%;
+    left: 90%;
   }
 }
