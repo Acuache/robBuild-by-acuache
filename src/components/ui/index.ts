@@ -6,6 +6,7 @@
 // Como usan "export default", necesitamos "default as"
 export { default as Header } from './Header'
 export { default as Footer } from './Footer'
+export { default as Bubble } from './Bubble'
 
 // ========================================
 // USO:

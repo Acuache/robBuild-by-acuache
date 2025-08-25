@@ -1,6 +1,12 @@
+import { useInView } from 'react-intersection-observer'
+import { Bubble } from "../ui";
 export default function NewTallerSection() {
+  const { ref, inView } = useInView({
+    threshold: 0.1,
+  })
   return (
-    <section className="w-full text-white py-15 sm:py-15 mb-30" style={{ background: 'var(--gradient-st)' }}>
+    <section ref={ref} className="w-full text-white py-15 sm:py-15 mb-30 relative overflow-hidden" style={{ background: 'var(--gradient-st)' }}>
+      <Bubble isView={inView} />
       <div className='px-5 max-w-6xl m-auto flex flex-col gap-8 lg:gap-11 xl:px-0'>
 
         {/* Header de la sección */}

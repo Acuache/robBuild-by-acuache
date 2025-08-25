@@ -2,6 +2,7 @@ import { CardImpact } from './';
 import { Icon } from "@iconify/react";
 import { useInView } from 'react-intersection-observer'
 import { useState, useEffect } from 'react'
+import { Bubble } from "../ui";
 
 export default function ImpactSection() {
   const { ref, inView } = useInView({
@@ -21,7 +22,8 @@ export default function ImpactSection() {
     }
   }, [inView])
   return (
-    <section ref={ref} className="w-full text-white py-15 sm:py-15" style={{ background: 'var(--gradient-st)' }}>
+    <section ref={ref} className="w-full text-white py-15 sm:py-15 relative overflow-hidden" style={{ background: 'var(--gradient-st)' }}>
+      <Bubble isView={inView} />
       <div className='px-5 flex flex-col gap-8 md:px-8 lg:gap-11 max-w-6xl m-auto xl:px-0'>
 
         {/* Header de la sección */}
