@@ -1,5 +1,6 @@
 import { Icon } from "@iconify/react";
 import { getVolunteerImage } from "../../utils/importImage";
+import { useState } from 'react'
 
 interface CardVolunteerProps {
   specialty: string,
@@ -12,8 +13,9 @@ interface CardVolunteerProps {
 }
 
 export default function CardVolunteer({ specialty, name, profession, img, location, linkedin, isAll }: CardVolunteerProps) {
+  const [isActive, setIsActive] = useState(false)
   return (
-    <article className={`group relative w-full max-w-[320px] h-100 rounded-md overflow-hidden duration-300`}>
+    <article className={`group relative w-full max-w-[320px] h-100 rounded-md overflow-hidden duration-300`} onClick={() => setIsActive(prev => !prev)}>
       {
         isAll && (
           <div
@@ -24,8 +26,8 @@ export default function CardVolunteer({ specialty, name, profession, img, locati
       }
 
       {/* Effecto Circulo */}
-      <a href={linkedin} target="black">
-        <div className="absolute flex justify-center items-center text-white w-18 h-18 bg-[#33AA6F]/80 rounded-full  duration-500 opacity-0 -right-[30%] -top-[30%] group-hover:-right-[5%] group-hover:-top-[3%] group-hover:opacity-100">
+      <a href={linkedin} target="black" onClick={(e) => e.stopPropagation()}>
+        <div className={`absolute flex justify-center items-center text-white w-18 h-18 bg-[#33AA6F]/80 rounded-full  duration-500 opacity-0 -right-[30%] -top-[30%] group-hover:-right-[5%] group-hover:-top-[3%] group-hover:opacity-100 ${isActive ? '-right-[5%] -top-[3%] opacity-100' : ''}`}>
           <Icon icon="bi:linkedin" width="28" height="28" />
         </div>
       </a>
@@ -33,10 +35,10 @@ export default function CardVolunteer({ specialty, name, profession, img, locati
       {/* Effecto Detalle */}
       <div
         style={{ clipPath: "polygon(0 0, 100% 0, 85% 100%, 0% 100%)" }}
-        className="z-3 absolute w-[70%] h-auto text-white text-sm bg-st bottom-12 flex  flex-col gap-1 justify-center pl-3 py-1 duration-500 -left-[100%] opacity-0 group-hover:-left-[0%] group-hover:opacity-100"
+        className={`z-3 absolute w-[70%] h-auto text-white text-sm bg-st bottom-12 flex  flex-col gap-1 justify-center pl-3 py-1 duration-500 -left-[100%] opacity-0 group-hover:-left-[0%] group-hover:opacity-100 ${isActive ? '-left-[0%] opacity-100' : ''}`}
       >
-        <p className="text-sm opacity-0 -translate-x-10 delay-500 duration-300 group-hover:opacity-100 group-hover:-translate-x-0">{profession}</p>
-        <div className="flex opacity-0 -translate-x-10 delay-500 duration-300 group-hover:opacity-100 group-hover:-translate-x-0">
+        <p className={`text-sm opacity-0 -translate-x-10 delay-500 duration-300 group-hover:opacity-100 group-hover:-translate-x-0 ${isActive ? 'opacity-100 -translate-x-0' : ''}`}>{profession}</p>
+        <div className={`flex opacity-0 -translate-x-10 delay-500 duration-300 group-hover:opacity-100 group-hover:-translate-x-0 ${isActive ? 'opacity-100 -translate-x-0' : ''}`}>
           <div className="">
             <Icon icon="mdi:location" width="22" height="22" />
           </div>
@@ -57,7 +59,7 @@ export default function CardVolunteer({ specialty, name, profession, img, locati
       {/* Effectos Complementarios */}
       <div
         style={{ clipPath: "polygon(0 0, 100% 0, 86% 100%, 0% 100%)" }}
-        className="z-1 absolute w-[calc(70%+4px)] h-auto text-sm bg-white/90 bottom-12 flex flex-col gap-1 justify-center pl-3 py-1 duration-500 -left-[100%] opacity-0 group-hover:-left-[0%] group-hover:opacity-100"
+        className={`z-1 absolute w-[calc(70%+4px)] h-auto text-sm bg-white/90 bottom-12 flex flex-col gap-1 justify-center pl-3 py-1 duration-500 -left-[100%] opacity-0 group-hover:-left-[0%] group-hover:opacity-100 ${isActive ? '-left-[0%] opacity-100' : ''}`}
       >
         {/* Para que se adapte */}
         <div className="opacity-0">
