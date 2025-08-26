@@ -15,37 +15,42 @@ export default function Header() {
             <img src={logoColor} alt="Logo de RobBuild" />
           </div>
         </Link>
-        <nav className={`w-70 h-dvh p-5 fixed top-0 right-0 bg-white flex flex-col transition-all duration-300 ${isActive ? "translate-x-0" : "translate-x-full"} sm:translate-x-0 sm:static sm:flex sm:flex-row sm:w-auto sm:h-auto sm:p-0 z-8`}>
-          <div className="cursor-pointer sm:hidden" onClick={handleClick}>
+        {
+          isActive && (
+            <div className="fixed inset-0 w-screen h-dvh backdrop-blur-xs z-19 bg-black/2" onClick={handleClick}></div>
+          )
+        }
+        <nav className={`w-70 h-dvh p-5 fixed top-0 right-0 bg-white flex flex-col transition-all duration-300 ${isActive ? "translate-x-0" : "translate-x-full"} sm:translate-x-0 sm:static sm:flex sm:flex-row sm:w-auto sm:h-auto sm:p-0 z-20`}>
+          <div className="cursor-pointer sm:hidden  flex justify-end items-end pr-1" onClick={handleClick}>
             <Icon icon="heroicons:x-mark" width="24" height="24" />
           </div>
           <ul className='flex flex-col sm:flex-row gap-3 transition-all duration-300 md:flex-row sm:gap-3 sm:text-md md:gap-8 lg:gap-12'>
             <li className="relative group">
-              <Link to="/" className="relative">
+              <Link to="/" className="relative" onClick={handleClick}>
                 Inicio
                 <span className="absolute -bottom-[2px] left-1/2 transform -translate-x-1/2 w-0 h-0.5 bg-st transition-all duration-500 group-hover:w-full"></span>
               </Link>
             </li>
             <li className="relative group">
-              <Link to="/talleres" className="relative">
+              <Link to="/talleres" className="relative" onClick={handleClick}>
                 Talleres
                 <span className="absolute -bottom-[2px] left-1/2 transform -translate-x-1/2 w-0 h-0.5 bg-st transition-all duration-500 group-hover:w-full"></span>
               </Link>
             </li>
             <li className="relative group">
-              <Link to="/voluntarios" className="relative">
+              <Link to="/voluntarios" className="relative" onClick={handleClick}>
                 Voluntarios
                 <span className="absolute -bottom-[2px] left-1/2 transform -translate-x-1/2 w-0 h-0.5 bg-st transition-all duration-500 group-hover:w-full"></span>
               </Link>
             </li>
             <li className="relative group">
-              <Link to="/noticias" className="relative">
+              <Link to="/noticias" className="relative" onClick={handleClick}>
                 Noticias
                 <span className="absolute -bottom-[2px] left-1/2 transform -translate-x-1/2 w-0 h-0.5 bg-st transition-all duration-500 group-hover:w-full"></span>
               </Link>
             </li>
             <li className="relative group">
-              <Link to="/donar" className="relative">
+              <Link to="/donar" className="relative" onClick={handleClick}>
                 Donar
                 <span className="absolute -bottom-[2px] left-1/2 transform -translate-x-1/2 w-0 h-0.5 bg-st transition-all duration-500 group-hover:w-full"></span>
               </Link>

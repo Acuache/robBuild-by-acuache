@@ -425,7 +425,7 @@ export default function Donar() {
                     </div>
                   </div>
 
-                  <div className="paypal-buttons-container">
+                  <div className="paypal-buttons-container relative -z-0">
                     <PayPalButtons
                       fundingSource="paypal"
                       style={{
