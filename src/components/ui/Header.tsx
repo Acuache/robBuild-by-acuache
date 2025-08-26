@@ -17,7 +17,7 @@ export default function Header() {
         </Link>
         {
           isActive && (
-            <div className="fixed inset-0 w-screen h-dvh backdrop-blur-xs z-19 bg-black/2" onClick={handleClick}></div>
+            <div className="fixed inset-0 w-screen h-dvh backdrop-blur-xs z-19 bg-black/2 sm:hidden" onClick={handleClick}></div>
           )
         }
         <nav className={`w-70 h-dvh p-5 fixed top-0 right-0 bg-white flex flex-col transition-all duration-300 ${isActive ? "translate-x-0" : "translate-x-full"} sm:translate-x-0 sm:static sm:flex sm:flex-row sm:w-auto sm:h-auto sm:p-0 z-20`}>
