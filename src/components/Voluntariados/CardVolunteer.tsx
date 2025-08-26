@@ -13,7 +13,7 @@ interface CardVolunteerProps {
 
 export default function CardVolunteer({ specialty, name, profession, img, location, linkedin, isAll }: CardVolunteerProps) {
   return (
-    <article tabIndex={0} onTouchStart={(e) => (e.currentTarget as HTMLElement).focus()} className={`group relative w-full max-w-[320px] h-100 rounded-md overflow-hidden duration-300`}>
+    <article tabIndex={0} onTouchStart={(e) => (e.currentTarget as HTMLElement).focus()} className={`group relative w-full max-w-[320px] h-100 rounded-md overflow-hidden duration-300 outline-none focus:outline-none focus-visible:outline-none focus:ring-0`}>
       {
         isAll && (
           <div
