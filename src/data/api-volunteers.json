@@ -1,5 +1,45 @@
 [
   {
+    "specialty": "Marketing",
+    "name": "Rosa Fuertes",
+    "profession": "Diseño Industrial",
+    "img": "rosa-fuertes.png",
+    "location": "Lima",
+    "linkedin": "https://www.linkedin.com/in/rosa-fuertes"
+  },
+  {
+    "specialty": "Programación",
+    "name": "Juan Ramos",
+    "profession": "Ing. Mecatrónica",
+    "img": "juan-ramos.png",
+    "location": "Callao",
+    "linkedin": "https://www.linkedin.com/in/juan-antonio-ramos-vega-253272358/"
+  },
+  {
+    "specialty": "Mecánica",
+    "name": "Raúl Maceda",
+    "profession": "Ing. Mecatrónica",
+    "img": "raul-maceda.png",
+    "location": "Pasco",
+    "linkedin": "https://www.linkedin.com/in/ra%C3%BAl-maceda-894601337/ "
+  },
+  {
+    "specialty": "Programación",
+    "name": "Itzamar Bravo",
+    "profession": "Ing. Mecatrónica",
+    "img": "itzamar-bravo.png",
+    "location": "México",
+    "linkedin": "https://mx.linkedin.com/in/itzamar-bravo-349a89116"
+  },
+  {
+    "specialty": "Programación",
+    "name": "Rodrigo Saavedra",
+    "profession": "Ing. Mecatrónica",
+    "img": "rodrigo-saavedra.png",
+    "location": "Tacna",
+    "linkedin": "https://www.linkedin.com/in/rodrigo-saavedra-4b606b23a"
+  },
+  {
     "specialty": "Electrónica",
     "name": "Angel Quispe",
     "profession": "Ing. Electrónica",
