@@ -14,8 +14,8 @@ export default function ProgramsSections() {
 
         <section className='flex flex-col gap-10 sm:flex-row sm:items-stretch lg:gap-25'>
           {
-            programs.map((program) => (
-              <ProgramCard {...program} />
+            programs.map((program, index) => (
+              <ProgramCard key={index} {...program} />
             ))
           }
         </section>

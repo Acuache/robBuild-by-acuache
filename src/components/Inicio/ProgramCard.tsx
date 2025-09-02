@@ -1,5 +1,6 @@
 import { resultImages } from '../../assets/images/programs'
 import { Icon } from "@iconify/react";
+import { Link } from 'react-router-dom'
 
 interface ProgramCardProps {
   id: number,
@@ -9,7 +10,13 @@ interface ProgramCardProps {
   img?: string
 }
 
+function slugify(text: string) {
+  return text.toLowerCase().replace(/\s+/g, '-');
+}
+
 export default function ProgramCard({ id, title, description, informations }: ProgramCardProps) {
+  const idProgram = slugify(title)
+
   return (
     <article className='overflow-hidden rounded-lg flex flex-col'>
       <div className='h-65'>
@@ -32,7 +39,9 @@ export default function ProgramCard({ id, title, description, informations }: Pr
             }
           </div>
         </div>
-        <button className='mt-3 text-white font-bold w-fit px-6 py-2 rounded-full transition-all duration-300 ease-out hover:scale-105 hover:shadow-lg hover:shadow-st/20 hover:-translate-y-1 hover:brightness-110 active:scale-95' style={{ background: 'var(--gradient-st)' }}>Más información</button>
+        <Link to={`/programa/${idProgram}`}>
+          <button className='mt-3 text-white font-bold w-fit px-6 py-2 rounded-full transition-all duration-300 ease-out hover:scale-105 hover:shadow-lg hover:shadow-st/20 hover:-translate-y-1 hover:brightness-110 active:scale-95' style={{ background: 'var(--gradient-st)' }}>Más información</button>
+        </Link>
       </div>
     </article>
   )

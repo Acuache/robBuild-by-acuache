@@ -1,5 +1,6 @@
 // Pages
 import Inicio from "../pages/Inicio";
+import Programa from "../pages/Programa";
 import Noticias from "../pages/Noticias";
 import Talleres from "../pages/Talleres";
 import Voluntariados from "../pages/Voluntariados";
@@ -18,6 +19,7 @@ export default function MyRoutes() {
       <Header />
       <Routes>
         <Route path="/" element={<Inicio />} />
+        <Route path="/programa/:title" element={<Programa />} />
         <Route path="/noticias" element={<Noticias />} />
         <Route path="/talleres" element={<Talleres />} />
         <Route path="/voluntarios" element={<Voluntariados />} />

@@ -1,0 +1,64 @@
+[
+  {
+    "id" : "robótica-para-todos-con-enfoque-steam",
+    "imgHeader" : "program1_description.png",
+    "imgDescription": "program1_header.png",
+    "title": "Robótica para todos con STEAM",
+    "subtitle": "Transformando vidas con el poder de la tecnología",
+    "description": "Un programa integral que combina teoría y práctica para desarrollar habilidades STEM mediante proyectos de tecnología. Está orientado a niños y jóvenes de 8-15 años. Durante el proceso, los participantes aprenden a diseñar, construir y programar prototipos en simuladores virtuales.",
+    "descriptionDetails": [
+      "Metodología práctica y gamificada.", 
+      "Enfoque en contextos reales.", 
+      "Aprendizaje por proyectos"
+    ],
+    "requirements": [
+      "Conexión a internet estable",
+      "Ingresar desde una PC/Laptop"
+    ],
+    "methodology": [
+      "Aprendizaje Basado en Proyectos", 
+      "Uso de simuladores interactivos",
+      "Clases gamificadas"
+    ],
+    "platforms": [
+      "VexCode VR",
+      "Tinkercad",
+      "Scratch",
+      "Arduino", 
+      "mBlock",
+      "Open Roberta",
+      "Micro Bit",
+      "Gears Bot"
+    ]
+  },
+  {
+    "id" : "robótica-para-un-futuro-sin-brechas",
+    "imgHeader" : "program2_description.png",
+    "imgDescription": "program2_header.png",
+    "title": "Robótica para un futuro sin brechas",
+    "subtitle": "Tecnología que conecta, inspira y transforma comunidades.",
+    "description": "Programa integral de acceso inclusivo a la tecnología que ofrece una ruta de aprendizaje STEAM para escuelas públicas de zonas rurales. Se incluye dentro del horario escolar y se gestiona  con la institución educativa.",
+    "descriptionDetails": [
+      "Metodología práctica y gamificada.", 
+      "Enfoque en contextos reales.", 
+      "Aprendizaje por proyectos"
+    ],
+    "requirements": [
+      "Proyector/Pantalla",
+      "Conexión a internet estable",
+      "PC/Laptop para los estudiantes"
+    ],
+    "methodology": [
+      "Aprendizaje Basado en Proyectos", 
+      "Uso de simuladores interactivos",
+      "Clases gamificadas"
+    ],
+    "platforms": [
+      "VexCode VR",
+      "Tinkercad",
+      "Scratch",
+      "Arduino", 
+      "Python"
+    ]
+  }
+]
