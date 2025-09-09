@@ -1,15 +1,21 @@
 import { HeaderProgram, DescriptionProgram, SectionPhrase, SectionDetails } from '../components/Programa'
 import { Footer } from '../components/ui'
 import { useEffect } from 'react'
-import { useParams } from 'react-router-dom'
+import { useParams, Navigate } from 'react-router-dom'
 import data from '../data/api-detail-programs.json'
 
 export default function Programa() {
   const param = useParams()
   const detail = data.filter(item => item.id === param.title)[0]
+
   useEffect(() => {
     window.scrollTo(0, 0)
   }, [])
+
+  // Si no se encuentra el programa, redirigir a 404
+  if (!detail) {
+    return <Navigate to="/404" replace />
+  }
 
   return (
     <>

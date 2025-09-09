@@ -24,6 +24,7 @@ export default function MyRoutes() {
         <Route path="/talleres" element={<Talleres />} />
         <Route path="/voluntarios" element={<Voluntariados />} />
         <Route path="/donar" element={<Donar />} />
+        <Route path="/404" element={<Error404 />} />
         <Route path="*" element={<Error404 />} />
       </Routes>
     </BrowserRouter>
