@@ -49,7 +49,7 @@ export default function LifeSection() {
           </CardLife>
         </section>
 
-        <button className=" cursor-pointer m-auto bg-white text-st flex w-fit items-center justify-center gap-3 px-5 py-3 rounded-lg">
+        <a href="https://forms.office.com/r/M9jUD40EdF" target="_blank" className="z-2 cursor-pointer m-auto bg-white text-st flex w-fit items-center justify-center gap-3 px-5 py-3 rounded-lg shadow-[0_4px_15px_rgba(255,255,255,0.3)] hover:shadow-[0_6px_20px_rgba(255,255,255,0.4)] hover:-translate-y-1 transition-all duration-300 ease-in-out">
           <span>
             <Icon icon="mdi:heart-outline" width="26" height="26" />
           </span>
@@ -59,7 +59,7 @@ export default function LifeSection() {
           <span>
             <Icon icon="proicons:arrow-right" width="26" height="26" />
           </span>
-        </button>
+        </a>
       </div>
     </section>
   )
