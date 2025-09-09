@@ -20,7 +20,7 @@ export default function NewTallerSection() {
         <a
           href="https://www.youtube.com/@AulaRobbuild/videos"
           target="black"
-          className="m-auto font-semibold bg-white text-st px-8 text-lg py-2 rounded-full text-center shadow-[0_4px_20px_rgba(255,255,255,0.3)] hover:shadow-[0_8px_30px_rgba(255,255,255,0.5)] hover:-translate-y-1 transition-all duration-300 ease-out transform"
+          className="m-auto font-semibold bg-white text-st px-8 text-lg py-2 rounded-full text-center shadow-[0_4px_20px_rgba(255,255,255,0.3)] hover:shadow-[0_8px_30px_rgba(255,255,255,0.5)] hover:-translate-y-1 transition-all duration-300 ease-out transform z-2"
         >
           Ver talleres ahora
         </a>
