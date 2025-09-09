@@ -1,9 +1,10 @@
 {
   "rewrites": [
-    {
-      "source": "/(.*)",
-      "destination": "/index.html"
-    }
+    // Mantener archivos estáticos sin reescritura
+    { "source": "/assets/(.*)", "destination": "/assets/$1" },
+    { "source": "/(.*\\.(js|css|png|jpg|jpeg|gif|svg|webp|ico|ttf|woff|woff2|map))", "destination": "/$1" },
+    // Fallback SPA: cualquier otra ruta va a index.html
+    { "source": "/(.*)", "destination": "/index.html" }
   ],
   "buildCommand": "npm run build",
   "outputDirectory": "dist",
