@@ -25,10 +25,10 @@ export default function VolunteerDonateSection() {
         </header>
 
         <section className='flex flex-row flex-wrap justify-center items-center gap-6 sm:gap-15'>
-          <Link to="/voluntarios">
+          <Link to="/voluntarios" className="z-2">
             <button className="w-50 font-semibold text-base bg-white text-st px-10 py-3 rounded-lg transition-all duration-300 hover:shadow-2xl hover:shadow-white/40 hover:-translate-y-1">Ser voluntario</button>
           </Link>
-          <Link to="donar">
+          <Link to="donar" className="z-2">
             <button className="w-fit font-semibold text-base bg-white text-st px-10 py-3 rounded-lg transition-all duration-300 hover:shadow-2xl hover:shadow-white/40 hover:-translate-y-1">Hacer Donación</button>
           </Link>
         </section>
