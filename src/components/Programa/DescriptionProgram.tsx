@@ -25,8 +25,8 @@ export default function DescriptionProgram({ description, descriptionDetails, im
           </p>
           <ul className="flex flex-col gap-1.5">
             {descriptionDetails.map(((detail, index) => (
-              <li key={index} className="flex">
-                <Icon className="text-st" icon="prime:check-circle" width="24" height="24" />
+              <li key={index} className="flex items-center gap-1">
+                <Icon className="text-st" icon="prime:check-circle" width="25" height="25" />
                 <p>{detail}</p>
               </li>
             )))}

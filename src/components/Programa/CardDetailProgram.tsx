@@ -13,11 +13,10 @@ export default function CardDetailProgram({ color, subcolor, requirements, metho
       style={{ borderColor: `#${color}` }}
     >
       <div
-        className="absolute size-35 -top-30 -right-30 group-hover:-top-10 group-hover:-right-10 duration-500 rounded-full"
+        className="z-1 absolute size-50 -top-30 -right-30 group-hover:scale-[8] duration-1000 rounded-full opacity-50"
         style={{ backgroundColor: `#${subcolor}` }}
-
       ></div>
-      <header className="flex gap-3 items-center">
+      <header className="flex gap-3 items-center z-2">
         <div
           className={`flex jsutify-center items-center p-2 rounded-lg`}
           style={{ backgroundColor: `#${subcolor}` }}
@@ -28,9 +27,9 @@ export default function CardDetailProgram({ color, subcolor, requirements, metho
             style={{ color: `#${color}` }}
           />
         </div>
-        <p className="font-extrabold text-lg">Requisitos</p>
+        <p className="font-extrabold text-lg ">Requisitos</p>
       </header>
-      <div className="flex flex-col text-black/90">
+      <div className="flex flex-col text-black/90 z-2">
         {requirements?.map((requirement, index) => (
           <p key={`req-${index}`}>{requirement}</p>
         ))}
