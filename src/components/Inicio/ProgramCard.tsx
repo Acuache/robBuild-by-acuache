@@ -13,12 +13,13 @@ interface ProgramCardProps {
 function slugify(text: string) {
   return text
     .toLowerCase()
-    .normalize('NFD')
-    .replace(/[\u0300-\u036f]/g, '') // Elimina tildes
-    .replace(/[^a-z0-9\s-]/g, '') // Elimina caracteres especiales
-    .trim()
-    .replace(/\s+/g, '-') // Reemplaza espacios con guiones
-    .replace(/-+/g, '-'); // Elimina guiones duplicados
+    .replace(/á/g, 'a')
+    .replace(/é/g, 'e')
+    .replace(/í/g, 'i')
+    .replace(/ó/g, 'o')
+    .replace(/ú/g, 'u')
+    .replace(/ñ/g, 'n')
+    .replace(/\s+/g, '-');
 }
 
 export default function ProgramCard({ id, title, description, informations }: ProgramCardProps) {
