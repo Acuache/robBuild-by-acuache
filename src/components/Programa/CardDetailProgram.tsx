@@ -13,7 +13,7 @@ export default function CardDetailProgram({ color, subcolor, requirements, metho
       style={{ borderColor: `#${color}` }}
     >
       <div
-        className="z-1 absolute size-50 -top-30 -right-30 group-hover:scale-[8] duration-1000 rounded-full opacity-50"
+        className="z-1 absolute size-50 -top-44 -right-44 group-hover:scale-[9] duration-2000 rounded-full opacity-50"
         style={{ backgroundColor: `#${subcolor}` }}
       ></div>
       <header className="flex gap-3 items-center z-2">
@@ -42,7 +42,7 @@ export default function CardDetailProgram({ color, subcolor, requirements, metho
           {platforms?.map((platform, index) => (
             <p
               key={`pla-${index}`}
-              className="border-1 border-black/30 px-2.5 py-1.9 rounded-md transition-all duration-300 hover:shadow-lg hover:-translate-y-1 hover:border-blue-500/50 hover:bg-blue-50 cursor-pointer"
+              className="bg-white border-1 border-black/30 px-2.5 py-1.9 rounded-md transition-all duration-300 hover:shadow-lg hover:-translate-y-1 hover:border-blue-500/50 hover:bg-blue-50 cursor-pointer"
             >
               {platform}
             </p>
