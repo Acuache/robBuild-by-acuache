@@ -1,7 +1,7 @@
 import { HeaderProgram, DescriptionProgram, SectionPhrase, SectionDetails } from '../components/Programa'
 import { Footer } from '../components/ui'
 import { useEffect } from 'react'
-import { useParams, Navigate } from 'react-router-dom'
+import { useParams } from 'react-router-dom'
 import data from '../data/api-detail-programs.json'
 
 export default function Programa() {
@@ -12,9 +12,15 @@ export default function Programa() {
     window.scrollTo(0, 0)
   }, [])
 
-  // Si no se encuentra el programa, redirigir a 404
   if (!detail) {
-    return <Navigate to="/404" replace />
+    return (
+      <div className="min-h-screen flex items-center justify-center">
+        <div className="text-center">
+          <h1 className="text-2xl font-bold mb-4">Programa no encontrado</h1>
+          <p className="text-gray-600">El programa que buscas no existe.</p>
+        </div>
+      </div>
+    )
   }
 
   return (

@@ -1,6 +1,6 @@
 [
   {
-    "id" : "robótica-para-todos-con-enfoque-steam",
+    "id" : "robotica-para-todos-con-enfoque-steam",
     "imgHeader" : "program1_description.png",
     "imgDescription": "program1_header.png",
     "title": "Robótica para todos con STEAM",
@@ -32,7 +32,7 @@
     ]
   },
   {
-    "id" : "robótica-para-un-futuro-sin-brechas",
+    "id" : "robotica-para-un-futuro-sin-brechas",
     "imgHeader" : "program2_description.png",
     "imgDescription": "program2_header.png",
     "title": "Robótica para un futuro sin brechas",

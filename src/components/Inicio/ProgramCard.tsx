@@ -11,7 +11,14 @@ interface ProgramCardProps {
 }
 
 function slugify(text: string) {
-  return text.toLowerCase().replace(/\s+/g, '-');
+  return text
+    .toLowerCase()
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '') // Elimina tildes
+    .replace(/[^a-z0-9\s-]/g, '') // Elimina caracteres especiales
+    .trim()
+    .replace(/\s+/g, '-') // Reemplaza espacios con guiones
+    .replace(/-+/g, '-'); // Elimina guiones duplicados
 }
 
 export default function ProgramCard({ id, title, description, informations }: ProgramCardProps) {
