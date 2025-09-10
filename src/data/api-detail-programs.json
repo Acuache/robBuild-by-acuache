@@ -11,6 +11,23 @@
       "Enfoque en contextos reales.", 
       "Aprendizaje por proyectos"
     ],
+    "imagesDescriptions" : [
+      {
+        "imageName": "program1_image1.png",
+        "titleImage": "Nature details softly crafted by hand",
+        "descriptionImage": "Sincerity yet herefore forfeited his cell taint neglect questions uelderly amongst on distant"
+      },
+      {
+        "imageName": "program1_image2.png",
+        "titleImage": "Nature details softly crafted by hand",
+        "descriptionImage": "Sincerity yet herefore forfeited his cell taint neglect questions uelderly amongst on distant"
+      },
+      {
+        "imageName": "program1_image3.png",
+        "titleImage": "Nature details softly crafted by hand",
+        "descriptionImage": "Sincerity yet herefore forfeited his cell taint neglect questions uelderly amongst on distant"
+      }
+    ],
     "requirements": [
       "Conexión a internet estable",
       "Ingresar desde una PC/Laptop"
@@ -42,6 +59,23 @@
       "Metodología práctica y gamificada.", 
       "Enfoque en contextos reales.", 
       "Aprendizaje por proyectos"
+    ],
+    "imagesDescriptions" : [
+      {
+        "imageName": "program2_image1.png",
+        "titleImage": "Nature details softly crafted by hand",
+        "descriptionImage": "Sincerity yet herefore forfeited his cell taint neglect questions uelderly amongst on distant"
+      },
+      {
+        "imageName": "program2_image2.png",
+        "titleImage": "Nature details softly crafted by hand",
+        "descriptionImage": "Sincerity yet herefore forfeited his cell taint neglect questions uelderly amongst on distant"
+      },
+      {
+        "imageName": "program2_image3.png",
+        "titleImage": "Nature details softly crafted by hand",
+        "descriptionImage": "Sincerity yet herefore forfeited his cell taint neglect questions uelderly amongst on distant"
+      }
     ],
     "requirements": [
       "Proyector/Pantalla",
