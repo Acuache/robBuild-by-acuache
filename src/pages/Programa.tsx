@@ -1,4 +1,4 @@
-import { HeaderProgram, DescriptionProgram, SectionPhrase, SectionDetails } from '../components/Programa'
+import { HeaderProgram, DescriptionProgram, SectionPhrase, SectionDetails, SectionImageDescription } from '../components/Programa'
 import { Footer } from '../components/ui'
 import { useEffect } from 'react'
 import { useParams } from 'react-router-dom'
@@ -37,6 +37,7 @@ export default function Programa() {
         imgDescription={detail.imgDescription}
       />
       <SectionPhrase />
+      <SectionImageDescription />
       <SectionDetails
         requirements={detail.requirements}
         methodology={detail.methodology}
