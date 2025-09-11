@@ -1,12 +1,13 @@
 import { Icon } from "@iconify/react";
 interface CardDetailProgramProps {
+  title: string
   color: string;
   subcolor: string
   requirements?: string[]
   methodology?: string[]
   platforms?: string[]
 }
-export default function CardDetailProgram({ color, subcolor, requirements, methodology, platforms }: CardDetailProgramProps) {
+export default function CardDetailProgram({ color, subcolor, requirements, methodology, platforms, title }: CardDetailProgramProps) {
   return (
     <article
       className="group flex flex-col gap-6 border-l-3 shadow-2xl bg-white w-full  py-10 px-5 relative overflow-hidden"
@@ -27,7 +28,7 @@ export default function CardDetailProgram({ color, subcolor, requirements, metho
             style={{ color: `#${color}` }}
           />
         </div>
-        <p className="font-extrabold text-lg ">Requisitos</p>
+        <p className="font-extrabold text-lg ">{title}</p>
       </header>
       <div className="flex flex-col text-black/90 z-2">
         {requirements?.map((requirement, index) => (
