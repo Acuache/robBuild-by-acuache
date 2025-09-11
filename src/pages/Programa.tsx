@@ -39,12 +39,12 @@ export default function Programa() {
         imgDescription={detail.imgDescription}
       />
       <SectionPhrase />
-      <SectionImageDescription detailsImages={detail.imagesDescriptions} />
       <SectionDetails
         requirements={detail.requirements}
         methodology={detail.methodology}
         platforms={detail.platforms}
       />
+      <SectionImageDescription detailsImages={detail.imagesDescriptions} />
       <Footer />
     </>
   )

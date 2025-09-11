@@ -6,7 +6,7 @@ interface SectionDetailsProps {
 }
 export default function SectionDetails({ requirements, methodology, platforms }: SectionDetailsProps) {
   return (
-    <section className="w-full text-black py-15 sm:py-15">
+    <section className="w-full text-black py-15 sm:py-15 bg-[#f4fbf8]">
       <div className='px-4 flex flex-col justify-stretch sm:flex-row max-w-6xl m-auto md:px-8 xl:px-0'>
         <CardDetailProgram
           title="Requisitos"
