@@ -10,7 +10,7 @@ interface SectionImageDescriptionProps {
 export default function SectionImageDescription({ detailsImages }: SectionImageDescriptionProps) {
   return (
     <div className='w-full py-15 pt-40 bg-[#f4fbf8]'>
-      <section className='px-5 max-w-6xl m-auto flex flex-col gap-8  lg:gap-11 lg:px-0 '>
+      <section className='px-5 max-w-5xl m-auto flex flex-col gap-8  lg:gap-11 lg:px-0 '>
 
         {
           detailsImages.map((detail, index) => (
