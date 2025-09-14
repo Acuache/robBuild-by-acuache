@@ -1,9 +1,9 @@
 [
   {
     "id" : "robotica-para-todos-con-enfoque-steam",
-    "imgHeader" : "program1_description.png",
-    "imgDescription": "program1_header.png",
-    "title": "Robótica para todos con STEAM",
+    "imgHeader" : "program1_header.png",
+    "imgDescription": "program1_description.png",
+    "title": "Robótica para todos con enfoque STEAM",
     "subtitle": "Transformando vidas con el poder de la tecnología",
     "description": "Un programa integral que combina teoría y práctica para desarrollar habilidades STEM mediante proyectos de tecnología. Está orientado a niños y jóvenes de 8-15 años. Durante el proceso, los participantes aprenden a diseñar, construir y programar prototipos en simuladores virtuales.",
     "descriptionDetails": [
@@ -14,18 +14,18 @@
     "imagesDescriptions" : [
       {
         "imageName": "program1_image1.png",
-        "titleImage": "Nature details softly crafted by hand",
-        "descriptionImage": "Sincerity yet herefore forfeited his cell taint neglect questions uelderly amongst on distant"
+        "titleImage": "Diseño Creativo",
+        "descriptionImage": "Los estudiantes modelan objetos en 3D con Tinkercad, desarrollando creatividad, precisión digital y pensamiento espacial."
       },
       {
         "imageName": "program1_image2.png",
-        "titleImage": "Nature details softly crafted by hand",
-        "descriptionImage": "Sincerity yet herefore forfeited his cell taint neglect questions uelderly amongst on distant"
+        "titleImage": "Programación Lógico",
+        "descriptionImage": "Con VEX Code VR, los niños aprenden programación visual resolviendo retos interactivos en entornos virtuales."
       },
       {
         "imageName": "program1_image3.png",
-        "titleImage": "Nature details softly crafted by hand",
-        "descriptionImage": "Sincerity yet herefore forfeited his cell taint neglect questions uelderly amongst on distant"
+        "titleImage": "Innovación 3D",
+        "descriptionImage": "Mediante Tinkercad, los alumnos transforman sus ideas en prototipos digitales, fortaleciendo innovación y aprendizaje práctico."
       }
     ],
     "requirements": [
@@ -50,8 +50,8 @@
   },
   {
     "id" : "robotica-para-un-futuro-sin-brechas",
-    "imgHeader" : "program2_description.png",
-    "imgDescription": "program2_header.png",
+    "imgHeader" : "program2_header.png",
+    "imgDescription": "program2_description.png",
     "title": "Robótica para un futuro sin brechas",
     "subtitle": "Tecnología que conecta, inspira y transforma comunidades.",
     "description": "Programa integral de acceso inclusivo a la tecnología que ofrece una ruta de aprendizaje STEAM para escuelas públicas de zonas rurales. Se incluye dentro del horario escolar y se gestiona  con la institución educativa.",
@@ -63,18 +63,18 @@
     "imagesDescriptions" : [
       {
         "imageName": "program2_image1.png",
-        "titleImage": "Nature details softly crafted by hand",
-        "descriptionImage": "Sincerity yet herefore forfeited his cell taint neglect questions uelderly amongst on distant"
+        "titleImage": "Aprendizaje Activo",
+        "descriptionImage": "Los estudiantes desarrollan proyectos en Scratch, aplicando programación básica con metodología práctica y gamificada."
       },
       {
         "imageName": "program2_image2.png",
-        "titleImage": "Nature details softly crafted by hand",
-        "descriptionImage": "Sincerity yet herefore forfeited his cell taint neglect questions uelderly amongst on distant"
+        "titleImage": "Docencia Remota",
+        "descriptionImage": "Un docente remoto guía la clase en vivo, integrando programación al horario escolar regular."
       },
       {
         "imageName": "program2_image3.png",
-        "titleImage": "Nature details softly crafted by hand",
-        "descriptionImage": "Sincerity yet herefore forfeited his cell taint neglect questions uelderly amongst on distant"
+        "titleImage": "Proyectos Colaborativos",
+        "descriptionImage": "Alumnos trabajan en equipos con Scratch, creando proyectos digitales aplicadas a contextos reales de su comunidad."
       }
     ],
     "requirements": [
