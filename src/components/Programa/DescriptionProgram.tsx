@@ -33,7 +33,7 @@ export default function DescriptionProgram({ description, descriptionDetails, im
           </ul>
         </div>
         <div className={`sm:flex-1/2 duration-1500 ${inView ? "opacity-100 translate-x-0" : "opacity-0 translate-x-20"}`}>
-          <img className="w-full h-full object-cover" src={getDetailProgramImage(imgDescription)} />
+          <img className="w-full h-full object-cover" src={getDetailProgramImage(imgDescription)} loading="lazy" decoding="async" />
         </div>
       </div>
     </section>

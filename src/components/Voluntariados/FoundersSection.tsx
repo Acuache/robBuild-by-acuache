@@ -12,7 +12,7 @@ export default function FoundersSection() {
             className="bg-clip-text text-transparent bg-gradient-to-r"
             style={{ backgroundImage: 'var(--gradient-st)' }}
           >está REVOLUCIÓN</span></h2>
-          <p className='description text-pretty'>Cuatro personas extraordinarias que decidieron que el futuro tecnológico del Perú no podía esperar más.</p>
+          <p className='description text-pretty'>Dos personas extraordinarias que decidieron que el futuro tecnológico del Perú no podía esperar más.</p>
         </header>
 
         <section className='flex flex-row flex-wrap gap-5 justify-center items-center md:gap-8'>

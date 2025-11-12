@@ -28,7 +28,7 @@ export default function ProgramCard({ id, title, description, informations }: Pr
   return (
     <article className='overflow-hidden rounded-lg flex flex-col'>
       <div className='h-65'>
-        <img className='w-full h-full object-cover' src={resultImages[id]} alt={title} />
+        <img className='w-full h-full object-cover' src={resultImages[id]} alt={title} loading="lazy" decoding="async" />
       </div>
       <div className='bg-white p-4 flex flex-col items-center gap-2 flex-grow justify-between lg:p-4'>
         <div className='flex flex-col items-center gap-3 '>

@@ -15,9 +15,11 @@ export default function CardFounder({ name, job, img, url }: CardFounderProps) {
 
       {/* Imagen con animación */}
       <img
+        decoding="async"
+        loading="lazy"
         className="w-full h-full object-contain transition-transform duration-500 group-hover:scale-105"
         src={img}
-        alt={name}
+        alt={`Foto de perfil de ${name}`}
       />
 
       {/* Tarjeta de información con animación mejorada */}
@@ -31,6 +33,7 @@ export default function CardFounder({ name, job, img, url }: CardFounderProps) {
           target="_blank"
           rel="noopener noreferrer"
           className="transition-all duration-300 group-hover:scale-110 relative z-30"
+          aria-label={`Ir al LinkedIn de ${name}`}
         >
           <Icon
             icon="devicon:linkedin"

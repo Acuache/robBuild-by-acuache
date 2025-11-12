@@ -24,7 +24,7 @@ export default function CardVolunteer({ specialty, name, profession, img, locati
       }
 
       {/* Effecto Circulo */}
-      <a href={linkedin} target="_blank" rel="noopener noreferrer">
+      <a href={linkedin} target="_blank" rel="noopener noreferrer" aria-label={`Ir al LinkedIn de ${name}`}>
         <div className="absolute flex justify-center items-center text-white w-18 h-18 bg-[#33AA6F]/80 rounded-full  duration-500 opacity-0 -right-[30%] -top-[30%] group-hover:-right-[5%] group-hover:-top-[3%] group-hover:opacity-100 group-focus-within:-right-[5%] group-focus-within:-top-[3%] group-focus-within:opacity-100">
           <Icon icon="bi:linkedin" width="28" height="28" />
         </div>
@@ -45,8 +45,10 @@ export default function CardVolunteer({ specialty, name, profession, img, locati
       </div>
 
       <img
+        loading="lazy"
+        decoding="async"
         src={getVolunteerImage(img)}
-        alt={name}
+        alt={`Foto de perfil de ${name}`}
         className="w-full h-[100%] object-cover rounded-b-2xl bg-[#cbd0cc]"
       />
 

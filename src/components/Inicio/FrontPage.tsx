@@ -84,6 +84,8 @@ export default function FrontPage() {
 
           {/* Imagen principal con animación */}
           <img
+            loading="lazy"
+            decoding="async"
             className={`w-full h-full object-cover rounded-3xl transition-all duration-500 ease-out ${isAnimating ? 'brightness-90' : 'brightness-100'
               }`}
             src={images[currentImageIndex]}

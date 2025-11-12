@@ -52,6 +52,8 @@ export default function ResultsSection() {
           <article className="flex flex-col rounded-xl md:flex-row md:h-163 lg:h-128 overflow-hidden md:rounded-2xl">
             <div className={`h-100 md:basis-1/2  overflow-hidden bg-white md:h-full bg-center bg-no-repeat bg-[length:60%]`}>
               <img
+                loading="lazy"
+                decoding="async"
                 src={resultImages[currentIndex]}
                 alt={result.title}
                 className={`w-full h-full duration-50 object-center object-cover  ${isAnimating ? "opacity-0" : "opacity-100"}`}
@@ -102,6 +104,7 @@ export default function ResultsSection() {
                 {
                   results.map((_, index) => (
                     <button
+                      aria-label="Siguiente reconocimiento"
                       className={`w-3.5 h-3.5 rounded-full cursor-pointer transition-colors ${index === currentIndex ? "bg-st mx-1.5 animate-heartbeat" : "bg-[#c9cbcc]"}`}
                       key={index}
                       onClick={() => handleClick(index)}

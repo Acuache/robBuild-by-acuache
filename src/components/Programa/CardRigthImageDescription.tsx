@@ -18,7 +18,7 @@ export default function CardRigthImageDescription({ imageName, titleImage, descr
       </div>
 
       <div className={`w-full h-100 sm:h-120 lg:flex-2/3 max-w-160  lg:h-150 transition-all duration-1000 overflow-hidden ${inView ? "opacity-100 translate-x-0" : "opacity-0 translate-x-80"}`}>
-        <img className='w-full h-full object-cover' src={getDetailProgramImage(imageName)} alt="" />
+        <img className='w-full h-full object-cover' src={getDetailProgramImage(imageName)} alt={titleImage} loading="lazy" decoding="async" />
       </div>
 
       <div className={`z-2 flex flex-col justify-center items-center p-7 gap-4 bg-white lg:absolute  lg:left-0 lg:top-1/2 lg:-translate-y-1/4 sm:p-12 sm:max-w-115 sm:-mt-20 lg:flex-1/3 text-center lg:text-end lg:items-end transition-all duration-1000 ${inView ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-80"}`}>
