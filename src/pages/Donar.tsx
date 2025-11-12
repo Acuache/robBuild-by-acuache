@@ -259,7 +259,7 @@ export default function Donar() {
   return (
     <>
       <section className="mt-16 w-full py-15 bg-[#f4fbf8] px-4">
-        <div className="max-w-3xl m-auto flex flex-col gap-8 px-4 sm:px-6 lg:px-8">
+        <main className="max-w-3xl m-auto flex flex-col gap-8 px-4 sm:px-6 lg:px-8">
           {/* Header */}
           <header className='flex flex-col gap-5 items-center'>
             <h2 className='title'>Apoya Nuestra Misión</h2>
@@ -582,7 +582,7 @@ export default function Donar() {
               </div>
             </div>
           )}
-        </div>
+        </main>
       </section>
       <Footer />
     </>

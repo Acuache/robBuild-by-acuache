@@ -14,7 +14,7 @@ export default function DescriptionProgram({ description, descriptionDetails, im
     triggerOnce: true,
   })
   return (
-    <section ref={ref} className="w-full text-black py-15 bg-[#f4fbf8]">
+    <main ref={ref} className="w-full text-black py-15 bg-[#f4fbf8]">
       <div className='px-4 flex flex-col gap-8 sm:flex-row lg:gap-11 max-w-6xl m-auto md:px-8 xl:px-0 justify-stretch'>
         <div className={`flex flex-col gap-3 sm:flex-1/2 text-lg duration-1500 ${inView ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-20"}`}>
           <p className="">
@@ -36,6 +36,6 @@ export default function DescriptionProgram({ description, descriptionDetails, im
           <img className="w-full h-full object-cover" src={getDetailProgramImage(imgDescription)} loading="lazy" decoding="async" />
         </div>
       </div>
-    </section>
+    </main>
   )
 }

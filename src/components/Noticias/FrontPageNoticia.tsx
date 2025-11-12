@@ -30,7 +30,7 @@ export default function FrontPageNoticia() {
           <p className='description text-pretty'>Descubre los logros más recientes, nuevos programas y eventos especiales de nuestra comunidad educativa.</p>
         </header>
 
-        <section className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5 md:gap-8 justify-items-center'>
+        <main className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5 md:gap-8 justify-items-center'>
           {
             news.map((noticia, index) => (
               <CardNoticia
@@ -40,7 +40,7 @@ export default function FrontPageNoticia() {
               />
             ))
           }
-        </section>
+        </main>
 
       </div>
     </section>

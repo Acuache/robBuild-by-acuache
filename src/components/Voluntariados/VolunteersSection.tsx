@@ -50,7 +50,7 @@ export default function VolunteersSection() {
   }
 
   return (
-    <section className="w-full  py-15  bg-[#f4fbf8]">
+    <main className="w-full  py-15  bg-[#f4fbf8]">
       <div className='px-5 max-w-6xl m-auto flex flex-col gap-8 lg:gap-11 lg:px-0'>
 
         {/* Header de la sección */}
@@ -152,6 +152,6 @@ export default function VolunteersSection() {
         )}
 
       </div>
-    </section>
+    </main>
   )
 }
