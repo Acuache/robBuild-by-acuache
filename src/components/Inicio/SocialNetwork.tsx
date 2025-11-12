@@ -11,7 +11,7 @@ export default function SocialNetwork({ title, description, link, children }: So
         {children}
       </div>
       <div className="flex flex-col justify-between h-full">
-        <h4 className="text-base font-semibold">{title}</h4>
+        <h3 className="text-base font-semibold">{title}</h3>
         <p className="text-xs text-gray800">{description}</p>
       </div>
     </a>

@@ -25,44 +25,44 @@ export default function Footer() {
             </div>
           </div>
           <div className='flex flex-col gap-2'>
-            <h5 className='font-bold text-st'>Enlaces rápidos</h5>
+            <p className='font-bold text-st'>Enlaces rápidos</p>
             <ul className='flex flex-col gap-3'>
-              <Link to="/">
-                <li className='group cursor-pointer flex items-center gap-2 transition-all duration-300'>
+              <li className='group cursor-pointer flex items-center gap-2 transition-all duration-300'>
+                <Link to="/">
                   <div className="transition-colors duration-300 group-hover:text-st">
                     <Icon icon="ic:round-home" width="24" height="24" />
                   </div>
                   <p className="underline-animation">Inicio</p>
-                </li>
-              </Link>
-              <Link to="/talleres">
-                <li className='group cursor-pointer flex items-center gap-2 transition-all duration-300'>
+                </Link>
+              </li>
+              <li className='group cursor-pointer flex items-center gap-2 transition-all duration-300'>
+                <Link to="/talleres">
                   <div className="transition-colors duration-300 group-hover:text-st">
                     <Icon icon="grommet-icons:workshop" width="24" height="24" />
                   </div>
                   <p className="underline-animation">Talleres</p>
-                </li>
-              </Link>
-              <Link to="/voluntarios">
-                <li className='group cursor-pointer flex items-center gap-2 transition-all duration-300'>
+                </Link>
+              </li>
+              <li className='group cursor-pointer flex items-center gap-2 transition-all duration-300'>
+                <Link to="/voluntarios">
                   <div className="transition-colors duration-300 group-hover:text-st">
                     <Icon icon="formkit:people" width="24" height="24" />
                   </div>
                   <p className="underline-animation">Voluntarios</p>
-                </li>
-              </Link>
-              <Link to="/noticias">
-                <li className='group cursor-pointer flex items-center gap-2 transition-all duration-300'>
+                </Link>
+              </li>
+              <li className='group cursor-pointer flex items-center gap-2 transition-all duration-300'>
+                <Link to="/noticias">
                   <div className="transition-colors duration-300 group-hover:text-st">
                     <Icon icon="material-symbols:news-outline" width="24" height="24" />
                   </div>
                   <p className="underline-animation">Noticias</p>
-                </li>
-              </Link>
+                </Link>
+              </li>
             </ul>
           </div>
           <div className='flex flex-col gap-2'>
-            <h5 className='font-bold text-st'>Contacto</h5>
+            <p className='font-bold text-st'>Contacto</p>
             <ul className='flex flex-col gap-3'>
               <li className='group cursor-pointer flex items-center gap-2 transition-all duration-300'>
                 <div className="transition-colors duration-300 group-hover:text-st">

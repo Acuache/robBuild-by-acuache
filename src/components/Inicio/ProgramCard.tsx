@@ -48,7 +48,7 @@ export default function ProgramCard({ id, title, description, informations }: Pr
           </div>
         </div>
         <Link to={`/programa/${idProgram}`}>
-          <button className='mt-3 text-white font-bold w-fit px-6 py-2 rounded-full transition-all duration-300 ease-out hover:scale-105 hover:shadow-lg hover:shadow-st/20 hover:-translate-y-1 hover:brightness-110 active:scale-95' style={{ background: 'var(--gradient-st)' }}>Más información</button>
+          <button className='mt-3 text-white font-bold w-fit px-6 py-2 rounded-full transition-all duration-300 ease-out hover:scale-105 hover:shadow-lg hover:shadow-st/20 hover:-translate-y-1 hover:brightness-110 active:scale-95' style={{ background: 'var(--gradient-st)' }} aria-label={`Más información sobre ${title}`} >Más información</button>
         </Link>
       </div>
     </article>

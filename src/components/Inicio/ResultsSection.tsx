@@ -100,12 +100,12 @@ export default function ResultsSection() {
                   <p className="text-base/5">{result.victories}</p>
                 </div>
               </div>
-              <div className="flex gap-2">
+              <div className="flex gap-3">
                 {
                   results.map((_, index) => (
                     <button
                       aria-label="Siguiente reconocimiento"
-                      className={`w-3.5 h-3.5 rounded-full cursor-pointer transition-colors ${index === currentIndex ? "bg-st mx-1.5 animate-heartbeat" : "bg-[#c9cbcc]"}`}
+                      className={`size-4 rounded-full cursor-pointer transition-colors ${index === currentIndex ? "bg-st mx-1.5 animate-heartbeat" : "bg-[#c9cbcc]"}`}
                       key={index}
                       onClick={() => handleClick(index)}
                     />
