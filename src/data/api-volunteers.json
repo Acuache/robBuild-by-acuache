@@ -3,7 +3,7 @@
     "specialty": "Marketing",
     "name": "Rosa Fuertes",
     "profession": "Diseño Industrial",
-    "img": "rosa-fuertes.png",
+    "img": "rosa-fuertes.webp",
     "location": "Lima",
     "linkedin": "https://www.linkedin.com/in/rosa-fuertes"
   },
@@ -11,7 +11,7 @@
     "specialty": "Programación",
     "name": "Juan Ramos",
     "profession": "Ing. Mecatrónica",
-    "img": "juan-ramos.png",
+    "img": "juan-ramos.webp",
     "location": "Callao",
     "linkedin": "https://www.linkedin.com/in/juan-antonio-ramos-vega-253272358/"
   },
@@ -19,7 +19,7 @@
     "specialty": "Mecánica",
     "name": "Raúl Maceda",
     "profession": "Ing. Mecatrónica",
-    "img": "raul-maceda.png",
+    "img": "raul-maceda.webp",
     "location": "Pasco",
     "linkedin": "https://www.linkedin.com/in/ra%C3%BAl-maceda-894601337/ "
   },
@@ -27,7 +27,7 @@
     "specialty": "Programación",
     "name": "Itzamar Bravo",
     "profession": "Ing. Mecatrónica",
-    "img": "itzamar-bravo.png",
+    "img": "itzamar-bravo.webp",
     "location": "México",
     "linkedin": "https://mx.linkedin.com/in/itzamar-bravo-349a89116"
   },
@@ -35,7 +35,7 @@
     "specialty": "Programación",
     "name": "Rodrigo Saavedra",
     "profession": "Ing. Mecatrónica",
-    "img": "rodrigo-saavedra.png",
+    "img": "rodrigo-saavedra.webp",
     "location": "Tacna",
     "linkedin": "https://www.linkedin.com/in/rodrigo-saavedra-4b606b23a"
   },
@@ -43,7 +43,7 @@
     "specialty": "Electrónica",
     "name": "Angel Quispe",
     "profession": "Ing. Electrónica",
-    "img": "angel-quispe.png",
+    "img": "angel-quispe.webp",
     "location": "Lima",
     "linkedin": "https://www.linkedin.com/in/angel-quispe-708845111/"
   },
@@ -51,7 +51,7 @@
     "specialty": "Programación",
     "name": "Flor Huaman",
     "profession": "Ing. Bioingeniería",
-    "img": "flor-huaman.png",
+    "img": "flor-huaman.webp",
     "location": "Lima",
     "linkedin": "https://www.linkedin.com/in/flor-lucero-huaman-lopez-123a62299/"
   },
@@ -59,7 +59,7 @@
     "specialty": "Mecánica",
     "name": "Juan del Olmo",
     "profession": "Ing. Bioingeniería",
-    "img": "juan-delolmo.png",
+    "img": "juan-delolmo.webp",
     "location": "Ancash ",
     "linkedin": "https://www.linkedin.com/in/juan-ignacio-del-olmo-dulong-8453851a6"
   },
@@ -67,7 +67,7 @@
     "specialty": "Programación",
     "name": "Elías Paccosoncco",
     "profession": "Tec. Gestión y Mantenimiento",
-    "img": "elias-paccosoncco.png",
+    "img": "elias-paccosoncco.webp",
     "location": "Lima",
     "linkedin": "https://www.linkedin.com/in/elias-paccosoncco/"
   },
@@ -75,7 +75,7 @@
     "specialty": "Electrónica",
     "name": "Flavio Alarcón",
     "profession": "Ing. Mecatrónica ",
-    "img": "flavio-alarcon.png",
+    "img": "flavio-alarcon.webp",
     "location": "Lima",
     "linkedin": "https://www.linkedin.com/in/flavio-alarcon-mu%C3%B1oz?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
   },
@@ -83,7 +83,7 @@
     "specialty": "Programación",
     "name": "Josué Gutiérrez",
     "profession": "Ing. Software",
-    "img": "josue-gutierrez.png",
+    "img": "josue-gutierrez.webp",
     "location": "Lima",
     "linkedin": "https://www.linkedin.com/me?trk=p_mwlite_feed-secondary_nav"
   }, 
@@ -91,7 +91,7 @@
     "specialty": "Electrónica",
     "name": "Roy Reza",
     "profession": "Ing. Bioingeniería",
-    "img": "roy-reza.png",
+    "img": "roy-reza.webp",
     "location": "Junín",
     "linkedin": "https://www.linkedin.com/in/roy-reza-b728392b8/"
   },
@@ -99,7 +99,7 @@
     "specialty": "Programación",
     "name": "Angela Vera",
     "profession": "Ing. Mecatrónica ",
-    "img": "angela-vera.png",
+    "img": "angela-vera.webp",
     "location": "Lima",
     "linkedin": "https://www.linkedin.com/in/angela-milagros-vera-bonilla-a77834237"
   },
@@ -107,7 +107,7 @@
     "specialty": "Desarrollo Web",
     "name": "Michael Acuache",
     "profession": "Ing. Sistemas",
-    "img": "michael-acuache.png",
+    "img": "michael-acuache.webp",
     "location": "Ica",
     "linkedin": "https://www.linkedin.com/in/yeltsin-michael-acuache-yalle-25968936b/"
   },
@@ -115,7 +115,7 @@
     "specialty": "Electrónica",
     "name": "Nattaly Mantari",
     "profession": "Ing. Mecatrónica ",
-    "img": "nattaly-mantari.png",
+    "img": "nattaly-mantari.webp",
     "location": "Junin",
     "linkedin": "https://www.linkedin.com/in/nattaly-mantari-ramos-894134247/"
   },
@@ -123,7 +123,7 @@
     "specialty": "Programación",
     "name": "Diego Quispe",
     "profession": "Computer Science",
-    "img": "diego-quispe.png",
+    "img": "diego-quispe.webp",
     "location": "Lima",
     "linkedin": "https://www.linkedin.com/in/diegorandolp/"
   },
@@ -131,7 +131,7 @@
     "specialty": "Electrónica",
     "name": "Paul Meza",
     "profession": "Ing. Mecánica",
-    "img": "paul-meza.png",
+    "img": "paul-meza.webp",
     "location": "Lima",
     "linkedin": "https://www.linkedin.com/in/paul-steve-meza-fernandez-0943b5271/"
   },
@@ -139,7 +139,7 @@
     "specialty": "Programación",
     "name": "Grecia Vargas",
     "profession": "Tec. Adm. Redes y Com.",
-    "img": "grecia-vargas.png",
+    "img": "grecia-vargas.webp",
     "location": "Ucayali ",
     "linkedin": "https://www.linkedin.com/in/grecia-vargas-rivera-532952278/"
   },
@@ -147,7 +147,7 @@
     "specialty": "Embajadores",
     "name": "Rafael Solier",
     "profession": "Ing. Electrónica",
-    "img": "rafael-solier.png",
+    "img": "rafael-solier.webp",
     "location": "Huancavelica",
     "linkedin": "https://www.linkedin.com/in/rafael-oliverth-solier-soto-685843336/"
   },
@@ -155,7 +155,7 @@
     "specialty": "Programación",
     "name": "Karla Yauri",
     "profession": "Tec. Adm. Redes y Com.",
-    "img": "karla-yauri.png",
+    "img": "karla-yauri.webp",
     "location": "San Martin",
     "linkedin": "https://www.linkedin.com/in/karla-nadith-yauri-camarena-a453b4303/"
   },
@@ -163,7 +163,7 @@
     "specialty": "Electrónica",
     "name": "Edinson Chipana",
     "profession": "Ing. Electrónica",
-    "img": "edinson-chipana.png",
+    "img": "edinson-chipana.webp",
     "location": "Lima",
     "linkedin": "https://www.linkedin.com/in/e-chipana/"
   },
@@ -171,7 +171,7 @@
     "specialty": "Programación",
     "name": "Nicol Anccana",
     "profession": "Computer Science",
-    "img": "nicol-anccana.png",
+    "img": "nicol-anccana.webp",
     "location": "Ica",
     "linkedin": "https://www.linkedin.com/in/nicol-anccana-llanto-b92a22253/"
   },
@@ -179,7 +179,7 @@
     "specialty": "Desarrollo Web",
     "name": "Martin Romani",
     "profession": "Tec. Desarrollo de software",
-    "img": "martin-romani.png",
+    "img": "martin-romani.webp",
     "location": "Lima",
     "linkedin": "https://www.linkedin.com/in/romani-delgado/"
   },
@@ -187,7 +187,7 @@
     "specialty": "Programación",
     "name": "Franco Araujo",
     "profession": "Ing. Empresarial",
-    "img": "franco-araujo.png",
+    "img": "franco-araujo.webp",
     "location": "Lima",
     "linkedin": "https://www.linkedin.com/in/gian-franco-araujo/"
   },
@@ -195,7 +195,7 @@
     "specialty": "Embajadores",
     "name": "Luis Barahona",
     "profession": "Ing. Electrónica",
-    "img": "luis-barahona.png",
+    "img": "luis-barahona.webp",
     "location": "Junín ",
     "linkedin": "https://www.linkedin.com/in/luis-david-barahona-valdivieso-41225b272/"
   },
@@ -203,7 +203,7 @@
     "specialty": "Programación",
     "name": "Fany Mayta",
     "profession": "Ing. Bioingeniería",
-    "img": "fany-mayta.png",
+    "img": "fany-mayta.webp",
     "location": "Lima",
     "linkedin": "https://www.linkedin.com/in/fany-mayta-alva-907b51238/"
   },
@@ -211,7 +211,7 @@
     "specialty": "Mecánica",
     "name": "Miguel Gomez",
     "profession": "Ing. Mecatrónica ",
-    "img": "miguel-gomez.png",
+    "img": "miguel-gomez.webp",
     "location": "Lima",
     "linkedin": "https://www.linkedin.com/in/miguel-angel-gomez-avalos-765072300/"
   },
@@ -219,7 +219,7 @@
     "specialty": "Programación",
     "name": "Jhostyn Malca",
     "profession": "Ing. Industrial ",
-    "img": "jhostyn-malca.png",
+    "img": "jhostyn-malca.webp",
     "location": "Lima",
     "linkedin": "https://www.linkedin.com/in/jhostyn-malca/"
   },
@@ -227,7 +227,7 @@
     "specialty": "Electrónica",
     "name": "Isabel Tapia",
     "profession": "Ing. Electrónica",
-    "img": "isabel-tapia.png",
+    "img": "isabel-tapia.webp",
     "location": "Arequipa",
     "linkedin": ""
   },
@@ -235,7 +235,7 @@
     "specialty": "Programación",
     "name": "Blanca Saldaña ",
     "profession": "Tec. Adm. Redes y Com.",
-    "img": "blanca-saldaña.png",
+    "img": "blanca-saldaña.webp",
     "location": "Ica",
     "linkedin": "https://www.linkedin.com/in/blanca-nelida-salda%C3%B1a-ramos/"
   },
@@ -243,7 +243,7 @@
     "specialty": "Electrónica",
     "name": "William Sime",
     "profession": "Ing. Mecatrónica ",
-    "img": "william-sime.png",
+    "img": "william-sime.webp",
     "location": "Lima",
     "linkedin": "https://www.linkedin.com/in/william-sime-costilla-0920821a5/"
   },
@@ -251,7 +251,7 @@
     "specialty": "Programación",
     "name": "Josué Yufra",
     "profession": "Lic. Informática",
-    "img": "josue-yufra.png",
+    "img": "josue-yufra.webp",
     "location": "Tacna",
     "linkedin": "https://www.linkedin.com/in/josu%C3%A9-valerio-yufra-gutierrez-57a36a217/"
   },
@@ -259,7 +259,7 @@
     "specialty": "Electrónica",
     "name": "Robert Falcon",
     "profession": "Ing. Mecatrónica ",
-    "img": "robert-falcon.png",
+    "img": "robert-falcon.webp",
     "location": "Ica",
     "linkedin": "https://www.linkedin.com/in/robert-falc%C3%B3n-salvador-3502a220b/"
   },
@@ -267,7 +267,7 @@
     "specialty": "Programación",
     "name": "Joselyn Yeseth",
     "profession": "Ing. Mecatrónica",
-    "img": "joselyn-yeseth.png",
+    "img": "joselyn-yeseth.webp",
     "location": "Cajamarca",
     "linkedin": "https://www.linkedin.com/in/j%C3%B3selyn-yeseth-ydrogo-fern%C3%A1ndez-a68218121"
   },
@@ -275,7 +275,7 @@
     "specialty": "Maker",
     "name": "Yasmin Mattos",
     "profession": "UX Design",
-    "img": "yasmin-mattos.png",
+    "img": "yasmin-mattos.webp",
     "location": "Ica",
     "linkedin": "https://www.linkedin.com/in/lealimattos/"
   },
@@ -283,7 +283,7 @@
     "specialty": "Programación",
     "name": "Fabricio Lanche",
     "profession": "Computer Science",
-    "img": "fabricio-lanche.png",
+    "img": "fabricio-lanche.webp",
     "location": "Lima",
     "linkedin": "www.linkedin.com/in/fabricio-alonso-lanche-pacsi-16a5472ba"
   },
@@ -291,7 +291,7 @@
     "specialty": "Mecánica",
     "name": "Luis Yampufé",
     "profession": "Ing. Mecatrónica ",
-    "img": "luis-yampufe.png",
+    "img": "luis-yampufe.webp",
     "location": "Lima",
     "linkedin": "https://www.linkedin.com/in/luisyampuferoman/"
   },
@@ -299,7 +299,7 @@
     "specialty": "Programación",
     "name": "Alvaro Garay",
     "profession": "Ing. Mecatrónica ",
-    "img": "alvaro-garay.png",
+    "img": "alvaro-garay.webp",
     "location": "Lima",
     "linkedin": "https://www.linkedin.com/in/alvaro-santiago-garay-gutierrez-270971200/"
   }

@@ -1,4 +1,3 @@
-// Exportar las imágenes para que se puedan usar desde otros archivos
-export {default as democracia} from "./democracia.png"
-export {default as muniLima} from "./muniLima.png"
-export {default as upc} from "./upc.png"
+export {default as democracia} from "./democracia.webp"
+export {default as muniLima} from "./muniLima.webp"
+export {default as upc} from "./upc.webp"
