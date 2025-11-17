@@ -110,8 +110,22 @@
     ],
     "years": [
       {
+        "year": "2024", 
+        "map": "Ancash",
+        "images": [
+          "2024-image1.webp",
+          "2024-image2.webp",
+          "2024-image3.webp",
+          "2024-image4.webp",
+          "2024-image5.webp",
+          "2024-image6.webp",
+          "2024-image7.webp",
+          "2024-image8.webp"
+        ]
+      }, 
+      {
         "year": "2023", 
-        "map": "San juan de Lurigancho",
+        "map": "Huaraz",
         "images": [
           "2023-image1.webp",
           "2023-image2.webp",
@@ -128,20 +142,6 @@
           "2023-image13.webp",
           "2023-image14.webp",
           "2023-image15.webp"
-        ]
-      },
-      {
-        "year": "2024", 
-        "map": "Huancavelica",
-        "images": [
-          "2024-image1.webp",
-          "2024-image2.webp",
-          "2024-image3.webp",
-          "2024-image4.webp",
-          "2024-image5.webp",
-          "2024-image6.webp",
-          "2024-image7.webp",
-          "2024-image8.webp"
         ]
       }
     ],

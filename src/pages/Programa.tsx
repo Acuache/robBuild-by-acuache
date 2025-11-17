@@ -1,4 +1,5 @@
 import { HeaderProgram, DescriptionProgram, SectionPhrase, SectionDetails, SectionImageDescription, SliderImage } from '../components/Programa'
+import { VolunteerDonateSection } from '../components/Inicio'
 import { Footer } from '../components/ui'
 import { useEffect } from 'react'
 import { useParams } from 'react-router-dom'
@@ -27,7 +28,14 @@ export default function Programa() {
         descriptionDetails={detail.descriptionDetails}
         imgDescription={detail.imgDescription}
       />
-      <SectionPhrase />
+      {
+        detail.id !== "chocolatada-steam" ? (
+          <SectionPhrase />
+        ) : (
+          <VolunteerDonateSection />
+        )
+      }
+
       {
         detail.id !== "chocolatada-steam" && (
           <>
