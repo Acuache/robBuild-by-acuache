@@ -28,7 +28,7 @@ export default function Footer() {
             <p className='font-bold text-st'>Enlaces rápidos</p>
             <ul className='flex flex-col gap-3'>
               <li className='group cursor-pointer flex items-center gap-2 transition-all duration-300'>
-                <Link to="/">
+                <Link to="/" className='flex gap-1'>
                   <div className="transition-colors duration-300 group-hover:text-st">
                     <Icon icon="ic:round-home" width="24" height="24" />
                   </div>
@@ -36,7 +36,7 @@ export default function Footer() {
                 </Link>
               </li>
               <li className='group cursor-pointer flex items-center gap-2 transition-all duration-300'>
-                <Link to="/talleres">
+                <Link to="/talleres" className='flex gap-1'>
                   <div className="transition-colors duration-300 group-hover:text-st">
                     <Icon icon="grommet-icons:workshop" width="24" height="24" />
                   </div>
@@ -44,7 +44,7 @@ export default function Footer() {
                 </Link>
               </li>
               <li className='group cursor-pointer flex items-center gap-2 transition-all duration-300'>
-                <Link to="/voluntarios">
+                <Link to="/voluntarios" className='flex gap-1'>
                   <div className="transition-colors duration-300 group-hover:text-st">
                     <Icon icon="formkit:people" width="24" height="24" />
                   </div>
@@ -52,7 +52,7 @@ export default function Footer() {
                 </Link>
               </li>
               <li className='group cursor-pointer flex items-center gap-2 transition-all duration-300'>
-                <Link to="/noticias">
+                <Link to="/noticias" className='flex gap-1'>
                   <div className="transition-colors duration-300 group-hover:text-st">
                     <Icon icon="material-symbols:news-outline" width="24" height="24" />
                   </div>
