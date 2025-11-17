@@ -94,5 +94,90 @@
       "Arduino", 
       "Python"
     ]
+  },
+  {
+    "id" : "chocolatada-steam",
+    "imgHeader" : "program2_header.webp",
+    "imgDescription": "program2_description.webp",
+    "title": "Chocolatada STEAM: Ciencia, creatividad y solidaridad",
+    "subtitle": "Una experiencia navideña que combina aprendizaje, emoción y comunidad.",
+    "description": "Iniciativa social que se realiza cada diciembre y que combina la tradicional chocolatada navideña con actividades educativas y recreativas para niños de zonas vulnerables. Su propósito es ofrecer un espacio de aprendizaje, alegría y comunidad durante las fiestas.",
+    "descriptionDetails": [
+      "Talleres STEAM navideños", 
+      "Enfoque en comunidades vulnerables", 
+      "Convivencia y celebración", 
+      "Entrega de regalos"
+    ],
+    "years": [
+      {
+        "year": "2023", 
+        "map": "San juan de Lurigancho",
+        "images": [
+          "2023-image1.webp",
+          "2023-image2.webp",
+          "2023-image3.webp",
+          "2023-image4.webp",
+          "2023-image5.webp",
+          "2023-image6.webp",
+          "2023-image7.webp",
+          "2023-image8.webp",
+          "2023-image9.webp",
+          "2023-image10.webp",
+          "2023-image11.webp",
+          "2023-image12.webp",
+          "2023-image13.webp",
+          "2023-image14.webp",
+          "2023-image15.webp"
+        ]
+      },
+      {
+        "year": "2024", 
+        "map": "Huancavelica",
+        "images": [
+          "2024-image1.webp",
+          "2024-image2.webp",
+          "2024-image3.webp",
+          "2024-image4.webp",
+          "2024-image5.webp",
+          "2024-image6.webp",
+          "2024-image7.webp",
+          "2024-image8.webp"
+        ]
+      }
+    ],
+    "imagesDescriptions" : [
+      {
+        "imageName": "program2_image1.webp",
+        "titleImage": "Aprendizaje Activo",
+        "descriptionImage": "Los estudiantes desarrollan proyectos en Scratch, aplicando programación básica con metodología práctica y gamificada."
+      },
+      {
+        "imageName": "program2_image2.webp",
+        "titleImage": "Docencia Remota",
+        "descriptionImage": "Un docente remoto guía la clase en vivo, integrando programación al horario escolar regular."
+      },
+      {
+        "imageName": "program2_image3.webp",
+        "titleImage": "Proyectos Colaborativos",
+        "descriptionImage": "Alumnos trabajan en equipos con Scratch, creando proyectos digitales aplicadas a contextos reales de su comunidad."
+      }
+    ],
+    "requirements": [
+      "Proyector/Pantalla",
+      "Conexión a internet estable",
+      "PC/Laptop para los estudiantes"
+    ],
+    "methodology": [
+      "Aprendizaje Basado en Proyectos", 
+      "Uso de simuladores interactivos",
+      "Clases gamificadas"
+    ],
+    "platforms": [
+      "VexCode VR",
+      "Tinkercad",
+      "Scratch",
+      "Arduino", 
+      "Python"
+    ]
   }
 ]

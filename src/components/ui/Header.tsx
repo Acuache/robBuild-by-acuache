@@ -64,6 +64,12 @@ export default function Header() {
                       <span className="absolute -bottom-[2px] left-0 transform w-0 h-0.5 bg-st transition-all duration-500 group-hover/submenu:w-full"></span>
                     </Link>
                   </div>
+                  <div className="group/submenu">
+                    <Link to={`/programa/chocolatada-steam`} className="relative" onClick={handleClick}>
+                      Chocolatada STEAM
+                      <span className="absolute -bottom-[2px] left-0 transform w-0 h-0.5 bg-st transition-all duration-500 group-hover/submenu:w-full"></span>
+                    </Link>
+                  </div>
                 </div>
               </div>
             </li>

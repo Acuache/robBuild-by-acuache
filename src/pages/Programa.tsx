@@ -1,4 +1,4 @@
-import { HeaderProgram, DescriptionProgram, SectionPhrase, SectionDetails, SectionImageDescription } from '../components/Programa'
+import { HeaderProgram, DescriptionProgram, SectionPhrase, SectionDetails, SectionImageDescription, SliderImage } from '../components/Programa'
 import { Footer } from '../components/ui'
 import { useEffect } from 'react'
 import { useParams } from 'react-router-dom'
@@ -14,17 +14,6 @@ export default function Programa() {
     window.scrollTo(0, 0)
   }, [])
 
-  // Si no encuentra el programa (por si acaso)
-  // if (!detail) {
-  //   return (
-  //     <div className="min-h-screen flex items-center justify-center">
-  //       <div className="text-center">
-  //         <h1 className="text-2xl font-bold">Programa no encontrado</h1>
-  //         <p className="text-gray-600 mt-2">El programa que buscas no existe.</p>
-  //       </div>
-  //     </div>
-  //   )
-  // }
 
   return (
     <>
@@ -39,12 +28,26 @@ export default function Programa() {
         imgDescription={detail.imgDescription}
       />
       <SectionPhrase />
-      <SectionDetails
-        requirements={detail.requirements}
-        methodology={detail.methodology}
-        platforms={detail.platforms}
-      />
-      <SectionImageDescription detailsImages={detail.imagesDescriptions} />
+      {
+        detail.id !== "chocolatada-steam" && (
+          <>
+            <SectionDetails
+              requirements={detail.requirements}
+              methodology={detail.methodology}
+              platforms={detail.platforms}
+            />
+            <SectionImageDescription detailsImages={detail.imagesDescriptions} />
+          </>
+        )
+      }
+
+      {
+        detail.id === "chocolatada-steam" && (
+          detail.years!.map((year, index) => (
+            <SliderImage {...year} key={`${index}-${year}`} />
+          ))
+        )
+      }
       <Footer />
     </>
   )

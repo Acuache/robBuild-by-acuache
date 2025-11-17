@@ -75,7 +75,6 @@
   transform: scaleX(1);
 }
 
-/* Animación de latido sutil */
 @keyframes heartbeat {
   0% { transform: scale(1); }
   15% { transform: scale(1.1); }
@@ -89,7 +88,6 @@
   animation: heartbeat 2s ease-in-out;
 }
 
-/* Animación de latido infinito para el corazón */
 @keyframes heartBeatInfinite {
   0% { transform: scale(1); }
   25% { transform: scale(1.15); }
@@ -100,6 +98,31 @@
 
 .heart-beat-infinite {
   animation: heartBeatInfinite 1.5s ease-in-out infinite;
+}
+
+@keyframes marqueeLeft {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+
+.marquee-rtl {
+  display: flex;
+  width: max-content; 
+  animation: marqueeLeft 100s linear infinite;
+}
+
+
+.marquee-ltr {
+  display: flex;
+  width: max-content;
+  animation: marqueeLeft 100s linear infinite reverse; 
+}
+
+
+.marquee-mask {
+  -webkit-mask-image: linear-gradient(to right, rgba(0,0,0,0), #000 10%, #000 90%, rgba(0,0,0,0));
+  mask-image: linear-gradient(to right, rgba(0,0,0,0), #000 10%, #000 90%, rgba(0,0,0,0));
 }
 
 @theme {
