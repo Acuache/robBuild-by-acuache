@@ -49,13 +49,16 @@ export default function Programa() {
         )
       }
 
-      {
-        detail.id === "chocolatada-steam" && (
-          detail.years!.map((year, index) => (
-            <SliderImage {...year} key={`${index}-${year}`} />
-          ))
-        )
-      }
+      <section className='flex flex-col gap-10 my-15'>
+
+        {
+          detail.id === "chocolatada-steam" && (
+            detail.years!.map((year, index) => (
+              <SliderImage {...year} key={`${index}-${year}`} />
+            ))
+          )
+        }
+      </section>
       <Footer />
     </>
   )
