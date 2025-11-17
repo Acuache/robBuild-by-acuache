@@ -57,7 +57,7 @@ export default function FrontPage() {
       <Bubble isView={inView} />
       <div className=" flex-1 basis-[90%] px-4 max-w-6xl m-auto text-white text-center flex flex-col gap-10 items-center py-10 pb-15 md:px-8 sm:py-30 sm:flex-row sm:text-left sm:gap-12 md:gap-18 lg:gap-25 xl:px-0">
         <div className="flex flex-col gap-8 sm:w-1/3 lg:w-1/3">
-          <h1 className={`text-4xl font-bold sm:text-4xl md:text-5xl lg:text-6xl text-balance duration-1000 ${inView ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-10"}`} style={{ textShadow: '0 0 1px currentColor, 1px 0 1px currentColor, 0 1px 1px currentColor, -1px 0 1px currentColor' }}>Tranformamos vidas con el poder de la educación</h1>
+          <h1 className={`text-4xl font-bold sm:text-4xl md:text-5xl lg:text-6xl text-balance duration-1000 ${inView ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-10"}`} style={{ textShadow: '0 0 1px currentColor, 1px 0 1px currentColor, 0 1px 1px currentColor, -1px 0 1px currentColor' }}>Transformamos vidas con el poder de la educación</h1>
           <p className={`sm:text-base md:text-xl lg:text-xl duration-1000 ${inView ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-10"}`}>Brindamos talleres gratuitos, cursos en nuestra aula virtual y proyectos educativos con impacto social para estudiantes y docentes.</p>
           <div className="flex gap-5 w-fit m-auto sm:m-0 sm:relative sm:top-9 md:top-0">
             <Link to="donar">

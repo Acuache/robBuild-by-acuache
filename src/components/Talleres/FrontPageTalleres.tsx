@@ -14,14 +14,14 @@ export default function FrontPageTalleres() {
         <section className='flex flex-row flex-wrap justify-center items-center gap-6 sm:gap-15'>
           <CardIcon
             number={20}
-            description="Talleres Grabados"
+            description="Talleres grabados"
             isMayor500={false}
           >
             <Icon icon="humbleicons:camera-video" width={45} height={45} />
           </CardIcon>
           <CardIcon
             number={1000}
-            description="Suscriptores Beneficiados"
+            description="Suscriptores beneficiados"
             isMayor500={true}
           >
             <Icon icon="formkit:people" width={40} height={40} />

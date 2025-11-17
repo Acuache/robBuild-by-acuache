@@ -11,7 +11,7 @@ export default function FoundersSection() {
           <h2 className='title'>Fundadores que iniciaron <br /><span
             className="bg-clip-text text-transparent bg-gradient-to-r"
             style={{ backgroundImage: 'var(--gradient-st)' }}
-          >está REVOLUCIÓN</span></h2>
+          >esta REVOLUCIÓN</span></h2>
           <p className='description text-pretty'>Dos personas extraordinarias que decidieron que el futuro tecnológico del Perú no podía esperar más.</p>
         </header>
 

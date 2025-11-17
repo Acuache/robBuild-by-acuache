@@ -27,6 +27,7 @@ export default function Programa() {
         description={detail.description}
         descriptionDetails={detail.descriptionDetails}
         imgDescription={detail.imgDescription}
+        isActive={detail.id === "chocolatada-steam"}
       />
       {
         detail.id !== "chocolatada-steam" ? (

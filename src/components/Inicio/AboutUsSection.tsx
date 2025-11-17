@@ -9,7 +9,7 @@ export default function AboutUsSection() {
           <header className='flex flex-col gap-5'>
             <h2 className='text-xl font-semibold sm:text-4xl'>Conéctate con nosotros</h2>
             <p className='text-base'>
-              Síguenos en nuestras redes sociales para estar al dia con nuestras actividades, talleres y el impacto que estamos generando juntos.
+              Síguenos en nuestras redes sociales para estar al día con nuestras actividades, talleres y el impacto que estamos generando juntos.
             </p>
           </header>
           <section className="flex flex-wrap gap-3 sm:gap-6 justify-center mt-5">

@@ -418,7 +418,7 @@ export default function Donar() {
                       </div>
                       <div className="text-left">
                         <p className="text-blue-800 text-sm font-medium mb-1">
-                          Puedes donar con tarjeta de crédito/debito o con Paypal
+                          Puedes donar con tarjeta de crédito/débito o con PayPal
                         </p>
 
                       </div>
