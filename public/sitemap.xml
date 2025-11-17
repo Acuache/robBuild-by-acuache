@@ -1,24 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://robbbuild-by-acuache.vercel.app/</loc>
+    <loc>https://robbuild.com/</loc>
   </url>
   <url>
-    <loc>https://robbbuild-by-acuache.vercel.app/programa/robotica-para-todos-con-enfoque-steam</loc>
+    <loc>https://robbuild.com/talleres</loc>
   </url>
   <url>
-    <loc>https://robbbuild-by-acuache.vercel.app/programa/robotica-para-un-futuro-sin-brechas</loc>
+    <loc>https://robbuild.com/programa/robotica-para-todos-con-enfoque-steam</loc>
   </url>
   <url>
-    <loc>https://robbbuild-by-acuache.vercel.app/talleres</loc>
+    <loc>https://robbuild.com/programa/robotica-para-un-futuro-sin-brechas</loc>
   </url>
   <url>
-    <loc>https://robbbuild-by-acuache.vercel.app/voluntarios</loc>
+    <loc>https://robbuild.com/programa/chocolatada-steam</loc>
   </url>
   <url>
-    <loc>https://robbbuild-by-acuache.vercel.app/noticias</loc>
+    <loc>https://robbuild.com/voluntarios</loc>
   </url>
   <url>
-    <loc>https://robbbuild-by-acuache.vercel.app/donar</loc>
+    <loc>https://robbuild.com/noticias</loc>
+  </url>
+  <url>
+    <loc>https://robbuild.com/donar</loc>
   </url>
 </urlset>
