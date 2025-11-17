@@ -50,8 +50,8 @@ export default function Header() {
                 </div>
               </div>
               {/* Submenu desktop*/}
-              <div className="absolute top-full hidden md:block">
-                <div className="absolute md:w-55 bg-white md:top-full p-5 flex flex-col gap-4 opacity-0 invisible translate-y-2 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 transition-all duration-300 ease-out">
+              <div className="absolute top-full hidden md:block ">
+                <div className="absolute md:w-55 bg-white md:top-full p-5 flex flex-col gap-4 opacity-0 invisible translate-y-2 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 transition-all duration-300 ease-out border border-black/20 border-t-0 rounded-b-xl">
                   <div className="group/submenu">
                     <Link to={`/programa/robotica-para-todos-con-enfoque-steam`} className="relative" onClick={handleClick}>
                       Robótica STEAM
