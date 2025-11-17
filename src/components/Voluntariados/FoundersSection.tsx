@@ -20,13 +20,13 @@ export default function FoundersSection() {
             name="Maycoll Gamarra Chura"
             job="Director General"
             img={founder1}
-            url="https://www.linkedin.com/in/maycoll-gamarra-chura-a721b7156/"
+            url="https://www.linkedin.com/in/maycoll-gamarra-a721b7156/"
           />
           <CardFounder
             name="Diego Vargas Triveño"
             job="Director de Proyectos"
             img={founder2}
-            url="https://www.youtube.com/"
+            url="https://www.linkedin.com/in/diegovt2/"
           />
         </section>
 
